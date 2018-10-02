@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      8304_2
+HostName                       vlsi315.vlsi.polymtl.ca
+ProcessIdentifier              17932
+ProcessCreationTime_UTC        1538503600
+ProcessCreationTime_Readable   Tue Oct  2 14:06:40 2018 EDT
+AppIdentifier                  /CMC/tools/cadence/IC617_lnx86/tools/dfII/bin/64bit/libManager
+OSType                         lnx86
+ReasonForPlacingEditLock       log file
+FilePathUsedToEditLock         /users/Cours/ele8304/2/Labs/Tuto/inverseur/libManager.log
+TimeEditLocked                 Tue Oct  2 14:06:40 2018 EDT

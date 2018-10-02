@@ -1,0 +1,24 @@
+;               Cadence Initialization File (.cdsinit)
+;		
+;
+;	defaults values/examples can be found in:
+;		/CMC/tools/cadence/IC617_lnx86/tools/dfII/samples/local/cdsinit
+;		/CMC/tools/cadence/IC617_lnx86/tools/dfII/cdsuser/.cdsinit
+;
+;---------------------------------------------------------------------------
+
+;; Load Cadence environment file, alternative way:
+;      when( isFile("./.cdsenv") 
+;            printf("\nFYI: Load the local ./.cdsenv file.")
+;            envLoadFile(".cdsenv")
+;            )
+
+;; Automatically launch Library Manager after the CIW appearance:
+       when( isFile("./cds.lib")
+             printf("\nFYI: Launched library manager.")
+             ddsOpenLibManager()
+; 	    )
+
+;; Personal perferences:
+      editor = "gedit"
+;-------------------- End of File --------------------------------------------

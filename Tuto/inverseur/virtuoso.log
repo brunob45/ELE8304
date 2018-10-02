@@ -1,0 +1,2662 @@
+\# Program start time UTC 2018.10.02 18:06:35.277
+\# Local time Tuesday 2 October 2018, 2:06 pm
+\o Program:		@(#)$CDS: virtuoso version 6.1.7-64b 11/09/2015 12:45 (sjfnl165) $
+\o Hierarchy:		/CMC/tools/cadence/IC617_lnx86/tools.lnx86/dfII/
+\o Sub version:		sub-version  IC6.1.7-64b.78  (64-bit addresses)
+\# Command line:	/CMC/tools/cadence/IC617_lnx86/tools/dfII/bin/64bit/virtuoso -log virtuoso.log
+\# Host name (type):	vlsi315 (x86_64)
+\# Operating system:	Linux 3.10.0-862.14.4.el7.x86_64 #1 SMP Tue Sep 25 14:32:52 CDT 2018
+\# Linux /etc/issue:	\S
+\# Linux /etc/issue:	Kernel \r on an \m
+\# X display name (WxH):	:1 (1920x1080)
+\# Available geometry:			TL(0:28) BR(1919:1045)
+\# X server:			The X.Org Foundation
+\# Depth of Visual (Root):	24 (24)
+\# Number of Planes Used:	24
+\# X version:		11.0 (vendor release 11905000)
+\# X resource pool:	base 0x3800000, mask 0x1fffff (2097151), shift 0
+\# 			current id 0x0, current max 0x1ffffa (2097146)
+\# Max data seg size:	     unlimited
+\# Max process size:	     unlimited
+\# Initial sbrk value:	        351 MB
+\# Available memory:	     12,461 MB
+\# System memory:	     20,196 MB
+\# Maximum memory size:	     19,919 MB
+\# Max mem available:	     12,535 MB
+\# Initial memory used:	         74 MB
+\#        process size:	        878 MB
+\# Qt version:		4.8.5
+\# Window Manager:	other
+\# User Name:		8304_2
+\o Working Directory:	vlsi315:/users/Cours/ele8304/2/Labs/Tuto/inverseur
+\# Process Id:		16875
+\o 
+\o COPYRIGHT © 1992-2015  CADENCE DESIGN SYSTEMS INC.  ALL RIGHTS RESERVED.
+\o           © 1992-2015  UNIX SYSTEMS Laboratories INC.,
+\o                          Reproduced with permission.
+\o 
+\o This Cadence Design Systems program and online documentation are
+\o proprietary/confidential information and may be disclosed/used only
+\o as authorized in a license agreement controlling such use and disclosure.
+\o 
+\o           RESTRICTED RIGHTS NOTICE (SHORT FORM)
+\o Use/reproduction/disclosure is subject to restriction
+\o set forth at FAR 1252.227-19 or its equivalent.
+\o Loading geView.cxt 
+\o Loading menuBuilder.cxt 
+\o Loading schView.cxt 
+\o Loading selectSv.cxt 
+\o Loading pvsui.cxt.
+\o Loading wireEdit.cxt 
+\o Loading pte2.cxt 
+\o Loading xlUI.cxt 
+\o Loading auCore.cxt 
+\o Loading vhdl.cxt 
+\o Loading seismic.cxt 
+\o Loading ci.cxt 
+\o Loading ams.cxt 
+\o Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.25s.
+\w *WARNING* (reader): a '(' at line 17 was still unclosed on EOF, ')' added
+\w                     at line 25 of file .cdsinit 
+\o 
+\p > 
+\a _treeSetOpcGUI(t)
+\r FYI: Launched library manager.t
+\# Available memory:         12,356 MB at UTC 2018.10.02 18:06:46.425
+\# Memory report: Maximum memory size now 12,509 MB at UTC 2018.10.02 18:06:46.425
+\i ddsServOpen("ele8304" "inv" "schematic" "edit" nil)
+\w *WARNING* (icLic-203) Failed to check out license Virtuoso_Schematic_Editor_L ("95100") to run Schematics L because of status code -18.
+\w Attempting to check out the next available license Virtuoso_Schematic_Editor_XL ("95115") per license checkout order L, XL.
+\o *INFO* (icLic-302) License Virtuoso_Schematic_Editor_XL ("95115") was used to run Schematics L.
+\o Loading gpdk045/libInit.il ...
+\o 	Loading gpdk045/loadCxt.ile ... done!
+\o 	Loading context 'gpdk045' from library 'gpdk045' ... done!
+\o 	Loading context 'pdkUtils' from library 'gpdk045' ... done!
+\o 	Loading gpdk045/gpdk045_customFilter.il ... done!
+\o 	Loading gpdk045/libInitCustomExit.il ... 
+\o 	Loading Environment Settings ...
+\o 	Loading Model Management File ...
+\o Loading oasis.cxt 
+\o Loading analog.cxt 
+\o Loading asimenv.cxt 
+\o Loading spectrei.cxt 
+\# Memory report: using         193 MB, process size 1,071 MB at UTC 2018.10.02 18:06:50.241
+\o Loading devCheck.cxt 
+\o Loading relXpert.cxt 
+\o Loading hspiceD.cxt 
+\o Loading spectreinl.cxt 
+\o Loading UltraSim.cxt 
+\o Loading msgHandler.cxt 
+\o Loading AMSOSS.cxt 
+\o Loading AMS.cxt 
+\o 	Loading gpdk045/gpdk045_PDKRegistrations.il ... done!
+\o 
+\o   *************************************************************           
+\o   *              Cadence Design Systems, Inc.                 *           
+\o   *                                                           *           
+\o   *                    Generic 45nm PDK                       *           
+\o   *                        (gpdk045)                          *           
+\o   *                                                           *           
+\o   *************************************************************           
+\o 	
+\o 
+\o 	VERSION: 4.0 (17-June-2014)
+\o 
+\o done!
+\o Loaded gpdk045/libInit.il successfully!
+\o Loading schematic.cxt 
+\o Loading vb.cxt 
+\o Loading nt.cxt 
+\o Loading oi.cxt 
+\o Loading see.cxt 
+\o Loading treeAssistant.cxt 
+\o Loading asst.cxt 
+\o Loading mtv.cxt 
+\o Loading le.cxt 
+\o Loading leToolbox.cxt 
+\a _treeNavActivateOpc(dwindow('treeAssistant1) "")
+\r t
+\o Loading hsm.cxt 
+\o Loading simui.cxt 
+\o Loading lx.cxt 
+\o Loading lce.cxt 
+\w *WARNING* 'PVS Results Viewer' cannot be selected - no RV license exists. Switched to 'PVS DRC DE'
+\o Loading rte.cxt 
+\o Loading layerProc.cxt 
+\o Loading mpt.cxt 
+\a when(dwindow('oiAssistant1) hiMapWindow(dwindow('oiAssistant1)))
+\r t
+\a when(dwindow('treeAssistant1) hiMapWindow(dwindow('treeAssistant1)))
+\r t
+\a hiResizeWindow(swindow(1) list(1010:178 1910:868))
+\r t
+\a schSingleSelectPt()
+\i -0.25:1.5625
+\r nil
+\a _deUpdateMenu('schematicTools 2)
+\r t
+\a lxLaunchLayoutXL()
+\p > 
+\a hiiSetCurrentForm('lxCVPairActionForm)
+\r t
+\a lxCVPairActionForm->cvPairAction->value= "Create New"
+\r "Create New"
+\a hiFormDone(lxCVPairActionForm)
+\r t
+\p > 
+\a hiFormDone(deNewForm)
+\p > 
+\a hiDBoxOK(deDBox)
+\r t
+\p > 
+\a hiDBoxUser(_icLicLicenseQuestionDBox nil 1)
+\r t
+\o *INFO* (icLic-302) License Virtuoso_Layout_Suite_GXL ("95321") was used to run Layout XL.
+\o Loading cph.cxt 
+\o Loading drdEdit.cxt 
+\o Loading soi.cxt 
+\o Loading lo.cxt 
+\o Loading vfp.cxt 
+\o Loading smd.cxt 
+\o Loading ncl.cxt 
+\o Loading te.cxt 
+\o Loading schHDL.cxt 
+\o Loading techComp.cxt 
+\o Loading vca.cxt 
+\# Memory report: using         325 MB, process size 1,205 MB at UTC 2018.10.02 18:07:09.222
+\r t
+\o Loading layers.cxt 
+\w *WARNING* (icLic-203) Failed to check out license Virtuoso_Schematic_Editor_L ("95100") to run Schematics L because of status code -18.
+\w Attempting to check out the next available license Virtuoso_Schematic_Editor_XL ("95115") per license checkout order L, XL.
+\o *INFO* (icLic-302) License Virtuoso_Schematic_Editor_XL ("95115") was used to run Schematics L.
+\o INFO (BND-1003): Binder initialization finished:
+\o 
+\o                  bound       unbound     ungenerated
+\o   terminals          0             0               4
+\o   nets               0             0               4
+\o   instances          0             0               2
+\o 
+\w *WARNING* (BND-2005): Layout instances and terminals do not match the source.
+\w Use 'XL Status' in the Navigator or run 'Connectivity - Check - Against Source' for more details.
+\w If the bindings are correct, run the 'Update from Source' commands,
+\w otherwise run 'Connectivity - Update - Binding'.
+\o Loading cpf.cxt 
+\a _ciAssistantReplay_newAssistantByName(dwindow('ciProspector1) "Rapid Analog Prototype")
+\r t
+\a _ciBrowserReplay_sort(dwindow('ciManager1) 0 0)
+\r t
+\a _ciBrowserReplay_changeSetting(dwindow('ciManager1) "sortBy/Type" "bool:t")
+\r t
+\a _ciBrowserReplay_changeSetting(dwindow('ciManager1) "sortBy/Creation Date" "bool:f")
+\r t
+\r t
+\a when(dwindow('ptePaletteAssistant1) hiMapWindow(dwindow('ptePaletteAssistant1)))
+\r t
+\a leHiEditDisplayOptions()
+\p > 
+\a leDisplayOptionsForm->spacing->value=0.01
+\r 0.01
+\a leDisplayOptionsForm->majorSpacing->value=0.05
+\r 0.05
+\a leDisplayOptionsForm->options->displayPinNames->value =  t
+\r t
+\a leDisplayOptionsForm->stop->value=31
+\r 31
+\a leDisplayOptionsForm->snapMode->value="anyAngle"
+\r "anyAngle"
+\a leDisplayOptionsForm->segSnapMode->value="anyAngle"
+\r "anyAngle"
+\a hiFormDone(leDisplayOptionsForm)
+\r t
+\r t
+\a lxHiReInitDesign()
+\o INFO (LX-1063): Building the layout generation form...
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Metal1 drawing"
+\r "Metal1 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Metal1 drawing"
+\r "Metal1 drawing"
+\p > 
+\a hiiSetCurrentForm('lxTemplateForm)
+\r t
+\a lxTemplateForm->templateTab->page1->bToggle->boundary->value =  nil
+\r nil
+\a lxTemplateForm->templateTab->value=2
+\r 2
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Metal1 pin"
+\r "Metal1 pin"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Metal1 pin"
+\r "Metal1 pin"
+\a (lxiLGDefaultsCB)
+\r t
+\a lxTemplateForm->templateTab->page2->pScrollRegion->value= '( "\"in\"       \"in\"      (\"Metal1\" \"pin\")        0.06   0.06   1     t" )
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Metal1 pin"
+\r "Metal1 pin"
+\r ("\"in\"       \"in\"      (\"Metal1\" \"pin\")        0.06   0.06   1     t")
+\a lxTemplateForm->templateTab->page2->pPinLabel->pinLabel->value =  t
+\r t
+\a (lxiLGTextStyleCB)
+\p > 
+\a hiiSetCurrentForm('lxPinTextStyleForm)
+\r t
+\a lxPinTextStyleForm->labelLayerNameChoice->value= "Same As Pin"
+\r "Same As Pin"
+\a hiFormDone(lxPinTextStyleForm)
+\r t
+\r t
+\a hiiSetCurrentForm('lxTemplateForm)
+\r t
+\a hiFormDone(lxTemplateForm)
+\r t
+\o INFO (LCE-1007): The cell verifier found
+\o INFO (LCE-1008):    8 open(s)
+\r t
+\a mouseSingleSelectPt()
+\i 0.59:-1.16
+\r nil
+\a leHiCreateInst()
+\p > 
+\a hiiSetCurrentForm('leCreateInstForm)
+\r t
+\a leCreateInstForm->leInstParamDisclosure->value=t
+\r t
+\a leCreateInstForm->libName->value="gsclib045_tech"
+\r "gsclib045_tech"
+\a leCreateInstForm->cellName->value="cellTmpl"
+\o Loading cdf.cxt 
+\r "cellTmpl"
+\a leCreateInstForm->width->value=0.5
+\r 0.5
+\a hiiToggleEnterForm(leCreateInstForm)
+\r t
+\a lxToggleShowAllIncompleteNets()
+\r t
+\a hiZoomOutAtMouse()
+\i -0.615:-1.84
+\r t
+\a hiZoomInAtMouse()
+\i 0.385:0.55
+\r t
+\a hiZoomInAtMouse()
+\i 0.4:0.565
+\r t
+\a hiZoomInAtMouse()
+\i 0:0
+\r t
+\a hiZoomInAtMouse()
+\i 0:0
+\r t
+\a hiZoomInAtMouse()
+\i 0:0
+\r t
+\a hiZoomInAtMouse()
+\i 0:0
+\r t
+\a hiZoomInAtMouse()
+\i 0:0
+\r t
+\a hiZoomInAtMouse()
+\i 0:0
+\r t
+\a hiZoomOutAtMouse()
+\i 0:0
+\r t
+\a hiZoomOutAtMouse()
+\i 0:0
+\r t
+\a hiZoomOutAtMouse()
+\i 0:0
+\r t
+\a mouseAddPt(t)
+\i -0.0005:0.0005
+\r t
+\a hiZoomOutAtMouse()
+\i 0.005:-0.01
+\r t
+\a hiZoomOutAtMouse()
+\i 0.005:-0.005
+\r t
+\a hiZoomOutAtMouse()
+\i 0.01:-0.005
+\r t
+\a hiZoomOutAtMouse()
+\i 0.005:-0.01
+\r t
+\a cancelEnterFun()
+\r t
+\r nil
+\a mouseSingleSelectPt()
+\i 0.21:-0.73
+\r t
+\a leSelBoxOrStretch()
+\i 0.21:-0.73
+\a le0MoveForm->le0MoveFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\i 0.21:-0.73
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 1.175:1.32
+\r t
+\r t
+\a mouseSingleSelectPt()
+\i 0.3:-1.68
+\r t
+\a leSelBoxOrStretch()
+\i 0.27:-1.66
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\i 0.27:-1.66
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 1.12:0.205
+\r t
+\r t
+\a mouseSingleSelectPt()
+\i 0.335:-2.125
+\r t
+\a leSelBoxOrStretch()
+\i 0.29:-2.115
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\i 0.29:-2.115
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 0.235:0.305
+\r t
+\r t
+\a mouseSingleSelectPt()
+\i 1.12:0.225
+\r t
+\a leSelBoxOrStretch()
+\i 1.165:0.21
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\i 1.165:0.21
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 0.275:1.16
+\r t
+\r t
+\a mouseSingleSelectPt()
+\i 1.09:0.965
+\r nil
+\a mouseSingleSelectPt()
+\i 0.295:0.355
+\r t
+\a hiZoomInAtMouse()
+\i 0.335:0.285
+\r t
+\a hiZoomInAtMouse()
+\i 0.335:0.285
+\r t
+\a leSelBoxOrStretch()
+\i 0.315:0.28
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\i 0.315:0.28
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 0.345:0.29
+\r t
+\r t
+\a leSelBoxOrStretch()
+\i 0.335:0.345
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\i 0.335:0.345
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 0.32:0.345
+\r t
+\r t
+\a pteSetVisible("Nwell drawing" nil "Layers")
+\r t
+\a pteSetVisible("Nwell drawing" t "Layers")
+\r t
+\a pteSetVisible("Nwell drawing" nil "Layers")
+\r t
+\a pteSetVisible("Oxide drawing" nil "Layers")
+\r t
+\a pteSetVisible("Oxide drawing" t "Layers")
+\r t
+\a pteSetVisible("Oxide drawing" nil "Layers")
+\r t
+\a pteSetVisible("Oxide_thk drawing" nil "Layers")
+\r t
+\a pteSetVisible("Poly drawing" nil "Layers")
+\r t
+\a pteSetVisible("Poly drawing" t "Layers")
+\r t
+\a pteSetVisible("Pimp drawing" nil "Layers")
+\r t
+\a pteSetVisible("Pimp drawing" t "Layers")
+\r t
+\a pteSetVisible("Nhvt drawing" nil "Layers")
+\r t
+\a pteSetVisible("Nhvt drawing" t "Layers")
+\r t
+\a pteSetVisible("Nhvt drawing" nil "Layers")
+\r t
+\a pteSetVisible("Nlvt drawing" nil "Layers")
+\r t
+\a pteSetVisible("Nimp drawing" nil "Layers")
+\r t
+\a pteSetVisible("Nimp drawing" t "Layers")
+\r t
+\a pteSetVisible("Phvt drawing" nil "Layers")
+\r t
+\a pteSetVisible("Plvt drawing" nil "Layers")
+\r t
+\a hiZoomOutAtMouse()
+\i 0.03:0.905
+\r t
+\a hiZoomOutAtMouse()
+\i 0.02:0.915
+\r t
+\a hiZoomOutAtMouse()
+\i 0:0.92
+\r t
+\a hiZoomInAtMouse()
+\i 0:0.915
+\r t
+\a pteSetVisible("Metal1 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal1 drawing" t "Layers")
+\r t
+\a pteSetVisible("Metal3 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Via2 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal2 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Via1 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Via1 drawing" t "Layers")
+\r t
+\a pteSetVisible("Cont drawing" nil "Layers")
+\r t
+\a pteSetVisible("Cont drawing" t "Layers")
+\r t
+\a pteSetVisible("Nzvt drawing" nil "Layers")
+\r t
+\a pteSetVisible("Via3 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal4 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Via4 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal5 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Via5 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal6 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Via6 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal7 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Via7 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal8 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Via8 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal9 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Via9 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal10 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Via10 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal11 drawing" nil "Layers")
+\r t
+\a pteSetVisible("CapMetal drawing" nil "Layers")
+\r t
+\a pteSetVisible("CapMetal drawing" t "Layers")
+\r t
+\a pteSetVisible("CapMetal drawing" nil "Layers")
+\r t
+\a pteSetVisible("CapMetal net" nil "Layers")
+\r t
+\a pteSetVisible("Nburied drawing" nil "Layers")
+\r t
+\a pteSetVisible("Nburied net" nil "Layers")
+\r t
+\a pteSetVisible("SRAM drawing" nil "Layers")
+\r t
+\a pteSetVisible("PO_text drawing" nil "Layers")
+\r t
+\a pteSetVisible("SEALRING drawing" nil "Layers")
+\r t
+\a pteSetVisible("LOGO drawing" nil "Layers")
+\r t
+\a pteSetVisible("ANALOG drawing" nil "Layers")
+\r t
+\a pteSetVisible("FUSE drawing" nil "Layers")
+\r t
+\a pteSetVisible("FILLER drawing" nil "Layers")
+\r t
+\a pteSetVisible("VIAEXCL drawing" nil "Layers")
+\r t
+\a pteSetVisible("Psub drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal1 slot" nil "Layers")
+\r t
+\a pteSetVisible("Metal1 slot" t "Layers")
+\r t
+\a pteSetVisible("Metal1 slot" nil "Layers")
+\r t
+\a pteSetVisible("Metal2 slot" nil "Layers")
+\r t
+\a pteSetVisible("Metal3 slot" nil "Layers")
+\r t
+\a pteSetVisible("Metal4 slot" nil "Layers")
+\r t
+\a pteSetVisible("Metal5 slot" nil "Layers")
+\r t
+\a pteSetVisible("Metal6 slot" nil "Layers")
+\r t
+\a pteSetVisible("Metal7 slot" nil "Layers")
+\r t
+\a pteSetVisible("Metal9 slot" nil "Layers")
+\r t
+\a pteSetVisible("Metal10 slot" nil "Layers")
+\r t
+\a pteSetVisible("Metal8 slot" nil "Layers")
+\r t
+\a leSelBoxOrStretch()
+\i 1.19:1.31
+\i 1.19:1.31
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 1.205:0.87
+\r t
+\r t
+\a mouseSingleSelectPt()
+\i 1.175:1.35
+\r t
+\a leSelBoxOrStretch()
+\i 1.195:1.305
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\i 1.195:1.305
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 0.38:0.6
+\r t
+\r t
+\a mouseSingleSelectPt()
+\i 0.98:0.775
+\r nil
+\a pteSetVisible("Nwell drawing" t "Layers")
+\r t
+\a mouseSingleSelectPt()
+\i 0.08:-0.745
+\r t
+\a leSelBoxOrStretch()
+\i 0.09:-0.73
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\i 0.09:-0.73
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 0.155:0.925
+\r t
+\r t
+\a mouseSingleSelectPt()
+\i 0.09:-0.82
+\r t
+\a leSelBoxOrStretch()
+\i 0.08:-0.845
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\i 0.08:-0.845
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 0.095:1.71
+\r t
+\r t
+\a mouseSingleSelectPt()
+\i 0.21:-0.85
+\r t
+\a leSelBoxOrStretch()
+\i 0.2:-0.86
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\i 0.2:-0.86
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 0.385:-0.015
+\r t
+\r t
+\a mouseSingleSelectPt()
+\i 1.74:0.81
+\r nil
+\a mouseSingleSelectPt()
+\i 1.4:0.68
+\r nil
+\a leHiCreateWire()
+\o (LE-101213): Create wire command does not support "anyAngle" snap mode which is the snap Mode of
+\o current active Window. Setting it to "orthogonal".
+\w *WARNING* (LE-105026): Switching to next valid routing layer ("Poly").
+\p > 
+\a geSingleSelectBox()
+\i 0.265:1
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 0.25:0.51
+\r t
+\r nil
+\a hiZoomInAtMouse()
+\i 0.255:0.5
+\r t
+\a hiZoomInAtMouse()
+\i 0.255:0.5
+\r t
+\a mouseAddPt(t)
+\i 0.265:0.5005
+\r t
+\w *WARNING* (WE-20052): The current wire width (0.045) is an odd multiple of the manufacturing grid. As a result, the wire centerline is off the manufacturing grid.
+\a hiZoomInAtMouse()
+\i 0.255:0.67
+\r t
+\a hiZoomOutAtMouse()
+\i 0.255:0.67
+\r t
+\a hiZoomOutAtMouse()
+\i 0.255:0.67
+\r t
+\a mouseAddPt(t)
+\i 0.259:1.003
+\r t
+\a mouseAddPt(t)
+\i 0.158:1.2405
+\r t
+\a mouseAddPt(t)
+\i 0.156:1.7
+\r t
+\a hiZoomRelativeScale(hiGetCurrentWindow() 2.0)
+\r t
+\a hiZoomOutAtMouse()
+\i -0.03:1.07
+\r t
+\a hiUndo()
+\r t
+\a mouseAddPt(t)
+\i 0.1555:1.2355
+\r t
+\a mouseAddPt(t)
+\i 0.158:1.709
+\r t
+\w *WARNING* (LE-105022): Cannot switch to non-routing entry layer ("Via1").
+\w *WARNING* (LE-104018): Setting the entry layer to be invisible
+\a pteSetVisible("Metal1 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal1 drawing" t "Layers")
+\r t
+\w *WARNING* (LE-105022): Cannot switch to non-routing entry layer ("Via1").
+\w *WARNING* (LE-104018): Setting the entry layer to be invisible
+\a pteSetVisible("Metal1 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal1 drawing" t "Layers")
+\r t
+\w *WARNING* (LE-105022): Cannot switch to non-routing entry layer ("Via1").
+\w *WARNING* (LE-104018): Setting the entry layer to be invisible
+\a pteSetVisible("Metal1 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal1 drawing" t "Layers")
+\r t
+\a hiZoomRelativeScale(hiGetCurrentWindow() 2.0)
+\r t
+\a hiUndo()
+\r t
+\a mouseAddPt(t)
+\i 0.1425:1.2405
+\r t
+\a mouseAddPt(t)
+\i 0.1545:1.6615
+\r t
+\a mouseAddPt(t)
+\i 0.366:1.1
+\r t
+\a mouseAddPt(t)
+\i 0.3595:0.4
+\r t
+\a mouseAddPt(t)
+\i 0.1485:0.285
+\r t
+\a mouseAddPt(t)
+\i 0.1485:0.024
+\r t
+\a hiZoomOutAtMouse()
+\i 0.245:0.1
+\r t
+\a cancelEnterFun()
+\r t
+\r nil
+\a mouseSingleSelectPt()
+\i 0.16:0.915
+\r t
+\a leSelBoxOrStretch()
+\i 0.165:0.92
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\i 0.165:0.92
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 0.23:0.92
+\r t
+\r t
+\a mouseSingleSelectPt()
+\i -0.535:0.805
+\r nil
+\a mouseSingleSelectPt()
+\i -0.365:0.695
+\r nil
+\a leHiCreateRect()
+\a leRectForm->slotLayer->value = "Cont drawing"
+\r "Cont drawing"
+\a leRectForm->slotLayer->value = "Cont drawing"
+\r "Cont drawing"
+\a leRectForm->slotLayer->value = "Cont drawing"
+\r "Cont drawing"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\p > 
+\a geSingleSelectBox()
+\i 0.07:0.985
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 0.25:0.86
+\r t
+\r t
+\a mouseAddPt(t)
+\i -0.102:0.8635
+\r t
+\a mouseAddPt(t)
+\i -0.349:0.5755
+\r t
+\a hiZoomRelativeScale(hiGetCurrentWindow() 2.0)
+\r t
+\a hiUndo()
+\r t
+\a hiZoomOutAtMouse()
+\i -0.22:0.76
+\r t
+\a pteSetActiveLpp("Via1 drawing")
+\r nil
+\a geSingleSelectBox()
+\i -0.235:0.845
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i -0.19:0.77
+\r t
+\r nil
+\a leHiCreateRect()
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\r t
+\a geSingleSelectBox()
+\i -0.18:0.81
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i -0.245:0.735
+\r t
+\r nil
+\a geSingleSelectBox()
+\i -0.295:0.74
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i -0.1:0.585
+\r t
+\r nil
+\a geSingleSelectBox()
+\i 0.05:0.965
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 0.11:0.925
+\r t
+\r nil
+\a pteSetVisible("Via2 drawing" t "Layers")
+\r t
+\a pteSetActiveLpp("Via2 drawing")
+\r nil
+\a pteSetVisible("Via2 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Via3 drawing" t "Layers")
+\r t
+\a pteSetVisible("Via3 drawing" nil "Layers")
+\r t
+\a leHiCreateRect()
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\r t
+\a geSingleSelectBox()
+\i 0.005:0.94
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 0.155:0.795
+\r t
+\r nil
+\a pteSetVisible("Oxide drawing" t "Layers")
+\r t
+\a pteSetVisible("Oxide_thk drawing" t "Layers")
+\r t
+\a pteSetVisible("Nhvt drawing" t "Layers")
+\r t
+\a pteSetVisible("Nlvt drawing" t "Layers")
+\r t
+\a pteSetVisible("Nwell drawing" nil "Layers")
+\r t
+\a pteSetVisible("Nwell drawing" t "Layers")
+\r t
+\a pteSetVisible("Phvt drawing" t "Layers")
+\r t
+\a pteSetVisible("Plvt drawing" t "Layers")
+\r t
+\a pteSetVisible("Nzvt drawing" t "Layers")
+\r t
+\a pteSetVisible("Metal2 drawing" t "Layers")
+\r t
+\a pteSetVisible("Via2 drawing" t "Layers")
+\r t
+\a pteSetVisible("Via3 drawing" t "Layers")
+\r t
+\a pteSetVisible("Metal3 drawing" t "Layers")
+\r t
+\a pteSetVisible("Metal4 drawing" t "Layers")
+\r t
+\a pteSetVisible("Metal5 drawing" t "Layers")
+\r t
+\a pteSetVisible("Via4 drawing" t "Layers")
+\r t
+\a pteSetVisible("Via5 drawing" t "Layers")
+\r t
+\a pteSetVisible("Metal6 drawing" t "Layers")
+\r t
+\a pteSetVisible("Via6 drawing" t "Layers")
+\r t
+\a pteSetVisible("Metal7 drawing" t "Layers")
+\r t
+\a pteSetVisible("Via7 drawing" t "Layers")
+\r t
+\a pteSetVisible("Via8 drawing" t "Layers")
+\r t
+\a pteSetVisible("Metal8 drawing" t "Layers")
+\r t
+\a pteSetVisible("Metal9 drawing" t "Layers")
+\r t
+\a pteSetVisible("Via9 drawing" t "Layers")
+\r t
+\a pteSetVisible("Via10 drawing" t "Layers")
+\r t
+\a pteSetVisible("Metal10 drawing" t "Layers")
+\r t
+\a pteSetVisible("Metal11 drawing" t "Layers")
+\r t
+\a pteSetVisible("CapMetal drawing" t "Layers")
+\r t
+\a pteSetVisible("CapMetal net" t "Layers")
+\r t
+\a pteSetVisible("Nburied drawing" t "Layers")
+\r t
+\a pteSetVisible("Nburied net" t "Layers")
+\r t
+\a pteSetVisible("SRAM drawing" t "Layers")
+\r t
+\a pteSetVisible("SEALRING drawing" t "Layers")
+\r t
+\a pteSetVisible("PO_text drawing" t "Layers")
+\r t
+\a pteSetVisible("LOGO drawing" t "Layers")
+\r t
+\a pteSetVisible("ANALOG drawing" t "Layers")
+\r t
+\a pteSetVisible("FUSE drawing" t "Layers")
+\r t
+\a pteSetVisible("FILLER drawing" t "Layers")
+\r t
+\a pteSetVisible("VIAEXCL drawing" t "Layers")
+\r t
+\a pteSetVisible("Psub drawing" t "Layers")
+\r t
+\a pteSetVisible("Metal1 slot" t "Layers")
+\r t
+\a pteSetVisible("Metal2 slot" t "Layers")
+\r t
+\a pteSetVisible("Metal3 slot" t "Layers")
+\r t
+\a pteSetVisible("Metal4 slot" t "Layers")
+\r t
+\a pteSetVisible("Metal6 slot" t "Layers")
+\r t
+\a pteSetVisible("Metal5 slot" t "Layers")
+\r t
+\a pteSetVisible("Metal7 slot" t "Layers")
+\r t
+\a pteSetVisible("Metal9 slot" t "Layers")
+\r t
+\a pteSetVisible("Metal8 slot" t "Layers")
+\r t
+\a pteSetVisible("Metal10 slot" t "Layers")
+\r t
+\a hiZoomOutAtMouse()
+\i -0.515:0.435
+\r t
+\a hiZoomOutAtMouse()
+\i -0.515:0.43
+\r t
+\a hiZoomOutAtMouse()
+\i -0.49:0.44
+\r t
+\a hiZoomInAtMouse()
+\i 0.79:0.41
+\r t
+\a hiZoomInAtMouse()
+\i 0.83:0.73
+\r t
+\a pteSetActiveLpp("Via1 drawing")
+\r nil
+\a leHiCreateVia()
+\o Loading via.cxt 
+\r t
+\a hiZoomInAtMouse()
+\i 0.025:0.905
+\r t
+\a hiZoomInAtMouse()
+\i 0.12:0.905
+\r t
+\a mouseAddPt(t)
+\i 0.0795:0.927
+\r t
+\a mouseAddPt(t)
+\i 0.2235:0.926
+\r t
+\a hiUndo()
+\r t
+\a mouseAddPt(t)
+\i 0.2225:0.925
+\r t
+\a hiZoomOutAtMouse()
+\i -0.15:1.075
+\r t
+\a hiZoomInAtMouse()
+\i 0.355:0.59
+\r t
+\a mouseAddPt(t)
+\i 0.281:0.6185
+\r t
+\a mouseAddPt(t)
+\i 0.4185:0.6175
+\r t
+\a cancelEnterFun()
+\r t
+\r nil
+\a hiUndo()
+\r t
+\a hiUndo()
+\r t
+\a hiUndo()
+\r t
+\a hiUndo()
+\r t
+\a leHiCreateVia()
+\p > 
+\a mouseAddPt(t)
+\i 0.2175:0.925
+\r t
+\a mouseAddPt(t)
+\i 0.1185:0.923
+\r t
+\a mouseAddPt(t)
+\i 0.2855:0.6185
+\r t
+\a mouseAddPt(t)
+\i 0.3835:0.6185
+\r t
+\a hiUndo()
+\r t
+\a mouseAddPt(t)
+\i 0.3845:0.6185
+\r t
+\a hiUndo()
+\r t
+\a hiUndo()
+\r t
+\a leHiCreateVia()
+\r t
+\a hiiToggleEnterForm(le0ViaForm) 
+\r t
+\a hiZoomInAtMouse()
+\i 0.49:0.605
+\r t
+\a hiZoomInAtMouse()
+\i 0.485:0.61
+\r t
+\a hiZoomInAtMouse()
+\i 0.485:0.61
+\r t
+\a hiZoomOutAtMouse()
+\i 0.485:0.61
+\r t
+\a hiZoomOutAtMouse()
+\i 0.485:0.61
+\r t
+\a hiZoomOutAtMouse()
+\i 0.49:0.615
+\r t
+\a hiZoomOutAtMouse()
+\i 0.485:0.615
+\r t
+\a hiZoomOutAtMouse()
+\i 0.485:0.615
+\r t
+\a cancelEnterFun()
+\r t
+\r nil
+\a mouseSingleSelectPt()
+\i 0.1:0
+\r t
+\a hiZoomInAtMouse()
+\i 0.105:-0.015
+\r t
+\a hiZoomInAtMouse()
+\i 0.105:-0.015
+\r t
+\a hiZoomInAtMouse()
+\i 0.105:-0.015
+\r t
+\a hiZoomInAtMouse()
+\i 0.105:-0.015
+\r t
+\a mouseSingleSelectPt()
+\i 0.105:-0.015
+\r t
+\a mouseSingleSelectPt()
+\i 0.105:-0.01
+\r t
+\a _lxHiMousePopUp()
+\o Loading apAssist.cxt 
+\o Loading dynAGUtil.cxt 
+\i 0.105:-0.01
+\i 0.105:-0.01
+\r nil
+\a hiPopupDown(_cxtMenu)
+\r t
+\a leHiEditProp()
+\r t
+\a geiPlInvokePlistAction("editorNum0" "close")
+\r t
+\a hiZoomOutAtMouse()
+\i 0.12:0
+\r t
+\a hiZoomOutAtMouse()
+\i 0.12:0.01
+\r t
+\a mouseSingleSelectPt()
+\i 0.1:-0.02
+\r t
+\a mouseSingleSelectPt()
+\i -0.1:-0.015
+\r nil
+\a mouseSingleSelectPt()
+\i 0.09:-0.015
+\r t
+\a pteSetVisible("Cont drawing" nil "Layers")
+\r t
+\a pteSetVisible("Cont drawing" t "Layers")
+\r t
+\a pteSetVisible("Cont drawing" nil "Layers")
+\r t
+\a pteSetVisible("Cont drawing" t "Layers")
+\r t
+\a pteSetVisible("Cont drawing" nil "Layers")
+\r t
+\a pteSetVisible("Cont drawing" t "Layers")
+\r t
+\a mouseSingleSelectPt()
+\i 0.365:0.6
+\r t
+\a mouseSingleSelectPt()
+\i 0.375:0.585
+\r t
+\a leHiCreateVia()
+\p > 
+\a mouseAddPt(t)
+\i 0.283:0.6165
+\r t
+\a hiUndo()
+\r t
+\a le0ViaForm->viaSingleModeScrollView->viaDefName->value="M2_M1"
+\r "M2_M1"
+\a mouseAddPt(t)
+\i 0.2965:0.6095
+\r t
+\a mouseAddPt(t)
+\i 0.3735:0.608
+\r t
+\a hiUndo()
+\r t
+\a hiUndo()
+\r t
+\a hiUndo()
+\r t
+\a hiUndo()
+\r t
+\a mouseAddPt(t)
+\i 0.216:0.9235
+\r t
+\a mouseAddPt(t)
+\i 0.136:0.9225
+\r t
+\a mouseAddPt(t)
+\i 0.292:0.614
+\r t
+\a mouseAddPt(t)
+\i 0.3705:0.613
+\r t
+\a le0ViaForm->viaSingleModeScrollView->parameters->value=3
+\r 3
+\a le0ViaForm->viaSingleModeScrollView->parameters->value=1
+\r 1
+\a le0ViaForm->viaSingleModeScrollView->rows->value= 2
+\r 2
+\a le0ViaForm->viaSingleModeScrollView->rows->value= 1
+\r 1
+\a le0ViaForm->viaSingleModeScrollView->columns->value= 2
+\r 2
+\a hiUndo()
+\r t
+\a hiUndo()
+\r t
+\a hiUndo()
+\r t
+\a hiUndo()
+\r t
+\a mouseAddPt(t)
+\i 0.1455:0.9245
+\r t
+\a mouseAddPt(t)
+\i 0.364:0.6215
+\r t
+\a hiUndo()
+\r t
+\a mouseAddPt(t)
+\i 0.2775:0.616
+\r t
+\a hiZoomOutAtMouse()
+\i 0.08:0.625
+\r t
+\a hiZoomOutAtMouse()
+\i 0.84:0.835
+\r t
+\a hiZoomInAtMouse()
+\i 0.835:0.835
+\r t
+\a pteSetVisible("Nlvt drawing" nil "Layers")
+\r t
+\a pteSetVisible("Nlvt drawing" t "Layers")
+\r t
+\a hiiToggleEnterForm(le0ViaForm) 
+\r t
+\a cancelEnterFun()
+\r t
+\r nil
+\a mouseSingleSelectPt()
+\i 0.275:0.315
+\r t
+\a leHiMove()
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\p > 
+\a mouseAddPt(t)
+\i 0.9065:0.455
+\r t
+\a hiZoomInAtMouse()
+\i 0.91:0.545
+\r t
+\a mouseAddPt(t)
+\i 0.3585:0.7145
+\r t
+\r t
+\a hiUndo()
+\r t
+\a mouseSingleSelectPt()
+\i 0.265:0.365
+\r t
+\a mouseSingleSelectPt()
+\i 0.295:0.35
+\r t
+\a leHiMove()
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\p > 
+\a mouseAddPt(t)
+\i 0.3:0.3875
+\r t
+\a hiResizeWindow(swindow(2) list(-10:24 1910:1005))
+\r t
+\a mouseAddPt(t)
+\i 0.16:0.486
+\r t
+\r t
+\a mouseSingleSelectPt()
+\i 1.01:0.535
+\r nil
+\a mouseSingleSelectPt()
+\i 0.41:0.18
+\r t
+\a mouseSingleSelectPt()
+\i 0.135:0.41
+\r t
+\a leHiMove()
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\p > 
+\a mouseAddPt(t)
+\i 0.137:0.411
+\r t
+\a mouseAddPt(t)
+\i 0.2745:0.41
+\r t
+\r t
+\a mouseSingleSelectPt()
+\i 0.19:0.63
+\r t
+\a leHiMove()
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\p > 
+\a mouseAddPt(t)
+\i 0.195:0.605
+\r t
+\a mouseAddPt(t)
+\i 0.2065:0.6175
+\r t
+\r t
+\a mouseSingleSelectPt()
+\i 1.015:0.52
+\r nil
+\a leHiCreateWire()
+\w *WARNING* (LE-105026): Switching to next valid routing layer ("Metal2").
+\p > 
+\a mouseAddPt(t)
+\i 0.1535:0.2795
+\r t
+\a cancelEnterFun()
+\r t
+\r nil
+\a leHiCreateWire()
+\p > 
+\a mouseAddPt(t)
+\i 0.1505:0.3735
+\r t
+\a mouseAddPt(t)
+\i 0.1725:0.285
+\r t
+\a hiZoomInAtMouse()
+\i 0.15:0.19
+\r t
+\a hiUndo()
+\r t
+\a leHiCreateWire()
+\r t
+\r nil
+\p > 
+\a mouseAddPt(t)
+\i 0.1525:0.274
+\r t
+\a mouseAddPt(t)
+\i 0.1555:0.375
+\r t
+\a cancelEnterFun()
+\r t
+\a hiZoomInAtMouse()
+\i 0.74:0.555
+\r t
+\a hiZoomInAtMouse()
+\i 0.74:0.555
+\r t
+\a hiZoomOutAtMouse()
+\i 0.74:0.555
+\r t
+\a hiZoomOutAtMouse()
+\i 0.74:0.555
+\r t
+\a hiZoomOutAtMouse()
+\i 0.74:0.56
+\r t
+\a hiZoomOutAtMouse()
+\i 0.455:0.44
+\r t
+\a mouseSingleSelectPt()
+\i 0.305:0.615
+\r t
+\a leHiMove()
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\p > 
+\a mouseAddPt(t)
+\i 0.302:0.6115
+\r t
+\a mouseAddPt(t)
+\i 0.298:0.676
+\r t
+\r t
+\a hiZoomOutAtMouse()
+\i 1.2:0.73
+\r t
+\a hiZoomInAtMouse()
+\i 1.155:0.705
+\r t
+\a mouseSingleSelectPt()
+\i 0.205:1.15
+\r t
+\a hiZoomInAtMouse()
+\i -0.045:0.08
+\r t
+\a hiZoomInAtMouse()
+\i -0.045:0.08
+\r t
+\a hiZoomInAtMouse()
+\i -0.045:0.08
+\r t
+\a hiZoomInAtMouse()
+\i -0.045:0.08
+\r t
+\a hiZoomInAtMouse()
+\i -0.045:0.08
+\r t
+\a hiZoomInAtMouse()
+\i -0.045:0.08
+\r t
+\a hiZoomInAtMouse()
+\i -0.045:0.08
+\r t
+\a hiZoomOutAtMouse()
+\i -0.06:0.08
+\r t
+\a hiZoomOutAtMouse()
+\i -0.06:0.08
+\r t
+\a hiZoomOutAtMouse()
+\i -0.06:0.085
+\r t
+\a hiZoomOutAtMouse()
+\i -0.055:0.08
+\r t
+\a hiZoomOutAtMouse()
+\i -0.06:0.085
+\r t
+\a hiZoomOutAtMouse()
+\i -0.055:0.08
+\r t
+\a hiZoomOutAtMouse()
+\i -0.05:0.085
+\r t
+\a hiZoomInAtMouse()
+\i 0.555:0.08
+\r t
+\a hiZoomInAtMouse()
+\i 0.555:0.085
+\r t
+\a hiZoomInAtMouse()
+\i 0.555:0.085
+\r t
+\a hiZoomInAtMouse()
+\i 0.555:0.085
+\r t
+\a hiZoomInAtMouse()
+\i 0.555:0.085
+\r t
+\a hiZoomOutAtMouse()
+\i 0.57:0.08
+\r t
+\a hiZoomOutAtMouse()
+\i 0.585:0.095
+\r t
+\a hiZoomOutAtMouse()
+\i 0.585:0.09
+\r t
+\a hiZoomOutAtMouse()
+\i 0.585:0.09
+\r t
+\a hiZoomOutAtMouse()
+\i 0.585:0.095
+\r t
+\a hiZoomInAtMouse()
+\i -0.135:0.76
+\r t
+\a hiZoomInAtMouse()
+\i -0.135:0.76
+\r t
+\a hiZoomInAtMouse()
+\i -0.135:0.76
+\r t
+\a hiZoomOutAtMouse()
+\i 0.075:0.73
+\r t
+\a hiZoomOutAtMouse()
+\i 0.07:0.725
+\r t
+\a hiZoomOutAtMouse()
+\i 0.14:0.48
+\r t
+\a hiZoomInAtMouse()
+\i 0.095:0.44
+\r t
+\a hiZoomOutAtMouse()
+\i 0.17:0.71
+\r t
+\a hiZoomOutAtMouse()
+\i 0.155:0.775
+\r t
+\a hiZoomInAtMouse()
+\i 0.325:0.115
+\r t
+\a hiZoomInAtMouse()
+\i 0.315:0.145
+\r t
+\a hiZoomInAtMouse()
+\i 0.115:0.385
+\r t
+\a hiZoomOutAtMouse()
+\i 0.11:0.43
+\r t
+\a hiZoomOutAtMouse()
+\i 0.11:0.43
+\r t
+\a hiZoomOutAtMouse()
+\i 0.11:0.435
+\r t
+\a hiResizeWindow(swindow(2) list(950:24 1910:1005))
+\r t
+\a hiZoomOutAtMouse()
+\i -2.29:1.61
+\r t
+\a hiZoomOutAtMouse()
+\i -2.29:1.615
+\r t
+\a hiZoomOutAtMouse()
+\i -2.29:1.61
+\r t
+\a hiZoomOutAtMouse()
+\i -2.29:1.61
+\r t
+\a hiZoomInAtMouse()
+\i 2.83:0.435
+\r t
+\a hiZoomInAtMouse()
+\i 2.725:0.54
+\r t
+\a hiZoomInAtMouse()
+\i 0:0.625
+\r t
+\a hiZoomInAtMouse()
+\i 0:0.625
+\r t
+\a leHiSplit()
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\r nil
+\a leHiSave()
+\r t
+\a mouseSingleSelectPt()
+\i -0.52:1.385
+\r nil
+\a hiZoomInAtMouse()
+\i 0.845:1.025
+\r t
+\a hiZoomInAtMouse()
+\i 0.855:1.02
+\r t
+\a hiZoomInAtMouse()
+\i 0.86:1.02
+\r t
+\a hiZoomInAtMouse()
+\i 0.86:1.02
+\r t
+\a hiZoomOutAtMouse()
+\i 0.845:1.025
+\r t
+\a hiZoomOutAtMouse()
+\i 0.845:1.025
+\r t
+\a hiZoomOutAtMouse()
+\i 0.84:1.025
+\r t
+\a hiZoomInAtMouse()
+\i -0.25:0.58
+\r t
+\a hiZoomOutAtMouse()
+\i -0.195:0.56
+\r t
+\a leHiMove()
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\p > 
+\a geSingleSelectBox()
+\i 0.33:1.28
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 0.32:1.41
+\r t
+\r nil
+\a mouseAddPt(t)
+\i 0.308:1.2635
+\r t
+\a mouseAddPt(t)
+\i 0.3015:1.255
+\r t
+\a mouseAddPt(t)
+\i 0.0485:1.151
+\r t
+\a mouseAddPt(t)
+\i 0.0485:1.1985
+\r t
+\a hiZoomInAtMouse()
+\i -0.215:0.99
+\r t
+\a hiZoomInAtMouse()
+\i -0.215:0.965
+\r t
+\a hiZoomOutAtMouse()
+\i -0.135:0.925
+\r t
+\a hiZoomOutAtMouse()
+\i -0.13:0.925
+\r t
+\a mouseAddPt(t)
+\i 0.0175:1.353
+\r t
+\a cancelEnterFun()
+\r t
+\r nil
+\a mouseSingleSelectPt()
+\i 0.02:1.355
+\r t
+\a mouseSingleSelectPt()
+\i 0.01:1.355
+\r t
+\a mouseSingleSelectPt()
+\i 0.015:1.355
+\r t
+\a mouseSingleSelectPt()
+\i 0.05:1.33
+\r t
+\a leHiMove()
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\p > 
+\a mouseAddPt(t)
+\i 0.0175:1.342
+\r t
+\a cancelEnterFun()
+\r t
+\r nil
+\a mouseSingleSelectPt()
+\i 0.05:1.3
+\r t
+\a leHiMove()
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\p > 
+\a mouseAddPt(t)
+\i 0.05:1.299
+\r t
+\a mouseAddPt(t)
+\i 0.0605:1.301
+\r t
+\r t
+\a leHiCreateWire()
+\p > 
+\a hiZoomInAtMouse()
+\i 0.08:1.565
+\r t
+\a hiZoomInAtMouse()
+\i 0.075:1.565
+\r t
+\a hiZoomOutAtMouse()
+\i 0.085:1.445
+\r t
+\a mouseAddPt(t)
+\i 0.34:1.144
+\r t
+\a mouseAddPt(t)
+\i 0.3445:1.089
+\r t
+\a leHiMove()
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\r t
+\a mouseAddPt(t)
+\i 0.3575:0.62
+\r t
+\a cancelEnterFun()
+\r t
+\r nil
+\a mouseSingleSelectPt()
+\i 0.325:0.605
+\r t
+\a leHiMove()
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\p > 
+\a mouseAddPt(t)
+\i 0.326:0.6045
+\r t
+\a mouseAddPt(t)
+\i 0.3225:0.675
+\r t
+\r t
+\a pteSetActiveLpp("Poly drawing")
+\r nil
+\a leHiCreateWire()
+\p > 
+\a cancelEnterFun()
+\r t
+\r nil
+\a mouseSingleSelectPt()
+\i 0.26:1.005
+\r t
+\a pteSetActiveLpp("Poly drawing")
+\r nil
+\a pteSetActiveLpp("Poly drawing")
+\r nil
+\a leHiCreateWire()
+\p > 
+\a mouseAddPt(t)
+\i 0.244:1.0045
+\w *WARNING* (WE-20052): The current wire width (0.045) is an odd multiple of the manufacturing grid. As a result, the wire centerline is off the manufacturing grid.
+\r t
+\a mouseAddPt(t)
+\i 0.2405:1.053
+\r t
+\a cancelEnterFun()
+\r t
+\r nil
+\a mouseSingleSelectPt()
+\i -0.08:0.99
+\r nil
+\a leHiSave()
+\r t
+\a hiZoomOutAtMouse()
+\i 0.545:0.795
+\r t
+\a hiZoomOutAtMouse()
+\i 0.415:0.94
+\r t
+\a hiZoomInAtMouse()
+\i 0.465:0.98
+\r t
+\a hiZoomOutAtMouse()
+\i 0.72:0.915
+\r t
+\a hiZoomInAtMouse()
+\i 0.72:0.51
+\r t
+\a hiZoomOutAtMouse()
+\i 0.085:1.455
+\r t
+\a _pvsOpenIPVSrunForm( 'drc ?timeout 30 )
+\r t
+\o *INFO* using "/users/Cours/ele8304/2/Labs/Tuto/inverseur/pvsUI_drcde.log" as a master PVS run log file
+\# Memory report: using         505 MB, process size 1,385 MB at UTC 2018.10.02 18:43:04.154
+\w *WARNING* PVS Color scheme: Color scheme is not set which might lead to error shapes or probes being displayed in unexpected colors. See /CMC/tools/cadence/PVS16.12.000_lnx86/tools/pvs/samples/color_setup/README for how to set up the color scheme.
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\# Memory report: using         649 MB, process size 1,529 MB at UTC 2018.10.02 18:43:06.224
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a _pvsOpenIPVSrunForm( 'lvs ?timeout 30 )
+\r t
+\o *INFO* using "/users/Cours/ele8304/2/Labs/Tuto/inverseur/pvsUI.log" as a master PVS run log file
+\o INFO: LVS BROWSER running
+\w *WARNING* PVS Color scheme: Color scheme is not set which might lead to error shapes or probes being displayed in unexpected colors. See /CMC/tools/cadence/PVS16.12.000_lnx86/tools/pvs/samples/color_setup/README for how to set up the color scheme.
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\o Started command server on port: 40474
+\o "Starting connectivity database server: /CMC/tools/cadence/PVS16.12.000_lnx86/bin/pvsProbeServer -ecdb /export/tmp/8304_2/verifications/lvs/.inv.ecdb"
+\o "Setting cell map file: /export/tmp/8304_2/verifications/lvs/lay_cellMap.txt"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\o "Starting probe server on port: 55331"
+\o No error data base is open.
+\o The QRC UI context file was successfully loaded
+\o Loading sna.cxt
+\a _qrcuiOpenPVSRunForm()
+\o QRC Run: Loading Technology Data. Standby...
+\p > 
+\a hiiSetCurrentForm('vuipreRcxForm)
+\r t
+\a hiFormDone(vuipreRcxForm)
+\r t
+\w *WARNING* Template file "/CMC/kits/AMSKIT616_GPDK/tech/gpdk045_v_4_0/pvs/.rcx_setup.tpl" cannot be found
+\o *Info* Default Substrate Tech Dir is not defined, replaced with the empty nameLoad complete.
+\p > 
+\a hiiSetCurrentForm('vuiRcxRunForm)
+\r t
+\a vuiRcxRunForm->vuiRCXTabField->page1->vuiRCXFlowTab->outputFormat->value="Extracted View"
+\r "Extracted View"
+\a vuiRcxRunForm->vuiRCXTabField->page1->vuiRCXFlowTab->technologyField->value="gpdk045_pvs"
+\r "gpdk045_pvs"
+\a vuiRcxRunForm->vuiRCXTabField->page1->vuiRCXFlowTab->technologyField->value="gpdk045_pvs"
+\r "gpdk045_pvs"
+\a vuiRcxRunForm->vuiRCXTabField->page1->vuiRCXFlowTab->technologyField->value="gpdk045_pvs"
+\r "gpdk045_pvs"
+\a vuiRcxRunForm->vuiRCXTabField->page1->vuiRCXFlowTab->ruleSetField->value="rcx_typical"
+\w *WARNING* Template file "/CMC/kits/AMSKIT616_GPDK/tech/gpdk045_v_4_0/pvs/.rcx_setup.tpl" cannot be found
+\r "rcx_typical"
+\a vuiRcxRunForm->vuiRCXTabField->page1->vuiRCXFlowTab->ruleSetDirSet->value= t
+\r t
+\a quiFileSelect(?returnVar vuiRcxRunForm->ruleSetDirField->value                                             ?startingDir vuiRcxRunForm->ruleSetDirField->value                                               ?mode 'dirs                                              ?supportTabs t                                              ?tabName "setupTab"                                              ?tabFieldName "ruleSetDirField")
+\p > 
+\a hiiSetCurrentForm('vuiRcxFileSelectForm)
+\r t
+\a hiiSetCurrentForm('vuiRcxRunForm)
+\r t
+\a hiiSetCurrentForm('vuiRcxFileSelectForm)
+\r t
+\a hiFormCancel(vuiRcxFileSelectForm)
+\r t
+\r nil
+\a hiiSetCurrentForm('vuiRcxRunForm)
+\r t
+\a vuiRcxRunForm->vuiRCXTabField->page1->vuiRCXFlowTab->ruleSetDirSet->value= nil
+\r nil
+\a vuiRcxRunForm->vuiRCXTabField->value=2
+\r 2
+\a vuiRcxRunForm->vuiRCXTabField->page2->vuiRCXExtractionTab->rcxExtractionMode->value="RC"
+\r "RC"
+\a vuiRcxRunForm->vuiRCXTabField->page2->vuiRCXExtractionTab->netNameSpace->value="Schematic Names"
+\r "Schematic Names"
+\a vuiRcxRunForm->vuiRCXTabField->page2->vuiRCXExtractionTab->refNode->value="vss"
+\r "vss"
+\a vuiRcxRunForm->vuiRCXTabField->page2->vuiRCXExtractionTab->capExtractMode->value="Coupled"
+\r "Coupled"
+\a vuiRcxRunForm->vuiRCXTabField->value=4
+\r 4
+\a vuiRcxRunForm->vuiRCXTabField->page4->vuiRCXNetlistingTab->vuiRCXParasiticResModels->value="Include Model"
+\r "Include Model"
+\a vuiRcxRunForm->vuiRCXTabField->page4->vuiRCXNetlistingTab->vuiRCXParasiticResModels->value="Do Not Include"
+\r "Do Not Include"
+\a hiFormDone(vuiRcxRunForm)
+\o CCLFile is /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.ccl
+\o LogFile is /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.log
+\o Starting the ipc:17 Run: IPC Id 23536: pid Quantus QRC.
+\r t
+\r nil
+\a hiiSetCurrentForm('tmp9)
+\r t
+\a hiFormDone(tmp9)
+\r t
+\o The Quantus QRC run "inv" completed successfully
+\o The output is in : 
+\o 
+\o Library: ele8304
+\o Cell:    inv
+\o View:    av_extracted
+\a hiDBoxOK(vuiRcxRunDialog)
+\r t
+\i ddsServOpen("ele8304" "inv" "av_extracted" "edit" nil)
+\a when(dwindow('ptePaletteAssistant2) hiMapWindow(dwindow('ptePaletteAssistant2)))
+\r t
+\a hiResizeWindow(swindow(3) list(774:191 1674:881))
+\r t
+\a hiResizeWindow(swindow(3) list(-10:24 1910:1005))
+\r t
+\a hiZoomInAtMouse()
+\i 0.005:0.755
+\r t
+\a mouseSingleSelectPt()
+\i 2.505:0.69
+\r nil
+\a hiGetCurrentWindow()->stopLevel = dbGetMaxHierDepth()-1
+\r 31
+\a hiGetCurrentWindow()->stopLevel = dbGetMaxHierDepth()-1
+\r 31
+\a hiGetCurrentWindow()->stopLevel = dbGetMaxHierDepth()-1
+\r 31
+\a hiGetCurrentWindow()->stopLevel = dbGetMaxHierDepth()-1
+\r 31
+\a hiGetCurrentWindow()->stopLevel = dbGetMaxHierDepth()-1
+\r 31
+\a hiSetCurrentWindow(window(3))
+\r t
+\a hiZoomInAtMouse()
+\i 0.265:0.435
+\r t
+\a hiZoomInAtMouse()
+\i 0.265:0.42
+\r t
+\a hiSetCurrentWindow(window(4))
+\r t
+\a hiZoomInAtMouse()
+\i 0.325:0.425
+\r t
+\a hiZoomInAtMouse()
+\i 0.256:0.4195
+\r t
+\a hiZoomInAtMouse()
+\i 0.23:0.42
+\r t
+\a hiZoomOutAtMouse()
+\i 0.32:0.455
+\r t
+\a hiZoomOutAtMouse()
+\i 0.28:0.45
+\r t
+\o  
+\o Library Manager new cellview request for cell "ele8304 inv_tb".
+\i deNew('(nil libName "ele8304" cellName "inv_tb"))
+\p > 
+\a hiiSetCurrentForm('deNewForm)
+\r t
+\a deNewForm->viewType->value="config"
+\r "config"
+\a hiFormDone(deNewForm)
+\r t
+\o Loading hed.cxt 
+\a nrSetWindowVisibility(hedNewConfigDialog_w6 "show")
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w6)
+\r t
+\a nrResizeWindow(hedNewConfigDialog_w6 list(290 127 500 600))
+\r t
+\a _hedSelectLCV(hedNewConfigDialog_w6->hedLCVSelection "ele8304" "inv_tb" "schematic")
+\r t
+\a hedNewConfigDialog_w6->buildLibList->value = t
+\r t
+\a nrSetWindowVisibility(hedListBuilderDialog "show")
+\r t
+\a nrSetCurrentWindow(hedListBuilderDialog)
+\r t
+\a nrResizeWindow(hedListBuilderDialog list(624 320 652 387))
+\r t
+\a hedListBuilderDialog->fromView->value = '("ele8304" )
+\r ("ele8304")
+\a hedListBuilderDialog->ok->value = t
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w6)
+\r t
+\a hedNewConfigDialog_w6->buildLibList->value = t
+\r t
+\a nrSetWindowVisibility(hedListBuilderDialog "show")
+\r t
+\a nrSetCurrentWindow(hedListBuilderDialog)
+\r t
+\a nrResizeWindow(hedListBuilderDialog list(624 320 652 387))
+\r t
+\a hedListBuilderDialog->fromView->value = '("ele8304" )
+\r ("ele8304")
+\a hedListBuilderDialog->insert->value = t
+\r t
+\a hedListBuilderDialog->toView->value = '("ele8304" )
+\r ("ele8304")
+\a hedListBuilderDialog->ok->value = t
+\r t
+\a hedNewConfigDialog_w6->libList->value = "ele8304"
+\r "ele8304"
+\a nrSetCurrentWindow(hedNewConfigDialog_w6)
+\r t
+\a hedNewConfigDialog_w6->buildViewList->value = t
+\r t
+\a nrSetWindowVisibility(hedListBuilderDialog "show")
+\r t
+\a nrSetCurrentWindow(hedListBuilderDialog)
+\r t
+\a nrResizeWindow(hedListBuilderDialog list(624 320 652 387))
+\r t
+\a hedListBuilderDialog->fromView->value = '("cmos_sch" )
+\r ("cmos_sch")
+\a hedListBuilderDialog->insert->value = t
+\r t
+\a hedListBuilderDialog->toView->value = '("cmos_sch" )
+\r ("cmos_sch")
+\a hedListBuilderDialog->remove->value = t
+\r t
+\a hedListBuilderDialog->fromView->value = '("cmos_sch" )
+\r ("cmos_sch")
+\a hedListBuilderDialog->cancel->value = t
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w6)
+\r t
+\a hedNewConfigDialog_w6->buildStopList->value = t
+\r t
+\a nrSetWindowVisibility(hedListBuilderDialog "show")
+\r t
+\a nrSetCurrentWindow(hedListBuilderDialog)
+\r t
+\a nrResizeWindow(hedListBuilderDialog list(624 320 652 387))
+\r t
+\a hedListBuilderDialog->cancel->value = t
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w6)
+\r t
+\a hedNewConfigDialog_w6->buildLibList->value = t
+\r t
+\a nrSetWindowVisibility(hedListBuilderDialog "show")
+\r t
+\a nrSetCurrentWindow(hedListBuilderDialog)
+\r t
+\a nrResizeWindow(hedListBuilderDialog list(624 320 652 387))
+\r t
+\a hedListBuilderDialog->cancel->value = t
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w6)
+\r t
+\a hedNewConfigDialog_w6->viewList->value = "av_extracted"
+\r "av_extracted"
+\a hedNewConfigDialog_w6->buildViewList->value = t
+\r t
+\a nrSetWindowVisibility(hedListBuilderDialog "show")
+\r t
+\a nrSetCurrentWindow(hedListBuilderDialog)
+\r t
+\a nrResizeWindow(hedListBuilderDialog list(624 320 652 387))
+\r t
+\a hedListBuilderDialog->toView->value = '("av_extracted" )
+\r ("av_extracted")
+\a hedListBuilderDialog->cancel->value = t
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w6)
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w6)
+\r t
+\a hedNewConfigDialog_w6->useTemplate->value = t
+\r t
+\a nrSetWindowVisibility(hedNewConfigDialog_w6_useTemplateDialog "show")
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w6_useTemplateDialog)
+\r t
+\a nrResizeWindow(hedNewConfigDialog_w6_useTemplateDialog list(340 337 400 179))
+\r t
+\a hedNewConfigDialog_w6_useTemplateDialog->file->value = "/CMC/tools/cadence/IC617_lnx86/share/cdssetup/hierEditor/templates/spectre"
+\r "/CMC/tools/cadence/IC617_lnx86/share/cdssetup/hierEditor/templates/spectre"
+\a hedNewConfigDialog_w6_useTemplateDialog->name->value = "spectre"
+\r "spectre"
+\a hedNewConfigDialog_w6_useTemplateDialog->ok->value = t
+\r t
+\a hedNewConfigDialog_w6->libList->value = "myLib"
+\r "myLib"
+\a hedNewConfigDialog_w6->viewList->value = "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice"
+\r "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice"
+\a hedNewConfigDialog_w6->stopList->value = "spectre"
+\r "spectre"
+\a hedNewConfigDialog_w6->description->value = ""
+\r ""
+\a hedNewConfigDialog_w6->description->value = " Default template for spectre\\n Note:\\n      Please remember to replace Top Cell Library, Cell, and View\\n      fields with the actual names used by your design.\\n"
+\r " Default template for spectre\\n Note:\\n      Please remember to replace Top Cell Library, Cell, and View\\n      fields with the actual names used by your design.\\n"
+\a nrSetCurrentWindow(hedNewConfigDialog_w6)
+\r t
+\a hedNewConfigDialog_w6->buildLibList->value = t
+\r t
+\a nrSetWindowVisibility(hedListBuilderDialog "show")
+\r t
+\a nrSetCurrentWindow(hedListBuilderDialog)
+\r t
+\a nrResizeWindow(hedListBuilderDialog list(624 320 652 387))
+\r t
+\a hedListBuilderDialog->fromView->value = '("ele8304" )
+\r ("ele8304")
+\a hedListBuilderDialog->toView->value = '("myLib" )
+\r ("myLib")
+\a hedListBuilderDialog->fromView->value = '()
+\r nil
+\a hedListBuilderDialog->remove->value = t
+\r t
+\a hedListBuilderDialog->fromView->value = '("myLib" )
+\r ("myLib")
+\a hedListBuilderDialog->fromView->value = '("ele8304" )
+\r ("ele8304")
+\a hedListBuilderDialog->insert->value = t
+\r t
+\a hedListBuilderDialog->toView->value = '("ele8304" )
+\r ("ele8304")
+\a hedListBuilderDialog->ok->value = t
+\r t
+\a hedNewConfigDialog_w6->libList->value = "ele8304"
+\r "ele8304"
+\a nrSetCurrentWindow(hedNewConfigDialog_w6)
+\r t
+\a hedNewConfigDialog_w6->buildViewList->value = t
+\r t
+\a nrSetWindowVisibility(hedListBuilderDialog "show")
+\r t
+\a nrSetCurrentWindow(hedListBuilderDialog)
+\r t
+\a nrResizeWindow(hedListBuilderDialog list(624 320 652 387))
+\r t
+\a hedListBuilderDialog->addValue->value = "av_extracted"
+\r "av_extracted"
+\a hedListBuilderDialog->add->value = t
+\r t
+\a hedListBuilderDialog->toView->value = '("av_extracted" )
+\r ("av_extracted")
+\a hedListBuilderDialog->ok->value = t
+\r t
+\a hedNewConfigDialog_w6->viewList->value = "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice av_extracted"
+\r "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice av_extracted"
+\a nrSetCurrentWindow(hedNewConfigDialog_w6)
+\r t
+\a hedNewConfigDialog_w6->ok->value = t
+\r t
+\a _seeHiTbClearHistory(window(6)->hiToolbars->hedToolbar_win6->hedSearchCombo_1)
+\r t
+\a _seeHiClearHistory(dwindow('hedSearchBrowser1))
+\r t
+\a _hedSetCurrent(window(6)->hedPartsTable "(analogLib vpulse spectre)" 2 1)
+\r t
+\a _hedSelect(window(6)->hedPartsTable '((nil 2 2)))
+\r t
+\a _hedSetCurrent(window(6)->hedPartsTable "(analogLib cap spectre)" 0 1)
+\r t
+\a _hedSelect(window(6)->hedPartsTable '((nil 0 0)))
+\r t
+\a window(6)->hedViewTab->value = "1"
+\r "1"
+\a _hedExpandTreeItem(window(6)->hedTree "/I0")
+\r t
+\a _hedCollapseTreeItem(window(6)->hedTree "/I0")
+\r t
+\a window(6)->hedViewTab->value = "0"
+\r "0"
+\a hiSetCurrentWindow(window(4))
+\r t
+\a hiZoomOutAtMouse()
+\i 1.28:0.59
+\r t
+\a hiZoomOutAtMouse()
+\i 0.805:0.57
+\r t
+\a hiZoomInAtMouse()
+\i 1.01:1.465
+\r t
+\a hiSetCurrentWindow(window(3))
+\r t
+\a _qrcuiOpenPVSRunForm()
+\o QRC Run: Loading Technology Data. Standby...
+\p > 
+\a hiiSetCurrentForm('vuipreRcxForm)
+\r t
+\a quiFileSelect(?returnVar vuipreRcxForm->runDir->value 		    	          ?title if(pvsRunFlag "PVS Data Directory Selector" "Calibre query directory Selector")         	                  ?startingDir  if(isDir(vuipreRcxForm->runDir->value) 			                             vuipreRcxForm->runDir->value                                                      getWorkingDir())         	                  ?mode 'dirs)
+\p > 
+\a hiiSetCurrentForm('vuiRcxFileSelectForm)
+\r t
+\a hiFormCancel(vuiRcxFileSelectForm)
+\r t
+\r nil
+\a hiiSetCurrentForm('vuipreRcxForm)
+\r t
+\a vuipreRcxForm->tech->value="gpdk045_pvs"
+\r "gpdk045_pvs"
+\a hiFormDone(vuipreRcxForm)
+\r t
+\w *WARNING* Template file "/CMC/kits/AMSKIT616_GPDK/tech/gpdk045_v_4_0/pvs/.rcx_setup.tpl" cannot be found
+\o *Info* Default Substrate Tech Dir is not defined, replaced with the empty name*Info* Ignoring peecMode from the State File
+\o Load complete.
+\p > 
+\a hiiSetCurrentForm('vuiRcxRunForm)
+\r t
+\a vuiRcxRunForm->vuiRCXTabField->page1->vuiRCXFlowTab->ruleSetField->value="rcx_typical"
+\w *WARNING* Template file "/CMC/kits/AMSKIT616_GPDK/tech/gpdk045_v_4_0/pvs/.rcx_setup.tpl" cannot be found
+\r "rcx_typical"
+\a vuiRcxRunForm->vuiRCXTabField->value=2
+\r 2
+\a vuiRcxRunForm->vuiRCXTabField->value=4
+\r 4
+\a hiCloseWindow(swindow(3))
+\r t
+\a hiSetCurrentWindow(window(6))
+\r t
+\a hiFormDone(vuiRcxRunForm)
+\w *WARNING* Cell View Exists. Overwrite?
+\w 
+\w Library: ele8304
+\w Cell:    inv
+\w View:    av_extracted
+\p > 
+\a hiDBoxOK(vuiDBox)
+\r t
+\o CCLFile is /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.ccl
+\o LogFile is /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.log
+\o Starting the ipc:22 Run: IPC Id 16922: pid Quantus QRC.
+\r t
+\r nil
+\a hiiSetCurrentForm('tmp10)
+\r t
+\a hiFormDone(tmp10)
+\r t
+\o The Quantus QRC run "inv" completed successfully
+\o The output is in : 
+\o 
+\o Library: ele8304
+\o Cell:    inv
+\o View:    av_extracted
+\a hiDBoxOK(vuiRcxRunDialog)
+\r t
+\o  
+\o Library Manager new cellview request for cell "ele8304 inv_tb".
+\i deNew('(nil libName "ele8304" cellName "inv_tb"))
+\p > 
+\a hiiSetCurrentForm('deNewForm)
+\r t
+\a deNewForm->viewType->value="config"
+\r "config"
+\a hiFormDone(deNewForm)
+\r t
+\a hiCloseWindow(swindow(4))
+\a nrSetWindowVisibility(hedQuerySaveMsgBox "show")
+\r t
+\a nrResizeWindow(hedQuerySaveMsgBox list(199 864 308 87))
+\r t
+\a nrSetCurrentWindow(hedQuerySaveMsgBox)
+\r t
+\a hedQuerySaveMsgBox->No->value = t
+\r t
+\r t
+\a _hiSetCurrentWinNum(3)
+\r t
+\o  
+\o Library Manager new cellview request for cell "ele8304 inv_tb".
+\i deNew('(nil libName "ele8304" cellName "inv_tb"))
+\p > 
+\a hiFormDone(deNewForm)
+\r t
+\a nrSetWindowVisibility(hedNewConfigDialog_w9 "show")
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w9)
+\r t
+\a nrResizeWindow(hedNewConfigDialog_w9 list(290 127 500 600))
+\r t
+\a _hedSelectLCV(hedNewConfigDialog_w9->hedLCVSelection "ele8304" "inv_tb" "schematic")
+\r t
+\a hedNewConfigDialog_w9->useTemplate->value = t
+\r t
+\a nrSetWindowVisibility(hedNewConfigDialog_w9_useTemplateDialog "show")
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w9_useTemplateDialog)
+\r t
+\a nrResizeWindow(hedNewConfigDialog_w9_useTemplateDialog list(340 337 400 179))
+\r t
+\a hedNewConfigDialog_w9_useTemplateDialog->file->value = "/CMC/tools/cadence/IC617_lnx86/share/cdssetup/hierEditor/templates/spectre"
+\r "/CMC/tools/cadence/IC617_lnx86/share/cdssetup/hierEditor/templates/spectre"
+\a hedNewConfigDialog_w9_useTemplateDialog->name->value = "spectre"
+\r "spectre"
+\a hedNewConfigDialog_w9_useTemplateDialog->ok->value = t
+\r t
+\a hedNewConfigDialog_w9->libList->value = "myLib"
+\r "myLib"
+\a hedNewConfigDialog_w9->viewList->value = "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice"
+\r "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice"
+\a hedNewConfigDialog_w9->stopList->value = "spectre"
+\r "spectre"
+\a hedNewConfigDialog_w9->description->value = ""
+\r ""
+\a hedNewConfigDialog_w9->description->value = " Default template for spectre\\n Note:\\n      Please remember to replace Top Cell Library, Cell, and View\\n      fields with the actual names used by your design.\\n"
+\r " Default template for spectre\\n Note:\\n      Please remember to replace Top Cell Library, Cell, and View\\n      fields with the actual names used by your design.\\n"
+\a nrSetCurrentWindow(hedNewConfigDialog_w9)
+\r t
+\a hedNewConfigDialog_w9->buildLibList->value = t
+\r t
+\a nrSetWindowVisibility(hedListBuilderDialog "show")
+\r t
+\a nrSetCurrentWindow(hedListBuilderDialog)
+\r t
+\a nrResizeWindow(hedListBuilderDialog list(624 320 652 387))
+\r t
+\a hedListBuilderDialog->toView->value = '("myLib" )
+\r ("myLib")
+\a hedListBuilderDialog->remove->value = t
+\r t
+\a hedListBuilderDialog->fromView->value = '("myLib" )
+\r ("myLib")
+\a hedListBuilderDialog->fromView->value = '("ele8304" )
+\r ("ele8304")
+\a hedListBuilderDialog->insert->value = t
+\r t
+\a hedListBuilderDialog->toView->value = '("ele8304" )
+\r ("ele8304")
+\a hedListBuilderDialog->ok->value = t
+\r t
+\a hedNewConfigDialog_w9->libList->value = "ele8304"
+\r "ele8304"
+\a nrSetCurrentWindow(hedNewConfigDialog_w9)
+\r t
+\a hedNewConfigDialog_w9->buildViewList->value = t
+\r t
+\a nrSetWindowVisibility(hedListBuilderDialog "show")
+\r t
+\a nrSetCurrentWindow(hedListBuilderDialog)
+\r t
+\a nrResizeWindow(hedListBuilderDialog list(624 320 652 387))
+\r t
+\a hedListBuilderDialog->addValue->value = "av_extracted"
+\r "av_extracted"
+\a hedListBuilderDialog->add->value = t
+\r t
+\a hedListBuilderDialog->toView->value = '("av_extracted" )
+\r ("av_extracted")
+\a hedListBuilderDialog->ok->value = t
+\r t
+\a hedNewConfigDialog_w9->viewList->value = "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice av_extracted"
+\r "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice av_extracted"
+\a nrSetCurrentWindow(hedNewConfigDialog_w9)
+\r t
+\a hedNewConfigDialog_w9->ok->value = t
+\r t
+\a _seeHiTbClearHistory(window(9)->hiToolbars->hedToolbar_win9->hedSearchCombo_2)
+\r t
+\a _seeHiClearHistory(dwindow('hedSearchBrowser2))
+\r t
+\a _hedSetCurrent(window(9)->hedPartsTable "(ele8304 inv_tb schematic)" 4 4)
+\r t
+\a _hedSelect(window(9)->hedPartsTable '((nil 4 4)))
+\r t
+\a _hedSetCurrent(window(9)->hedPartsTable "(ele8304 inv_tb schematic)" 4 3)
+\r t
+\a hiResizeWindow(swindow(5) list(-46:79 654:879))
+\r t
+\a _hedSetCurrent(window(9)->hedPartsTable "(ele8304 inv schematic)" 3 3)
+\r t
+\a _hedSelect(window(9)->hedPartsTable '((nil 3 3)))
+\r t
+\i ddsServOpen("ele8304" "inv" "av_extracted" "edit" nil)
+\a when(dwindow('ptePaletteAssistant3) hiMapWindow(dwindow('ptePaletteAssistant3)))
+\r t
+\i ddsServOpen("ele8304" "inv_tb" "schematic" "edit" nil)
+\a _treeNavActivateOpc(dwindow('treeAssistant5) "")
+\r t
+\a when(dwindow('oiAssistant5) hiMapWindow(dwindow('oiAssistant5)))
+\r t
+\a when(dwindow('treeAssistant5) hiMapWindow(dwindow('treeAssistant5)))
+\r t
+\a hiCloseWindow(swindow(7))
+\r t
+\a _hiSetCurrentWinNum(10)
+\r t
+\a hiSetCurrentWindow(window(3))
+\r t
+\a hiCloseWindow(swindow(2))
+\# Memory report: using         755 MB, process size 1,635 MB at UTC 2018.10.02 19:10:30.104
+\r t
+\a _hiSetCurrentWinNum(2)
+\r t
+\a hiResizeWindow(swindow(5) list(300:58 1000:858))
+\r t
+\a hiSetCurrentWindow(window(9))
+\r t
+\a dwindow('hedGlobalBindings2)->buildLibList->value = t
+\r t
+\a nrSetWindowVisibility(hedListBuilderDialog "show")
+\r t
+\a nrSetCurrentWindow(hedListBuilderDialog)
+\r t
+\a nrResizeWindow(hedListBuilderDialog list(624 320 652 387))
+\r t
+\a hedListBuilderDialog->cancel->value = t
+\r t
+\a _hedSetCurrent(window(9)->hedPartsTable "(ele8304 inv schematic)" 3 2)
+\r t
+\a _hedSetCurrent(window(9)->hedPartsTable "(ele8304 inv schematic)" 3 3)
+\r t
+\a hiResizeWindow(swindow(5) list(251:127 951:927))
+\r t
+\a _hedTriggerActionCB("save")
+\r t
+\o Bound cell (ele8304 inv) to view 'av_extracted'.
+\a _hedSetViewBinding(window(9)->hedPartsTable "av_extracted")
+\r t
+\a hiPopupDown(_hedPartsTableMenu)
+\r t
+\a _hedDeSelect(window(9)->hedPartsTable '((nil 3 3)))
+\r t
+\a _hedTriggerActionCB("update")
+\a nrSetWindowVisibility(hedUpdateSyncDialog "show")
+\r t
+\a nrSetCurrentWindow(hedUpdateSyncDialog)
+\r t
+\a nrResizeWindow(hedUpdateSyncDialog list(782 332 335 363))
+\r t
+\a hedUpdateSyncDialog->ok->value = t
+\r t
+\r t
+\a _hedTriggerActionCB("save")
+\r t

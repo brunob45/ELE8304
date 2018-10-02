@@ -1,0 +1,30 @@
+;              Cadence environment variable file (.cdsenv)
+;
+;	samples values can be found in:
+;		/CMC/tools/cadence/IC617_lnx86/tools/dfII/samples/.cdsenv
+;
+;---------------------------------------------------------------------------
+
+;;;;;;;;;;;;;;
+;; ADE setup
+;;;;;;;;;;;;;;
+asimenv.startup       projectDir       string  "/export/tmp/8304_2/simulations"
+asimenv.startup       simulator        string  "spectre"
+asimenv               saveAsCellview   boolean t
+
+;;;;;;;;;;;;;;
+;; CIW options
+;;;;;;;;;;;;;;
+ui	showScrollBars	boolean	t
+
+;;;;;;;;;;;;;;
+;; turn off Whats New displays
+;;;;;;;;;;;;;;
+ddserv	showWhatsNew	string	"no"
+
+;;;;;;;;;;;;;;
+;; Use next license available
+;;;;;;;;;;;;;;
+license	VLSL_UseNextLicense	string	"always"
+license	ADEL_UseNextLicense	string	"always"
+license	VSEL_UseNextLicense	string	"always"

@@ -1,0 +1,6 @@
+#!/bin/sh -f
+#--------------------------------------------------------------------------------------
+# THE RUN FILE created by Cadence Extraction Quantus QRC UI Version 17.21-s063
+#--------------------------------------------------------------------------------------
+
+qrc  -log_file /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.log -cmd /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.ccl 

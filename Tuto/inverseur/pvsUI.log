@@ -1,0 +1,22 @@
+Parameters:
+	-runDir
+	/export/tmp/8304_2/verifications/lvs/
+	-ossdir
+	/export/tmp/8304_2/verifications/lvs/
+	-cellmap
+	/export/tmp/8304_2/verifications/lvs/lay_cellMap.txt
+	-ppid
+	16875
+	-form
+	-viewer
+	virtuoso
+	-schview
+	schematic
+	-tag
+	FGNQIWFBKBSTEHPIP
+
+
+starting pvsProbeServer: port= 55331
+Starting probe server on port: 55331
+Checking out SoftShare license Phys_Ver_Sys_Results_Mgr 16.1 ... succeeded (1s).
+Checking in SoftShare license Phys_Ver_Sys_Results_Mgr ... succeeded (1s).

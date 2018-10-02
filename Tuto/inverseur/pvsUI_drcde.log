@@ -1,0 +1,22 @@
+Checking out SoftShare license Phys_Ver_Sys_Results_Mgr 16.1 ... succeeded (2s).
+********************************************************************************
+pvstdb 16.12-s208 64 bit (Thu Mar 22 23:09:45 PDT 2018)
+Build Ref No.: 208 Production (03-22-2018) [pvs_1612_a]
+
+Copyright 2018 Cadence Design Systems, Inc.
+All rights reserved worldwide.
+
+Build O/S:       Linux x86_64 2.6.18-194.el5
+Executed on:     vlsi315 (Linux x86_64 3.10.0-862.14.4.el7.x86_64)
+Process Id:      30919
+Starting Time:   Tue Oct  2 14:43:07 2018 (Tue Oct  2 18:43:07 2018 GMT)
+With parameters: -sf /export/tmp/8304_2/verifications/drc/inv.drc_errors.ascii.index /export/tmp/8304_2/verifications/drc/inv.drc_errors.ascii /export/tmp/8304_2/verifications/drc/inv.drc_errors.ascii.pvstdb 
+********************************************************************************
+
+Waiting for write lock on /export/tmp/8304_2/verifications/drc/inv.drc_errors.ascii.index.
+Obtained lock after 0 seconds.
+
+Summary: 0 markers created.
+
+pvstdb completed.
+38390383903839038390Checking in SoftShare license Phys_Ver_Sys_Results_Mgr ... succeeded (1s).

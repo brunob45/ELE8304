@@ -1,0 +1,20 @@
+//Revision 2
+//NOTE
+// Default template for spectre
+// Note:
+//      Please remember to replace Top Cell Library, Cell, and View
+//      fields with the actual names used by your design.
+//END_NOTE
+
+config inv_tb;
+design ele8304.inv_tb:schematic;
+liblist ele8304;
+
+viewlist spectre, cmos_sch, \cmos.sch , schematic, veriloga, ahdl, pspice, av_extracted;
+stoplist spectre;
+
+
+cell ele8304.inv binding :av_extracted;
+
+
+endconfig

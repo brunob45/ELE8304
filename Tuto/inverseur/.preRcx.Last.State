@@ -1,0 +1,14 @@
+
+
+vuipreRcxFormTable = '(
+	runName  "inv"
+	runDir  "/export/tmp/8304_2/verifications/lvs/svdb"
+	assuraTech  "/CMC/kits/AMSKIT616_GPDK/tech/gpdk045/pvtech.lib"
+	tech  "gpdk045_pvs"
+	mapFile  ""
+	netProp  5
+	instProp  6
+	devProp  7
+)
+
+
