@@ -2660,3 +2660,3742 @@
 \r t
 \a _hedTriggerActionCB("save")
 \r t
+\a _hedDeSelect(window(9)->hedPartsTable '((nil 5 5)))
+\r t
+\a hiResizeWindow(swindow(5) list(815:100 1515:900))
+\r t
+\a hiResizeWindow(swindow(5) list(890:102 1590:902))
+\r t
+\i ddsServOpen("ele8304" "inv" "layout" "edit" nil)
+\a when(dwindow('ptePaletteAssistant4) hiMapWindow(dwindow('ptePaletteAssistant4)))
+\r t
+\a _deUpdateMenu('maskLayoutTools 12)
+\r t
+\a deInstallApp(getCurrentWindow() "analogArtist-MaskLayout")
+\o Loading dal.cxt 
+\o Loading awv.cxt 
+\o Loading viva.cxt 
+\o Loading socket.cxt 
+\o Loading par.cxt 
+\o Loading alvs.cxt 
+\o Loading caa.cxt 
+\o Loading adexl.cxt 
+\w *WARNING* (icLic-203) Failed to check out license Analog_Design_Environment_L ("95200") to run ADE L because of status code -18.
+\w Attempting to check out the next available license Analog_Design_Environment_XL ("95210") per license checkout order L, XL, GXL.
+\o *INFO* (icLic-302) License Analog_Design_Environment_XL ("95210") was used to run ADE L.
+\r t
+\a hiResizeWindow(swindow(9) list(1048:271 1740:746))
+\r t
+\a hiCloseWindow(swindow(8))
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (DEBASE-102079): A SKILL error occurred in function _ipvs2AddToolbar
+\r t
+\a hiSetCurrentWindow(window(10))
+\r t
+\a _deUpdateMenu('maskLayoutTools 10)
+\r t
+\a deInstallApp(getCurrentWindow() "analogArtist-MaskLayout")
+\r t
+\a hiResizeWindow(swindow(10) list(825:247 1517:722))
+\r t
+\a hiResizeWindow(swindow(10) list(936:222 1628:697))
+\r t
+\a hiCloseWindow(swindow(9))
+\r t
+\a hiResizeWindow(swindow(10) list(1053:308 1745:783))
+\r t
+\a hiResizeWindow(swindow(5) list(897:7 1597:807))
+\r t
+\a hiCloseWindow(swindow(10))
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\r t
+\a _hiSetCurrentWinNum(10)
+\r t
+\a hiResizeWindow(swindow(5) list(1199:200 1899:1000))
+\r t
+\a _deUpdateMenu('maskLayoutTools 10)
+\r t
+\a deInstallApp(getCurrentWindow() "analogArtist-MaskLayout")
+\w *WARNING* (icLic-203) Failed to check out license Analog_Design_Environment_L ("95200") to run ADE L because of status code -18.
+\w Attempting to check out the next available license Analog_Design_Environment_XL ("95210") per license checkout order L, XL, GXL.
+\o *INFO* (icLic-302) License Analog_Design_Environment_XL ("95210") was used to run ADE L.
+\r t
+\a hiResizeWindow(swindow(11) list(1166:291 1858:766))
+\r t
+\a hiCloseWindow(swindow(11))
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\r t
+\a _hiSetCurrentWinNum(10)
+\r t
+\a hiSetCurrentWindow(window(9))
+\r t
+\a hiSetCurrentWindow(window(10))
+\r t
+\a _deUpdateMenu('maskLayoutTools 10)
+\r t
+\a deInstallApp(getCurrentWindow() "analogArtist-MaskLayout")
+\w *WARNING* (icLic-203) Failed to check out license Analog_Design_Environment_L ("95200") to run ADE L because of status code -18.
+\w Attempting to check out the next available license Analog_Design_Environment_XL ("95210") per license checkout order L, XL, GXL.
+\o *INFO* (icLic-302) License Analog_Design_Environment_XL ("95210") was used to run ADE L.
+\r t
+\a hiResizeWindow(swindow(12) list(244:295 936:770))
+\r t
+\a hiCloseWindow(swindow(12))
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\r t
+\a _hiSetCurrentWinNum(10)
+\r t
+\a hiSetCurrentWindow(window(9))
+\r t
+\a dwindow('hedTopCell2)->ade->value = t
+\r t
+\w *WARNING* (icLic-203) Failed to check out license Analog_Design_Environment_L ("95200") to run ADE L because of status code -18.
+\w Attempting to check out the next available license Analog_Design_Environment_XL ("95210") per license checkout order L, XL, GXL.
+\o *INFO* (icLic-302) License Analog_Design_Environment_XL ("95210") was used to run ADE L.
+\a hiResizeWindow(swindow(13) list(493:303 1185:778))
+\r t
+\a sevChooseSimulator('sevSession5)
+\p > 
+\a hiiSetCurrentForm('sevSimulatorForm5)
+\r t
+\a sevSimulatorForm5->simulator->value="spectre"
+\r "spectre"
+\a hiFormDone(sevSimulatorForm5)
+\p > 
+\a hiDBoxOK(aaMessage)
+\r t
+\a sevSetTableItem(connectModulesForm->ieFormTableBox 0 2 "")
+\r t
+\w *WARNING* (icLic-203) Failed to check out license Analog_Design_Environment_L ("95200") to run ADE L because of status code -18.
+\w Attempting to check out the next available license Analog_Design_Environment_XL ("95210") per license checkout order L, XL, GXL.
+\o *INFO* (icLic-302) License Analog_Design_Environment_XL ("95210") was used to run ADE L.
+\o INFO (ADE-1104): You are changing the simulator. All options that can be recognized
+\o      by the new simulator will be retained. All other options will be ignored.
+\o      You will not be warned about any ignored option. Be sure to check all your
+\o      forms (Analysis, Options, etc) to verify you have the setup you require 
+\r t
+\r t
+\a sevLoadState('sevSession5)
+\p > 
+\a hiiSetCurrentForm('sevLoadForm5)
+\r t
+\a hiFormDone(sevLoadForm5)
+\r t
+\r t
+\a sevTableSelectRows(sevAnaForm5->anaListBox 1)
+\r t
+\a sevNetlistAndRun('sevSession5)
+\o Delete psf data in /export/tmp/8304_2/simulations/inv_tb/spectre/config/psf.
+\o generate netlist...
+\o Loading seCore.cxt 
+\o Initializing the control file using cp:
+\o     cp /CMC/tools/cadence/IC617_lnx86/tools.lnx86/dfII/etc/si/control.spectre /export/tmp/8304_2/simulations/inv_tb/spectre/config/netlist/control
+\o Copying Spectre source file 'spectre.inp'
+\o Copying Spectre command file 'spectre.sim'
+\o Begin Incremental Netlisting Oct  2 15:20:08 2018
+\o End netlisting Oct  2 15:20:08 2018
+\o Loading monte.cxt 
+\o 
+\o Netlisting Statistics:
+\o 	Number of components:   37
+\o 
+\o 	Elapsed time:          1.0s (37.00/s)
+\o Errors: 0	Warnings: 0
+\o       ...successful.
+\o compose simulator input file...
+\o       ...successful.
+\o start simulator if needed...
+\o       ...successful.
+\o Loading paraplot.cxt 
+\r t
+\o simulate...
+\o INFO (ADE-3071): Simulation completed successfully.
+\o reading simulation data...
+\o       ...successful.
+\a rdbLoadResults("sevSession5" "/export/tmp/8304_2/simulations/inv_tb/spectre/config/psf")
+\r t
+\o net /vin selected but not highlighted
+\o net /vout selected but not highlighted
+\o terminal /I0/vdd selected but not highlighted
+\o terminal /I0/vss selected but not highlighted
+\# Memory report: using       1,356 MB, process size 2,345 MB at UTC 2018.10.02 19:20:14.020
+\# Memory report: Maximum memory size now 13,099 MB at UTC 2018.10.02 19:20:17.129
+\a hiSetCurrentWindow(window(19))
+\r t
+\a _ddtExecuteAction(awvGetCurrentWindow()->vivaSession "splitAllStrips")
+\r t
+\a hiResizeWindow(swindow(6) list(-10:24 1910:1005))
+\r t
+\a hiSetCurrentWindow(window(10))
+\r t
+\a hiZoomInAtMouse()
+\i 0.16:0.79
+\r t
+\a hiZoomInAtMouse()
+\i 0.16:0.78
+\r t
+\a hiZoomOutAtMouse()
+\i 0.045:0.75
+\r t
+\a hiZoomInAtMouse()
+\i -0.02:0.33
+\r t
+\a hiZoomOutAtMouse()
+\i -0.065:0.055
+\r t
+\a hiZoomOutAtMouse()
+\i -0.595:0.395
+\r t
+\a mouseSingleSelectPt()
+\i 2.145:0.855
+\r nil
+\a hiZoomInAtMouse()
+\i 2.14:0.85
+\r t
+\a hiZoomInAtMouse()
+\i 2.14:0.85
+\r t
+\a hiZoomOutAtMouse()
+\i 1.175:0.89
+\r t
+\a hiZoomOutAtMouse()
+\i 0.17:0.765
+\r t
+\a hiZoomInAtMouse()
+\i 0.23:0.85
+\r t
+\a hiZoomInAtMouse()
+\i 0.23:0.85
+\r t
+\a hiZoomInAtMouse()
+\i 0.36:0.795
+\r t
+\a hiZoomInAtMouse()
+\i 0.35:0.795
+\r t
+\a hiZoomOutAtMouse()
+\i 0.185:0.81
+\r t
+\a hiZoomOutAtMouse()
+\i 0.19:0.805
+\r t
+\a hiZoomOutAtMouse()
+\i 0.1915:0.805
+\r t
+\i ddsServOpen("ele8304" "inv" "layout" "edit" nil)
+\a when(dwindow('ptePaletteAssistant5) hiMapWindow(dwindow('ptePaletteAssistant5)))
+\r t
+\a hiResizeWindow(swindow(15) list(-10:24 1910:1005))
+\r t
+\a hiZoomInAtMouse()
+\i 0.22:0.65
+\r t
+\a hiZoomInAtMouse()
+\i 0.2525:0.685
+\r t
+\a hiZoomInAtMouse()
+\i 0.23:0.785
+\r t
+\a mouseSingleSelectPt()
+\i 0.23:0.95
+\r t
+\a _lxHiMousePopUp()
+\i 0.23:0.955
+\i 0.23:0.955
+\r nil
+\a hiPopupDown(_cxtMenu)
+\r t
+\a leHiEditProp()
+\r t
+\a geiPlInvokePlistAction("editorNum0" "cancel")
+\r t
+\a hiZoomOutAtMouse()
+\i 0.31:0.97
+\r t
+\a mouseSingleSelectPt()
+\i 0.375:0.715
+\r t
+\a leHiEditProp()
+\r t
+\a geiPlInvokePlistAction("editorNum0" "cancel")
+\r t
+\a hiResizeWindow(swindow(6) list(-10:24 950:1005))
+\r t
+\a hiResizeWindow(swindow(15) list(950:24 1910:1005))
+\r t
+\a hiZoomOutAtMouse()
+\i 0.38:1.125
+\r t
+\a hiZoomInAtMouse()
+\i 0.405:0.575
+\r t
+\a hiZoomInAtMouse()
+\i 0.315:0.67
+\r t
+\a pteSetVisible("Oxide drawing" nil "Layers")
+\r t
+\a pteSetVisible("Oxide drawing" t "Layers")
+\r t
+\a pteSetVisible("Oxide_thk drawing" nil "Layers")
+\r t
+\a pteSetVisible("Oxide_thk drawing" t "Layers")
+\r t
+\a pteSetVisible("Poly drawing" nil "Layers")
+\r t
+\a pteSetVisible("Poly drawing" t "Layers")
+\r t
+\a pteSetVisible("Pimp drawing" nil "Layers")
+\r t
+\a pteSetVisible("Pimp drawing" t "Layers")
+\r t
+\a pteSetVisible("Nhvt drawing" nil "Layers")
+\r t
+\a pteSetVisible("Nhvt drawing" t "Layers")
+\r t
+\a pteSetVisible("Nlvt drawing" nil "Layers")
+\r t
+\a pteSetVisible("Nlvt drawing" t "Layers")
+\r t
+\a pteSetVisible("Nimp drawing" nil "Layers")
+\r t
+\a pteSetVisible("Nimp drawing" t "Layers")
+\r t
+\a pteSetVisible("SiProt drawing" nil "Layers")
+\r t
+\a pteSetVisible("SiProt drawing" t "Layers")
+\r t
+\a pteSetVisible("Metal1 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal1 drawing" t "Layers")
+\r t
+\a pteSetVisible("Metal1 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal1 drawing" t "Layers")
+\r t
+\a pteSetVisible("Metal1 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal1 drawing" t "Layers")
+\r t
+\a pteSetVisible("Metal1 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal1 drawing" t "Layers")
+\r t
+\a pteSetVisible("Metal1 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal1 drawing" t "Layers")
+\r t
+\a pteSetVisible("Metal1 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal1 drawing" t "Layers")
+\r t
+\a pteSetVisible("Metal1 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal1 drawing" t "Layers")
+\r t
+\a pteSetVisible("Metal1 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal1 drawing" t "Layers")
+\r t
+\a pteSetVisible("Metal1 drawing" nil "Layers")
+\r t
+\a pteSetVisible("Metal1 drawing" t "Layers")
+\r t
+\a mouseSingleSelectPt()
+\i 0.2:0.69
+\r t
+\a mouseSingleSelectPt()
+\i 0.095:0.715
+\r t
+\a pteSetActiveLpp("Via1 drawing")
+\r nil
+\a leHiCreateWire()
+\o (LE-101213): Create wire command does not support "anyAngle" snap mode which is the snap Mode of
+\o current active Window. Setting it to "orthogonal".
+\w *WARNING* (LE-105026): Switching to next valid routing layer ("Metal2").
+\p > 
+\a mouseAddPt(t)
+\i 0.426:0.686
+\r t
+\a cancelEnterFun()
+\r t
+\r nil
+\a leHiAttach()
+\p > 
+\a mouseAddPt(t)
+\i 0.4505:0.6845
+\r t
+\r t
+\a leHiCopy()
+\p > 
+\a mouseAddPt(t)
+\i 0.434:0.658
+\r t
+\a cancelEnterFun()
+\r t
+\r nil
+\a hiZoomOutAtMouse()
+\i 0.455:0.665
+\r t
+\a leHiCreateVia()
+\p > 
+\a hiiToggleEnterForm(le0ViaForm) 
+\r t
+\a cancelEnterFun()
+\r t
+\r nil
+\a mouseSingleSelectPt()
+\i 0.195:0.685
+\r t
+\a leHiDelete()
+\r t
+\a _lxHiMousePopUp()
+\i 0.19:0.67
+\i 0.19:0.67
+\r nil
+\a hiPopupDown(_cxtMenu)
+\r t
+\a leHiCreateVia()
+\p > 
+\a mouseAddPt(t)
+\i 0.35:0.685
+\r t
+\a cancelEnterFun()
+\r t
+\r nil
+\a hiUndo()
+\r t
+\a leHiCreateVia()
+\p > 
+\a le0ViaForm->viaSingleModeScrollView->columns->value= 2
+\r 2
+\a le0ViaForm->viaSingleModeScrollView->columns->value= 1
+\r 1
+\a mouseAddPt(t)
+\i 0.3515:0.6835
+\r t
+\a leHiSave()
+\r t
+\a cancelEnterFun()
+\r t
+\r nil
+\a _qrcuiOpenPVSRunForm()
+\o QRC Run: Loading Technology Data. Standby...
+\p > 
+\a hiiSetCurrentForm('vuipreRcxForm)
+\r t
+\a hiFormDone(vuipreRcxForm)
+\r t
+\w *WARNING* Template file "/CMC/kits/AMSKIT616_GPDK/tech/gpdk045_v_4_0/pvs/.rcx_setup.tpl" cannot be found
+\o *Info* Default Substrate Tech Dir is not defined, replaced with the empty name*Info* Ignoring peecMode from the State File
+\o Load complete.
+\p > 
+\a hiiSetCurrentForm('vuiRcxRunForm)
+\r t
+\a vuiRcxRunForm->vuiRCXTabField->value=2
+\r 2
+\a hiFormDone(vuiRcxRunForm)
+\w *WARNING* Cell View Exists. Overwrite?
+\w 
+\w Library: ele8304
+\w Cell:    inv
+\w View:    av_extracted
+\p > 
+\a hiDBoxOK(vuiDBox)
+\r t
+\o CCLFile is /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.ccl
+\o LogFile is /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.log
+\o Starting the ipc:25 Run: IPC Id 2616: pid Quantus QRC.
+\r t
+\r nil
+\a hiiSetCurrentForm('tmp26)
+\r t
+\a hiFormDone(tmp26)
+\r t
+\e *Error* The Quantus QRC run "inv" failed!
+\e 	The log File is at: /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.log
+\a hiDBoxOK(vuiRcxRunDialog)
+\r t
+\a hiCloseWindow(window(22))
+\r t
+\a _hiSetCurrentWinNum(21)
+\r t
+\a hiCloseWindow(swindow(6))
+\r t
+\a _qrcuiOpenPVSRunForm()
+\o QRC Run: Loading Technology Data. Standby...
+\p > 
+\a hiiSetCurrentForm('vuipreRcxForm)
+\r t
+\a hiFormDone(vuipreRcxForm)
+\r t
+\w *WARNING* Template file "/CMC/kits/AMSKIT616_GPDK/tech/gpdk045_v_4_0/pvs/.rcx_setup.tpl" cannot be found
+\o *Info* Default Substrate Tech Dir is not defined, replaced with the empty name*Info* Ignoring peecMode from the State File
+\o Load complete.
+\p > 
+\a hiiSetCurrentForm('vuiRcxRunForm)
+\r t
+\a hiFormDone(vuiRcxRunForm)
+\w *WARNING* Cell View Exists. Overwrite?
+\w 
+\w Library: ele8304
+\w Cell:    inv
+\w View:    av_extracted
+\p > 
+\a hiDBoxOK(vuiDBox)
+\r t
+\o CCLFile is /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.ccl
+\o LogFile is /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.log
+\o Starting the ipc:26 Run: IPC Id 3413: pid Quantus QRC.
+\r t
+\r nil
+\e *Error* The Quantus QRC run "inv" failed!
+\e 	The log File is at: /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.log
+\a hiDBoxCancel(vuiRcxRunDialog)
+\r t
+\a hiCloseWindow(swindow(13))
+\o Simulation design variables differ from those on the cellView,
+\o they have been saved in the file "/tmp/saved-design-variables".
+\o To save future changes, copy variables to cellView before exiting.
+\r t
+\a hiResizeWindow(swindow(1) list(11:312 930:968))
+\r t
+\a hiCloseWindow(swindow(1))
+\r t
+\a hiCloseWindow(swindow(5))
+\r t
+\a _qrcuiOpenPVSRunForm()
+\o QRC Run: Loading Technology Data. Standby...
+\p > 
+\a hiiSetCurrentForm('vuipreRcxForm)
+\r t
+\a hiFormDone(vuipreRcxForm)
+\r t
+\w *WARNING* Template file "/CMC/kits/AMSKIT616_GPDK/tech/gpdk045_v_4_0/pvs/.rcx_setup.tpl" cannot be found
+\o *Info* Default Substrate Tech Dir is not defined, replaced with the empty name*Info* Ignoring peecMode from the State File
+\o Load complete.
+\p > 
+\a hiiSetCurrentForm('vuiRcxRunForm)
+\r t
+\a hiFormDone(vuiRcxRunForm)
+\w *WARNING* Cell View Exists. Overwrite?
+\w 
+\w Library: ele8304
+\w Cell:    inv
+\w View:    av_extracted
+\p > 
+\a hiDBoxOK(vuiDBox)
+\r t
+\o CCLFile is /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.ccl
+\o LogFile is /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.log
+\o Starting the ipc:27 Run: IPC Id 4573: pid Quantus QRC.
+\r t
+\r nil
+\a hiiSetCurrentForm('tmp28)
+\r t
+\e *Error* The Quantus QRC run "inv" failed!
+\e 	The log File is at: /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.log
+\a hiDBoxOK(vuiRcxRunDialog)
+\r t
+\a hiCloseWindow(window(23))
+\r t
+\a _hiSetCurrentWinNum(21)
+\r t
+\a hiQuit()
+\p > 
+\a hiDBoxCancel(hiQuitDBox)
+\r t
+\r nil
+\a _qrcuiOpenPVSRunForm()
+\o QRC Run: Loading Technology Data. Standby...
+\p > 
+\a hiiSetCurrentForm('vuipreRcxForm)
+\r t
+\a hiFormDone(vuipreRcxForm)
+\r t
+\w *WARNING* Template file "/CMC/kits/AMSKIT616_GPDK/tech/gpdk045_v_4_0/pvs/.rcx_setup.tpl" cannot be found
+\o *Info* Default Substrate Tech Dir is not defined, replaced with the empty name*Info* Ignoring peecMode from the State File
+\o Load complete.
+\p > 
+\a hiiSetCurrentForm('vuiRcxRunForm)
+\r t
+\a hiFormDone(vuiRcxRunForm)
+\w *WARNING* Cell View Exists. Overwrite?
+\w 
+\w Library: ele8304
+\w Cell:    inv
+\w View:    av_extracted
+\p > 
+\a hiDBoxOK(vuiDBox)
+\r t
+\o CCLFile is /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.ccl
+\o LogFile is /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.log
+\o Starting the ipc:28 Run: IPC Id 7020: pid Quantus QRC.
+\r t
+\r nil
+\a hiiSetCurrentForm('tmp29)
+\r t
+\a hiFormDone(tmp29)
+\r t
+\e *Error* The Quantus QRC run "inv" failed!
+\e 	The log File is at: /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.log
+\a hiDBoxOK(vuiRcxRunDialog)
+\r t
+\a hiSetCurrentWindow(window(21))
+\r t
+\a _pvsOpenIPVSrunForm( 'drc ?timeout 30 )
+\r t
+\o *INFO* using "/users/Cours/ele8304/2/Labs/Tuto/inverseur/pvsUI_drcde.log" as a master PVS run log file
+\w *WARNING* PVS Color scheme: Color scheme is not set which might lead to error shapes or probes being displayed in unexpected colors. See /CMC/tools/cadence/PVS16.12.000_lnx86/tools/pvs/samples/color_setup/README for how to set up the color scheme.
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a hiZoomOutAtMouse()
+\i 0.32:0.7
+\r t
+\a hiZoomOutAtMouse()
+\i 0.315:0.69
+\r t
+\a mouseSingleSelectPt()
+\i 0.31:0.685
+\r t
+\a leHiDelete()
+\r t
+\a leHiCreateVia()
+\p > 
+\a le0ViaForm->viaSingleModeScrollView->columns->value= 2
+\r 2
+\a hiiToggleEnterForm(le0ViaForm)
+\r t
+\a mouseAddPt(t)
+\i 0.397:0.695
+\r t
+\a cancelEnterFun()
+\r t
+\r nil
+\a mouseSingleSelectPt()
+\i 0.375:0.655
+\r t
+\a leHiMove()
+\a le0MoveForm->le0MoveFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\p > 
+\a mouseAddPt(t)
+\i 0.3805:0.656
+\r t
+\a mouseAddPt(t)
+\i 0.3625:0.664
+\r t
+\r t
+\a _pvsOpenIPVSrunForm( 'drc ?timeout 30 )
+\r t
+\a leHiSave()
+\r t
+\o *INFO* using "/users/Cours/ele8304/2/Labs/Tuto/inverseur/pvsUI_drcde.log" as a master PVS run log file
+\w *WARNING* PVS Color scheme: Color scheme is not set which might lead to error shapes or probes being displayed in unexpected colors. See /CMC/tools/cadence/PVS16.12.000_lnx86/tools/pvs/samples/color_setup/README for how to set up the color scheme.
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a _pvsOpenIPVSrunForm( 'lvs ?timeout 30 )
+\r t
+\o *INFO* using "/users/Cours/ele8304/2/Labs/Tuto/inverseur/pvsUI.log" as a master PVS run log file
+\o INFO: LVS BROWSER running
+\w *WARNING* PVS Color scheme: Color scheme is not set which might lead to error shapes or probes being displayed in unexpected colors. See /CMC/tools/cadence/PVS16.12.000_lnx86/tools/pvs/samples/color_setup/README for how to set up the color scheme.
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\o Started command server on port: 44457
+\o "Starting connectivity database server: /CMC/tools/cadence/PVS16.12.000_lnx86/bin/pvsProbeServer -ecdb /export/tmp/8304_2/verifications/lvs/.inv.ecdb"
+\o "Setting cell map file: /export/tmp/8304_2/verifications/lvs/lay_cellMap.txt"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\o "Starting probe server on port: 54738"
+\o No error data base is open.
+\a _qrcuiOpenPVSRunForm()
+\o QRC Run: Loading Technology Data. Standby...
+\p > 
+\a hiiSetCurrentForm('vuipreRcxForm)
+\r t
+\a hiFormDone(vuipreRcxForm)
+\r t
+\w *WARNING* Template file "/CMC/kits/AMSKIT616_GPDK/tech/gpdk045_v_4_0/pvs/.rcx_setup.tpl" cannot be found
+\o *Info* Default Substrate Tech Dir is not defined, replaced with the empty name*Info* Ignoring peecMode from the State File
+\o Load complete.
+\p > 
+\a hiiSetCurrentForm('vuiRcxRunForm)
+\r t
+\a hiFormDone(vuiRcxRunForm)
+\w *WARNING* Cell View Exists. Overwrite?
+\w 
+\w Library: ele8304
+\w Cell:    inv
+\w View:    av_extracted
+\p > 
+\a hiDBoxOK(vuiDBox)
+\r t
+\o CCLFile is /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.ccl
+\o LogFile is /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.log
+\o Starting the ipc:34 Run: IPC Id 15229: pid Quantus QRC.
+\r t
+\r nil
+\a hiiSetCurrentForm('tmp30)
+\r t
+\e *Error* The Quantus QRC run "inv" failed!
+\e 	The log File is at: /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.log
+\a mouseSingleSelectPt()
+\i 0.83:0.075
+\r nil
+\a hiDBoxOK(vuiRcxRunDialog)
+\r t
+\a hiCloseWindow(window(25))
+\r t
+\a _hiSetCurrentWinNum(24)
+\r t
+\a hiSetCurrentWindow(window(21))
+\r t
+\a _qrcuiOpenPVSRunForm()
+\o QRC Run: Loading Technology Data. Standby...
+\p > 
+\a hiiSetCurrentForm('vuipreRcxForm)
+\r t
+\a vuipreRcxForm->tech->value="gpdk045_pvs"
+\r "gpdk045_pvs"
+\a hiFormDone(vuipreRcxForm)
+\r t
+\w *WARNING* Template file "/CMC/kits/AMSKIT616_GPDK/tech/gpdk045_v_4_0/pvs/.rcx_setup.tpl" cannot be found
+\o *Info* Default Substrate Tech Dir is not defined, replaced with the empty name*Info* Ignoring peecMode from the State File
+\o Load complete.
+\p > 
+\a hiiSetCurrentForm('vuiRcxRunForm)
+\r t
+\a vuiRcxRunForm->vuiRCXTabField->page1->vuiRCXFlowTab->ruleSetField->value="rcx_typical"
+\w *WARNING* Template file "/CMC/kits/AMSKIT616_GPDK/tech/gpdk045_v_4_0/pvs/.rcx_setup.tpl" cannot be found
+\r "rcx_typical"
+\a vuiRcxRunForm->vuiRCXTabField->value=2
+\r 2
+\a vuiRcxRunForm->vuiRCXTabField->value=4
+\r 4
+\a hiFormDone(vuiRcxRunForm)
+\w *WARNING* Cell View Exists. Overwrite?
+\w 
+\w Library: ele8304
+\w Cell:    inv
+\w View:    av_extracted
+\p > 
+\a hiDBoxOK(vuiDBox)
+\r t
+\o CCLFile is /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.ccl
+\o LogFile is /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.log
+\o Starting the ipc:39 Run: IPC Id 18394: pid Quantus QRC.
+\r t
+\r nil
+\a hiiSetCurrentForm('tmp31)
+\r t
+\a hiFormDone(tmp31)
+\r t
+\o The Quantus QRC run "inv" completed successfully
+\o The output is in : 
+\o 
+\o Library: ele8304
+\o Cell:    inv
+\o View:    av_extracted
+\o Redraws cellview "ele8304 inv av_extracted".
+\a hiDBoxOK(vuiRcxRunDialog)
+\r t
+\o  
+\o Library Manager new cellview request for cell "ele8304 inv".
+\i deNew('(nil libName "ele8304" cellName "inv"))
+\p > 
+\a hiiSetCurrentForm('deNewForm)
+\r t
+\a deNewForm->viewType->value="config"
+\r "config"
+\a hiFormDone(deNewForm)
+\r t
+\a nrSetWindowVisibility(hedNewConfigDialog_w27 "show")
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w27)
+\r t
+\a nrResizeWindow(hedNewConfigDialog_w27 list(290 127 500 600))
+\r t
+\a hedNewConfigDialog_w27->useTemplate->value = t
+\r t
+\a nrSetWindowVisibility(hedNewConfigDialog_w27_useTemplateDialog "show")
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w27_useTemplateDialog)
+\r t
+\a nrResizeWindow(hedNewConfigDialog_w27_useTemplateDialog list(340 337 400 179))
+\r t
+\a hedNewConfigDialog_w27_useTemplateDialog->file->value = "/CMC/tools/cadence/IC617_lnx86/share/cdssetup/hierEditor/templates/spectre"
+\r "/CMC/tools/cadence/IC617_lnx86/share/cdssetup/hierEditor/templates/spectre"
+\a hedNewConfigDialog_w27_useTemplateDialog->name->value = "spectre"
+\r "spectre"
+\a hedNewConfigDialog_w27_useTemplateDialog->ok->value = t
+\r t
+\a hedNewConfigDialog_w27->libList->value = "myLib"
+\r "myLib"
+\a hedNewConfigDialog_w27->viewList->value = "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice"
+\r "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice"
+\a hedNewConfigDialog_w27->stopList->value = "spectre"
+\r "spectre"
+\a hedNewConfigDialog_w27->description->value = ""
+\r ""
+\a hedNewConfigDialog_w27->description->value = " Default template for spectre\\n Note:\\n      Please remember to replace Top Cell Library, Cell, and View\\n      fields with the actual names used by your design.\\n"
+\r " Default template for spectre\\n Note:\\n      Please remember to replace Top Cell Library, Cell, and View\\n      fields with the actual names used by your design.\\n"
+\a nrSetCurrentWindow(hedNewConfigDialog_w27)
+\r t
+\a hedNewConfigDialog_w27->buildLibList->value = t
+\r t
+\a nrSetWindowVisibility(hedListBuilderDialog "show")
+\r t
+\a nrSetCurrentWindow(hedListBuilderDialog)
+\r t
+\a nrResizeWindow(hedListBuilderDialog list(624 320 652 387))
+\r t
+\a hedListBuilderDialog->toView->value = '("myLib" )
+\r ("myLib")
+\a hedListBuilderDialog->remove->value = t
+\r t
+\a hedListBuilderDialog->fromView->value = '("myLib" )
+\r ("myLib")
+\a hedListBuilderDialog->fromView->value = '("ele8304" )
+\r ("ele8304")
+\a hedListBuilderDialog->insert->value = t
+\r t
+\a hedListBuilderDialog->toView->value = '("ele8304" )
+\r ("ele8304")
+\a hedListBuilderDialog->ok->value = t
+\r t
+\a hedNewConfigDialog_w27->libList->value = "ele8304"
+\r "ele8304"
+\a nrSetCurrentWindow(hedNewConfigDialog_w27)
+\r t
+\a hedNewConfigDialog_w27->buildViewList->value = t
+\r t
+\a nrSetWindowVisibility(hedListBuilderDialog "show")
+\r t
+\a nrSetCurrentWindow(hedListBuilderDialog)
+\r t
+\a nrResizeWindow(hedListBuilderDialog list(624 320 652 387))
+\r t
+\a hedListBuilderDialog->addValue->value = "av_extracted"
+\r "av_extracted"
+\a hedListBuilderDialog->add->value = t
+\r t
+\a hedListBuilderDialog->toView->value = '("av_extracted" )
+\r ("av_extracted")
+\a hedListBuilderDialog->ok->value = t
+\r t
+\a hedNewConfigDialog_w27->viewList->value = "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice av_extracted"
+\r "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice av_extracted"
+\a nrSetCurrentWindow(hedNewConfigDialog_w27)
+\r t
+\a _hedSelectLCV(hedNewConfigDialog_w27->hedLCVSelection "ele8304" "inv" "schematic")
+\r t
+\a hedNewConfigDialog_w27->ok->value = t
+\r t
+\a _seeHiTbClearHistory(window(27)->hiToolbars->hedToolbar_win27->hedSearchCombo_3)
+\r t
+\a _seeHiClearHistory(dwindow('hedSearchBrowser3))
+\r t
+\a _hedSetCurrent(window(27)->hedPartsTable "(ele8304 inv schematic)" 0 2)
+\r t
+\a _hedSelect(window(27)->hedPartsTable '((nil 0 0)))
+\r t
+\a hiPopupDown(_hedPartsTableMenu)
+\r t
+\a _hedSetCurrent(window(27)->hedPartsTable "(ele8304 inv schematic)" 0 3)
+\r t
+\a _hedSetCurrent(window(27)->hedPartsTable "(ele8304 inv schematic)" 0 2)
+\r t
+\a hiPopupDown(_hedPartsTableMenu)
+\r t
+\a _hedTriggerActionCB("save")
+\r t
+\a hiPopupDown(_hedPartsTableMenu)
+\r t
+\a _hedTriggerActionCB("update")
+\r t
+\a _hedSetCurrent(window(27)->hedPartsTable "(ele8304 inv schematic)" 0 2)
+\r t
+\a hiPopupDown(_hedPartsTableMenu)
+\r t
+\a hiCloseWindow(swindow(16))
+\r t
+\a _hiSetCurrentWinNum(24)
+\r t
+\o  
+\o Library Manager new cellview request for cell "ele8304 inv_tb".
+\i deNew('(nil libName "ele8304" cellName "inv_tb"))
+\p > 
+\a deNewForm->viewType->value="config"
+\r "config"
+\a hiFormDone(deNewForm)
+\p > 
+\a hiDBoxOK(deDBox)
+\r t
+\r t
+\a nrSetWindowVisibility(hedNewConfigDialog_w29 "show")
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w29)
+\r t
+\a nrResizeWindow(hedNewConfigDialog_w29 list(290 127 500 600))
+\r t
+\a hedNewConfigDialog_w29->useTemplate->value = t
+\r t
+\a nrSetWindowVisibility(hedNewConfigDialog_w29_useTemplateDialog "show")
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w29_useTemplateDialog)
+\r t
+\a nrResizeWindow(hedNewConfigDialog_w29_useTemplateDialog list(340 337 400 179))
+\r t
+\a hedNewConfigDialog_w29_useTemplateDialog->file->value = "/CMC/tools/cadence/IC617_lnx86/share/cdssetup/hierEditor/templates/spectre"
+\r "/CMC/tools/cadence/IC617_lnx86/share/cdssetup/hierEditor/templates/spectre"
+\a hedNewConfigDialog_w29_useTemplateDialog->name->value = "spectre"
+\r "spectre"
+\a hedNewConfigDialog_w29_useTemplateDialog->ok->value = t
+\r t
+\a hedNewConfigDialog_w29->libList->value = "myLib"
+\r "myLib"
+\a hedNewConfigDialog_w29->viewList->value = "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice"
+\r "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice"
+\a hedNewConfigDialog_w29->stopList->value = "spectre"
+\r "spectre"
+\a hedNewConfigDialog_w29->description->value = ""
+\r ""
+\a hedNewConfigDialog_w29->description->value = " Default template for spectre\\n Note:\\n      Please remember to replace Top Cell Library, Cell, and View\\n      fields with the actual names used by your design.\\n"
+\r " Default template for spectre\\n Note:\\n      Please remember to replace Top Cell Library, Cell, and View\\n      fields with the actual names used by your design.\\n"
+\a nrSetCurrentWindow(hedNewConfigDialog_w29)
+\r t
+\a hiSetCurrentWindow(window(21))
+\r t
+\a hiCloseWindow(swindow(17))
+\r t
+\a mouseSingleSelectPt()
+\i 0.8:0.625
+\r nil
+\a leHiCreateVia()
+\p > 
+\a le0ViaForm->viaSingleModeScrollView->viaDefName->value="M1_PO"
+\r "M1_PO"
+\a mouseAddPt(t)
+\i 0.2155:0.93
+\r t
+\a leHiCreateVia()
+\r t
+\a cancelEnterFun()
+\r t
+\r nil
+\a leHiCreateVia()
+\p > 
+\a le0ViaForm->viaSingleModeScrollView->viaDefName->value="M2_M1"
+\r "M2_M1"
+\a hiiToggleEnterForm(le0ViaForm) 
+\r t
+\a cancelEnterFun()
+\r t
+\r nil
+\a mouseSingleSelectPt()
+\i 0.465:0.685
+\r t
+\a mouseSingleSelectPt()
+\i 0.685:0.84
+\r nil
+\a _pvsOpenIPVSrunForm( 'drc ?timeout 30 )
+\r t
+\o *INFO* using "/users/Cours/ele8304/2/Labs/Tuto/inverseur/pvsUI_drcde.log" as a master PVS run log file
+\w *WARNING* PVS Color scheme: Color scheme is not set which might lead to error shapes or probes being displayed in unexpected colors. See /CMC/tools/cadence/PVS16.12.000_lnx86/tools/pvs/samples/color_setup/README for how to set up the color scheme.
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a _pvsOpenIPVSrunForm( 'lvs ?timeout 30 )
+\r t
+\o *INFO* using "/users/Cours/ele8304/2/Labs/Tuto/inverseur/pvsUI.log" as a master PVS run log file
+\o INFO: LVS BROWSER running
+\w *WARNING* PVS Color scheme: Color scheme is not set which might lead to error shapes or probes being displayed in unexpected colors. See /CMC/tools/cadence/PVS16.12.000_lnx86/tools/pvs/samples/color_setup/README for how to set up the color scheme.
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\o Started command server on port: 45426
+\o "Starting connectivity database server: /CMC/tools/cadence/PVS16.12.000_lnx86/bin/pvsProbeServer -ecdb /export/tmp/8304_2/verifications/lvs/.inv.ecdb"
+\o "Setting cell map file: /export/tmp/8304_2/verifications/lvs/lay_cellMap.txt"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Metal1 pin")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\o "Starting probe server on port: 48104"
+\o No error data base is open.
+\a hiCloseWindow(window(24))
+\r t
+\o  
+\o Library Manager new cellview request for cell "ele8304 inv_tb".
+\i deNew('(nil libName "ele8304" cellName "inv_tb"))
+\p > 
+\a hiiSetCurrentForm('deNewForm)
+\r t
+\a hiFormDone(deNewForm)
+\p > 
+\a hiDBoxOK(deDBox)
+\r t
+\r t
+\a nrSetWindowVisibility(hedNewConfigDialog_w31 "show")
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w31)
+\r t
+\a nrResizeWindow(hedNewConfigDialog_w31 list(290 127 500 600))
+\r t
+\a hedNewConfigDialog_w31->useTemplate->value = t
+\r t
+\a nrSetWindowVisibility(hedNewConfigDialog_w31_useTemplateDialog "show")
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w31_useTemplateDialog)
+\r t
+\a nrResizeWindow(hedNewConfigDialog_w31_useTemplateDialog list(340 337 400 179))
+\r t
+\a hedNewConfigDialog_w31_useTemplateDialog->file->value = "/CMC/tools/cadence/IC617_lnx86/share/cdssetup/hierEditor/templates/spectre"
+\r "/CMC/tools/cadence/IC617_lnx86/share/cdssetup/hierEditor/templates/spectre"
+\a hedNewConfigDialog_w31_useTemplateDialog->name->value = "spectre"
+\r "spectre"
+\a hedNewConfigDialog_w31_useTemplateDialog->ok->value = t
+\r t
+\a hedNewConfigDialog_w31->libList->value = "myLib"
+\r "myLib"
+\a hedNewConfigDialog_w31->viewList->value = "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice"
+\r "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice"
+\a hedNewConfigDialog_w31->stopList->value = "spectre"
+\r "spectre"
+\a hedNewConfigDialog_w31->description->value = ""
+\r ""
+\a hedNewConfigDialog_w31->description->value = " Default template for spectre\\n Note:\\n      Please remember to replace Top Cell Library, Cell, and View\\n      fields with the actual names used by your design.\\n"
+\r " Default template for spectre\\n Note:\\n      Please remember to replace Top Cell Library, Cell, and View\\n      fields with the actual names used by your design.\\n"
+\a nrSetCurrentWindow(hedNewConfigDialog_w31)
+\r t
+\a _hedSelectLCV(hedNewConfigDialog_w31->hedLCVSelection "ele8304" "inv_tb" "schematic")
+\r t
+\a hedNewConfigDialog_w31->buildLibList->value = t
+\r t
+\a nrSetWindowVisibility(hedListBuilderDialog "show")
+\r t
+\a nrSetCurrentWindow(hedListBuilderDialog)
+\r t
+\a nrResizeWindow(hedListBuilderDialog list(624 320 652 387))
+\r t
+\a hedListBuilderDialog->toView->value = '("myLib" )
+\r ("myLib")
+\a hedListBuilderDialog->remove->value = t
+\r t
+\a hedListBuilderDialog->fromView->value = '("myLib" )
+\r ("myLib")
+\a hedListBuilderDialog->fromView->value = '("ele8304" )
+\r ("ele8304")
+\a hedListBuilderDialog->insert->value = t
+\r t
+\a hedListBuilderDialog->toView->value = '("ele8304" )
+\r ("ele8304")
+\a hedListBuilderDialog->ok->value = t
+\r t
+\a hedNewConfigDialog_w31->libList->value = "ele8304"
+\r "ele8304"
+\a nrSetCurrentWindow(hedNewConfigDialog_w31)
+\r t
+\a hedNewConfigDialog_w31->buildViewList->value = t
+\r t
+\a nrSetWindowVisibility(hedListBuilderDialog "show")
+\r t
+\a nrSetCurrentWindow(hedListBuilderDialog)
+\r t
+\a nrResizeWindow(hedListBuilderDialog list(624 320 652 387))
+\r t
+\a hedListBuilderDialog->addValue->value = "av_extracted"
+\r "av_extracted"
+\a hedListBuilderDialog->add->value = t
+\r t
+\a hedListBuilderDialog->toView->value = '("av_extracted" )
+\r ("av_extracted")
+\a hedListBuilderDialog->ok->value = t
+\r t
+\a hedNewConfigDialog_w31->viewList->value = "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice av_extracted"
+\r "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice av_extracted"
+\a nrSetCurrentWindow(hedNewConfigDialog_w31)
+\r t
+\a hedNewConfigDialog_w31->ok->value = t
+\r t
+\a _seeHiTbClearHistory(window(31)->hiToolbars->hedToolbar_win31->hedSearchCombo_5)
+\r t
+\a _seeHiClearHistory(dwindow('hedSearchBrowser5))
+\r t
+\a _hedSetCurrent(window(31)->hedPartsTable "(ele8304 inv schematic)" 3 2)
+\r t
+\a _hedSelect(window(31)->hedPartsTable '((nil 3 3)))
+\r t
+\o Bound cell (ele8304 inv) to view 'av_extracted'.
+\a _hedSetViewBinding(window(31)->hedPartsTable "av_extracted")
+\r t
+\a hiPopupDown(_hedPartsTableMenu)
+\r t
+\a _hedDeSelect(window(31)->hedPartsTable '((nil 3 3)))
+\r t
+\a _hedTriggerActionCB("update")
+\a nrSetWindowVisibility(hedUpdateSyncDialog "show")
+\r t
+\a nrSetCurrentWindow(hedUpdateSyncDialog)
+\r t
+\a nrResizeWindow(hedUpdateSyncDialog list(782 332 335 363))
+\r t
+\a hedUpdateSyncDialog->ok->value = t
+\r t
+\r t
+\a _hedDeSelect(window(31)->hedPartsTable '((nil 5 5)))
+\r t
+\a _hedTriggerActionCB("save")
+\r t
+\a dwindow('hedTopCell5)->ade->value = t
+\r t
+\w *WARNING* (icLic-203) Failed to check out license Analog_Design_Environment_L ("95200") to run ADE L because of status code -18.
+\w Attempting to check out the next available license Analog_Design_Environment_XL ("95210") per license checkout order L, XL, GXL.
+\o *INFO* (icLic-302) License Analog_Design_Environment_XL ("95210") was used to run ADE L.
+\a hiResizeWindow(swindow(19) list(512:289 1204:764))
+\r t
+\a sevEditSelectedVars('sevSession6)
+\p > 
+\a hiiSetCurrentForm('sevVariablesForm6)
+\r t
+\a hiFormCancel(sevVariablesForm6)
+\r t
+\r nil
+\a sevCopyCellViewVariables('sevSession6)
+\o WARNING (ADE-1010): There are no variables in the cellview.
+\r t
+\a hiResizeWindow(swindow(19) list(939:331 1631:806))
+\r t
+\a sevLoadState('sevSession6)
+\p > 
+\a hiiSetCurrentForm('sevLoadForm6)
+\r t
+\a hiFormDone(sevLoadForm6)
+\p > 
+\a hiDBoxOK(aaMessage)
+\r t
+\r t
+\r t
+\a sevNetlistAndRun('sevSession6)
+\o Delete simulation data in /export/tmp/8304_2/simulations/inv_tb/ams/config/psf.
+\o generate netlist...
+\e *ERROR* (AMS-2141): The INCISIV installation being used is not compatible with the AMS Unified Netlisting (AMS UNL) flow. To run AMS Unified Netlister, either use INCISIV 13.20-s007 or a later release, or use other AMS netlisters.
+\o       ...unsuccessful.
+\r t
+\a sevTableSelectRows(sevAnaForm6->anaListBox 1)
+\r t
+\a sevNetlistAndRun('sevSession6)
+\o Delete simulation data in /export/tmp/8304_2/simulations/inv_tb/ams/config/psf.
+\o generate netlist...
+\e *ERROR* (AMS-2141): The INCISIV installation being used is not compatible with the AMS Unified Netlisting (AMS UNL) flow. To run AMS Unified Netlister, either use INCISIV 13.20-s007 or a later release, or use other AMS netlisters.
+\o       ...unsuccessful.
+\r t
+\a hiResizeWindow(window(1) list(0:102 951:520))
+\r t
+\a hiCloseWindow(swindow(19))
+\p > 
+\a hiDBoxOK(aaMessage)
+\r t
+\a sevSetTableItem(connectModulesForm->ieFormTableBox 0 2 "")
+\r t
+\o Simulation design variables differ from those on the cellView,
+\o they have been saved in the file "/tmp/saved-design-variables".
+\o To save future changes, copy variables to cellView before exiting.
+\r t
+\a _hiSetCurrentWinNum(31)
+\r t
+\o  
+\o Library Manager new cellview request for cell "ele8304 inv_tb".
+\i deNew('(nil libName "ele8304" cellName "inv_tb"))
+\p > 
+\a hiiSetCurrentForm('deNewForm)
+\r t
+\a hiFormDone(deNewForm)
+\p > 
+\a hiDBoxOK(deDBox)
+\r t
+\r t
+\a hiResizeWindow(swindow(18) list(1014:163 1714:963))
+\r t
+\a dwindow('hedTopCell5)->edit->value = t
+\r t
+\a nrSetWindowVisibility(hedEditTopCellDialog "show")
+\r t
+\a nrSetCurrentWindow(hedEditTopCellDialog)
+\r t
+\a nrResizeWindow(hedEditTopCellDialog list(1249 348 230 242))
+\r t
+\a hedEditTopCellDialog->cancel->value = t
+\r t
+\a hiCloseWindow(swindow(18))
+\r t
+\a _hiSetCurrentWinNum(21)
+\r t
+\o  
+\o Library Manager new cellview request for cell "ele8304 inv_tb".
+\i deNew('(nil libName "ele8304" cellName "inv_tb"))
+\p > 
+\a hiFormDone(deNewForm)
+\p > 
+\a hiDBoxOK(deDBox)
+\r t
+\r t
+\a nrSetWindowVisibility(hedNewConfigDialog_w35 "show")
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w35)
+\r t
+\a nrResizeWindow(hedNewConfigDialog_w35 list(290 127 500 600))
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w35)
+\r t
+\a hiResizeWindow(swindow(20) list(1038:124 1738:924))
+\r t
+\a nrResizeWindow(hedNewConfigDialog_w35 list(1138 208 500 600))
+\r t
+\a hiResizeWindow(swindow(20) list(1075:136 1775:936))
+\r t
+\a nrResizeWindow(hedNewConfigDialog_w35 list(1175 196 500 600))
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w35)
+\r t
+\a _hedSelectLCV(hedNewConfigDialog_w35->hedLCVSelection "ele8304" "inv_tb" "schematic")
+\r t
+\a hedNewConfigDialog_w35->useTemplate->value = t
+\r t
+\a nrSetWindowVisibility(hedNewConfigDialog_w35_useTemplateDialog "show")
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w35_useTemplateDialog)
+\r t
+\a nrResizeWindow(hedNewConfigDialog_w35_useTemplateDialog list(1225 406 400 179))
+\r t
+\a hedNewConfigDialog_w35_useTemplateDialog->file->value = "/CMC/tools/cadence/IC617_lnx86/share/cdssetup/hierEditor/templates/spectre"
+\r "/CMC/tools/cadence/IC617_lnx86/share/cdssetup/hierEditor/templates/spectre"
+\a hedNewConfigDialog_w35_useTemplateDialog->name->value = "spectre"
+\r "spectre"
+\a hedNewConfigDialog_w35_useTemplateDialog->ok->value = t
+\r t
+\a hedNewConfigDialog_w35->libList->value = "myLib"
+\r "myLib"
+\a hedNewConfigDialog_w35->viewList->value = "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice"
+\r "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice"
+\a hedNewConfigDialog_w35->stopList->value = "spectre"
+\r "spectre"
+\a hedNewConfigDialog_w35->description->value = ""
+\r ""
+\a hedNewConfigDialog_w35->description->value = " Default template for spectre\\n Note:\\n      Please remember to replace Top Cell Library, Cell, and View\\n      fields with the actual names used by your design.\\n"
+\r " Default template for spectre\\n Note:\\n      Please remember to replace Top Cell Library, Cell, and View\\n      fields with the actual names used by your design.\\n"
+\a nrSetCurrentWindow(hedNewConfigDialog_w35)
+\r t
+\a hedNewConfigDialog_w35->buildViewList->value = t
+\r t
+\a nrSetWindowVisibility(hedListBuilderDialog "show")
+\r t
+\a nrSetCurrentWindow(hedListBuilderDialog)
+\r t
+\a nrResizeWindow(hedListBuilderDialog list(624 320 652 387))
+\r t
+\a hedListBuilderDialog->addValue->value = "av_extracted"
+\r "av_extracted"
+\a hedListBuilderDialog->add->value = t
+\r t
+\a hedListBuilderDialog->toView->value = '("av_extracted" )
+\r ("av_extracted")
+\a hedListBuilderDialog->ok->value = t
+\r t
+\a hedNewConfigDialog_w35->viewList->value = "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice av_extracted"
+\r "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice av_extracted"
+\a nrSetCurrentWindow(hedNewConfigDialog_w35)
+\r t
+\a hedNewConfigDialog_w35->buildLibList->value = t
+\r t
+\a nrSetWindowVisibility(hedListBuilderDialog "show")
+\r t
+\a nrSetCurrentWindow(hedListBuilderDialog)
+\r t
+\a nrResizeWindow(hedListBuilderDialog list(624 320 652 387))
+\r t
+\a hedListBuilderDialog->toView->value = '("myLib" )
+\r ("myLib")
+\a hedListBuilderDialog->remove->value = t
+\r t
+\a hedListBuilderDialog->fromView->value = '("ele8304" )
+\r ("ele8304")
+\a hedListBuilderDialog->insert->value = t
+\r t
+\a hedListBuilderDialog->toView->value = '("ele8304" )
+\r ("ele8304")
+\a hedListBuilderDialog->ok->value = t
+\r t
+\a hedNewConfigDialog_w35->libList->value = "ele8304"
+\r "ele8304"
+\a nrSetCurrentWindow(hedNewConfigDialog_w35)
+\r t
+\a hedNewConfigDialog_w35->ok->value = t
+\r t
+\a _seeHiTbClearHistory(window(35)->hiToolbars->hedToolbar_win35->hedSearchCombo_6)
+\r t
+\a _seeHiClearHistory(dwindow('hedSearchBrowser6))
+\r t
+\a _hedSetCurrent(window(35)->hedPartsTable "(ele8304 inv schematic)" 3 2)
+\r t
+\a _hedSelect(window(35)->hedPartsTable '((nil 3 3)))
+\r t
+\o Bound cell (ele8304 inv) to view 'av_extracted'.
+\a _hedSetViewBinding(window(35)->hedPartsTable "av_extracted")
+\r t
+\a hiPopupDown(_hedPartsTableMenu)
+\r t
+\a _hedTriggerActionCB("update")
+\a nrSetWindowVisibility(hedUpdateSyncDialog "show")
+\r t
+\a nrSetCurrentWindow(hedUpdateSyncDialog)
+\r t
+\a nrResizeWindow(hedUpdateSyncDialog list(782 332 335 363))
+\r t
+\a hedUpdateSyncDialog->ok->value = t
+\r t
+\r t
+\a dwindow('hedTopCell6)->ade->value = t
+\r t
+\w *WARNING* (icLic-203) Failed to check out license Analog_Design_Environment_L ("95200") to run ADE L because of status code -18.
+\w Attempting to check out the next available license Analog_Design_Environment_XL ("95210") per license checkout order L, XL, GXL.
+\o *INFO* (icLic-302) License Analog_Design_Environment_XL ("95210") was used to run ADE L.
+\a hiResizeWindow(swindow(21) list(1098:337 1790:812))
+\r t
+\a sevChooseSimulator('sevSession7)
+\p > 
+\a hiiSetCurrentForm('sevSimulatorForm7)
+\r t
+\a sevSimulatorForm7->simulator->value="spectre"
+\r "spectre"
+\a hiFormDone(sevSimulatorForm7)
+\p > 
+\a hiDBoxOK(aaMessage)
+\r t
+\a sevSetTableItem(connectModulesForm->ieFormTableBox 0 2 "")
+\r t
+\w *WARNING* (icLic-203) Failed to check out license Analog_Design_Environment_L ("95200") to run ADE L because of status code -18.
+\w Attempting to check out the next available license Analog_Design_Environment_XL ("95210") per license checkout order L, XL, GXL.
+\o *INFO* (icLic-302) License Analog_Design_Environment_XL ("95210") was used to run ADE L.
+\o INFO (ADE-1104): You are changing the simulator. All options that can be recognized
+\o      by the new simulator will be retained. All other options will be ignored.
+\o      You will not be warned about any ignored option. Be sure to check all your
+\o      forms (Analysis, Options, etc) to verify you have the setup you require 
+\r t
+\r t
+\a sevLoadState('sevSession7)
+\p > 
+\a hiiSetCurrentForm('sevLoadForm7)
+\r t
+\a hiFormDone(sevLoadForm7)
+\r t
+\r t
+\a sevTableSelectRows(sevAnaForm7->anaListBox 1)
+\r t
+\a sevNetlistAndRun('sevSession7)
+\o Delete psf data in /export/tmp/8304_2/simulations/inv_tb/spectre/config/psf.
+\o generate netlist...
+\o Begin Incremental Netlisting Oct  2 15:48:55 2018
+\o WARNING (OSSHNL-335): Design configuration has changed since last netlisting session in this run
+\o directory. Netlist(s) from last session cannot be reused for incremental
+\o netlisting. Therefore, re-netlisting the design.
+\o 
+\o End netlisting Oct  2 15:48:55 2018
+\o 
+\o Netlisting Statistics:
+\o 	Number of components:   38
+\o 
+\o 	Elapsed time:          0.0s
+\o Errors: 0	Warnings: 0
+\o       ...successful.
+\o compose simulator input file...
+\o       ...successful.
+\o start simulator if needed...
+\o       ...successful.
+\r t
+\o simulate...
+\o INFO (ADE-3071): Simulation completed successfully.
+\o reading simulation data...
+\o       ...successful.
+\a rdbLoadResults("sevSession7" "/export/tmp/8304_2/simulations/inv_tb/spectre/config/psf")
+\r t
+\o net /vin selected but not highlighted
+\o net /vout selected but not highlighted
+\o terminal /I0/vdd selected but not highlighted
+\o terminal /I0/vss selected but not highlighted
+\a hiSetCurrentWindow(window(38))
+\r t
+\a hiSetCurrentWindow(window(21))
+\r t
+\a hiZoomOutAtMouse()
+\i 0.92:0.98
+\r t
+\a hiZoomInAtMouse()
+\i 0.735:-0.135
+\r t
+\a mouseSingleSelectPt()
+\i 0.435:0.76
+\r t
+\a leHiMove()
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\p > 
+\a mouseAddPt(t)
+\i 0.4305:0.751
+\r t
+\a mouseAddPt(t)
+\i 0.3245:0.7545
+\r t
+\r t
+\a mouseSingleSelectPt()
+\i 0.305:0.68
+\r t
+\a leHiMove()
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\p > 
+\a mouseAddPt(t)
+\i 0.3065:0.6775
+\r t
+\a mouseAddPt(t)
+\i 0.336:0.6825
+\r t
+\r t
+\a hiSetCurrentWindow(window(38))
+\r t
+\# Memory report: using       1,456 MB, process size 2,445 MB at UTC 2018.10.02 19:52:12.123
+\a _ddtExecuteAction(awvGetCurrentWindow()->vivaSession "splitStrip")
+\r t
+\a hiSetCurrentWindow(window(21))
+\r t
+\a mouseSingleSelectPt()
+\i 0.305:0.645
+\r t
+\a leHiMove()
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\p > 
+\a mouseAddPt(t)
+\i 0.29:0.627
+\r t
+\a mouseAddPt(t)
+\i 0.4095:0.622
+\r t
+\r t
+\a hiSetCurrentWindow(window(38))
+\r t
+\a _ddtExecuteAction(awvGetCurrentWindow()->vivaSession "moveAnalogTracesNewStrip")
+\r t
+\a _ddtExecuteAction(awvGetCurrentWindow()->vivaSession "splitAllStrips")
+\r t
+\a hiSetCurrentWindow(window(21))
+\r t
+\a mouseSingleSelectPt()
+\i 0.77:1.01
+\r nil
+\a geScroll(nil "s"    nil)
+\r t
+\a _pvsOpenIPVSrunForm( 'lvs ?timeout 30 )
+\r t
+\a geScroll(nil "s"    nil)
+\r t
+\a leHiSave()
+\r t
+\a hiSetCurrentWindow(window(35))
+\r t
+\a dwindow('hedTopCell6)->ade->value = t
+\r t
+\a hiSetCurrentWindow(window(36))
+\r t
+\a sevTableSelectRows(sevOutForm7->outListBox 2)
+\r t
+\a sevTableSelectRows(sevOutForm7->outListBox '( 2 3 4 5 ))
+\r t
+\a sevDeleteSelections('sevSession7)
+\r t
+\a hiResizeWindow(swindow(20) list(358:120 1058:920))
+\r t
+\a hiResizeWindow(swindow(20) list(358:174 1058:974))
+\r t
+\a hiResizeWindow(swindow(21) list(1102:335 1794:810))
+\r t
+\a sevNetlistAndRun('sevSession7)
+\o Delete psf data in /export/tmp/8304_2/simulations/inv_tb/spectre/config/psf.
+\o generate netlist...
+\o Begin Incremental Netlisting Oct  2 15:55:18 2018
+\o End netlisting Oct  2 15:55:19 2018
+\o 
+\o 	The netlist is up to date.
+\o 	Time taken to compare the design with netlist:   1.0s
+\o       ...successful.
+\o compose simulator input file...
+\o       ...successful.
+\o start simulator if needed...
+\o       ...successful.
+\r t
+\o simulate...
+\o INFO (ADE-3071): Simulation completed successfully.
+\o reading simulation data...
+\o       ...successful.
+\o net /vin selected but not highlighted
+\o net /vout selected but not highlighted
+\a hiSetCurrentWindow(window(37))
+\r t
+\a hiCloseWindow(swindow(22))
+\r t
+\a hiSetCurrentWindow(window(21))
+\r t
+\a hiSetCurrentWindow(window(35))
+\r t
+\a _hedTriggerActionCB("update")
+\r t
+\a hiCloseWindow(swindow(20))
+\r t
+\a _hiSetCurrentWinNum(21)
+\r t
+\a hiCloseWindow(swindow(15))
+\r t
+\a _hiSetCurrentWinNum(37)
+\r t
+\a hiCloseWindow(swindow(21))
+\p > 
+\a hiDBoxCancel(sevblockingDialogBox)
+\r t
+\o Simulation design variables differ from those on the cellView,
+\o they have been saved in the file "/tmp/saved-design-variables".
+\o To save future changes, copy variables to cellView before exiting.
+\r t
+\a _hiSetCurrentWinNum(36)
+\r nil
+\i ddsServOpen("ele8304" "inv_tb" "schematic" "edit" nil)
+\w *WARNING* (icLic-203) Failed to check out license Virtuoso_Schematic_Editor_L ("95100") to run Schematics L because of status code -18.
+\w Attempting to check out the next available license Virtuoso_Schematic_Editor_XL ("95115") per license checkout order L, XL.
+\o *INFO* (icLic-302) License Virtuoso_Schematic_Editor_XL ("95115") was used to run Schematics L.
+\a _treeNavActivateOpc(dwindow('treeAssistant8) "")
+\r t
+\a when(dwindow('oiAssistant8) hiMapWindow(dwindow('oiAssistant8)))
+\r t
+\a when(dwindow('treeAssistant8) hiMapWindow(dwindow('treeAssistant8)))
+\r t
+\a _deUpdateMenu('schematicTools 40)
+\r t
+\a lxLaunchLayoutXL()
+\p > 
+\a hiiSetCurrentForm('lxCVPairActionForm)
+\r t
+\a lxCVPairActionForm->cvPairAction->value= "Open Existing"
+\r "Open Existing"
+\a hiFormDone(lxCVPairActionForm)
+\r t
+\p > 
+\a deOpenForm->deCellChoice->value= '( "inv" )
+\r ("inv")
+\a _deCellChoiceCB()
+\r "config"
+\a hiFormCancel(deOpenForm)
+\r t
+\r nil
+\a hiCloseWindow(swindow(23))
+\r t
+\i ddsServOpen("ele8304" "inv" "schematic" "edit" nil)
+\w *WARNING* (icLic-203) Failed to check out license Virtuoso_Schematic_Editor_L ("95100") to run Schematics L because of status code -18.
+\w Attempting to check out the next available license Virtuoso_Schematic_Editor_XL ("95115") per license checkout order L, XL.
+\o *INFO* (icLic-302) License Virtuoso_Schematic_Editor_XL ("95115") was used to run Schematics L.
+\a _treeNavActivateOpc(dwindow('treeAssistant9) "")
+\r t
+\a when(dwindow('oiAssistant9) hiMapWindow(dwindow('oiAssistant9)))
+\r t
+\a when(dwindow('treeAssistant9) hiMapWindow(dwindow('treeAssistant9)))
+\r t
+\a _deUpdateMenu('schematicTools 41)
+\r t
+\a lxLaunchLayoutXL()
+\p > 
+\a hiiSetCurrentForm('lxCVPairActionForm)
+\r t
+\a hiFormDone(lxCVPairActionForm)
+\r t
+\p > 
+\a _deUpdateMenu('schematicTools 41)
+\r t
+\a hiFormDone(deOpenForm)
+\w *WARNING* (icLic-203) Failed to check out license Virtuoso_Layout_Suite_XL ("95310") to run Layout XL because of status code -18.
+\w Attempting to check out the next available license Virtuoso_Layout_Suite_GXL ("95321") per license checkout order XL, GXL.
+\o *INFO* (icLic-302) License Virtuoso_Layout_Suite_GXL ("95321") was used to run Layout XL.
+\r t
+\w *WARNING* (icLic-203) Failed to check out license Virtuoso_Schematic_Editor_L ("95100") to run Schematics L because of status code -18.
+\w Attempting to check out the next available license Virtuoso_Schematic_Editor_XL ("95115") per license checkout order L, XL.
+\o *INFO* (icLic-302) License Virtuoso_Schematic_Editor_XL ("95115") was used to run Schematics L.
+\o INFO (BND-1003): Binder initialization finished:
+\o 
+\o                  bound       unbound     ungenerated
+\o   terminals          4             0               0
+\o   nets               4             0               0
+\o   instances          2             1               0
+\o 
+\w *WARNING* (BND-2005): Layout instances and terminals do not match the source.
+\w Use 'XL Status' in the Navigator or run 'Connectivity - Check - Against Source' for more details.
+\w If the bindings are correct, run the 'Update from Source' commands,
+\w otherwise run 'Connectivity - Update - Binding'.
+\a _ciAssistantReplay_newAssistantByName(dwindow('ciProspector2) "Rapid Analog Prototype")
+\r t
+\a _ciBrowserReplay_sort(dwindow('ciManager2) 0 0)
+\r t
+\a _ciBrowserReplay_changeSetting(dwindow('ciManager2) "sortBy/Type" "bool:t")
+\r t
+\a _ciBrowserReplay_changeSetting(dwindow('ciManager2) "sortBy/Creation Date" "bool:f")
+\r t
+\r t
+\a when(dwindow('ptePaletteAssistant6) hiMapWindow(dwindow('ptePaletteAssistant6)))
+\r t
+\a mouseSingleSelectPt()
+\i 1.165:0.73
+\r nil
+\a hiZoomAbsoluteScale(hiGetCurrentWindow() 0.9)
+\r t
+\a hiZoomIn()
+\p > 
+\a mouseAddPt(t)
+\i -0.583:1.466
+\r t
+\a mouseAddPt(t)
+\i 0.91:0.3745
+\r t
+\r t
+\a mouseSingleSelectPt()
+\i 0.815:0.86
+\r nil
+\a _pvsOpenIPVSrunForm( 'lvs ?timeout 30 )
+\r t
+\o *INFO* using "/users/Cours/ele8304/2/Labs/Tuto/inverseur/pvsUI.log" as a master PVS run log file
+\o INFO: LVS BROWSER running
+\w *WARNING* PVS Color scheme: Color scheme is not set which might lead to error shapes or probes being displayed in unexpected colors. See /CMC/tools/cadence/PVS16.12.000_lnx86/tools/pvs/samples/color_setup/README for how to set up the color scheme.
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\o Started command server on port: 40135
+\o "Starting connectivity database server: /CMC/tools/cadence/PVS16.12.000_lnx86/bin/pvsProbeServer -ecdb /export/tmp/8304_2/verifications/lvs/.inv.ecdb"
+\o "Setting cell map file: /export/tmp/8304_2/verifications/lvs/lay_cellMap.txt"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "Nwell drawing")
+\r t
+\e *Error* putprop: first arg must be either symbol, list, defstruct or user type - nil
+\w *WARNING* (GE-2042): An unexpected error occurred while applying uifPushGlobalCDFState SKILL function.
+\w The reported error is : nil.
+\o (nil)
+\a geiPlSetPropValue("editorNum0" "attribute" "Layer" "string" "")
+\r t
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\o "Starting probe server on port: 37880"
+\a mouseSingleSelectPt()
+\i -0.34:0.51
+\r nil
+\a mouseSingleSelectPt()
+\i 0.795:1.02
+\r nil
+\a geScroll(nil "s"    nil)
+\r t
+\a geScroll(nil "s"    nil)
+\r t
+\a geScroll(nil "s"    nil)
+\r t
+\a mouseSingleSelectPt()
+\i 0.37:-0.035
+\r t
+\a leHiEditProp()
+\r t
+\a geiPlInvokePlistAction("editorNum0" "close")
+\r t
+\a leHiDelete()
+\r t
+\a lxHiUpdateComponentsAndNets()
+\o INFO (LX-1063): Building the update components and nets form...
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Metal1 pin"
+\r "Metal1 pin"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Metal1 pin"
+\r "Metal1 pin"
+\p > 
+\a hiiSetCurrentForm('lxTemplateForm)
+\r t
+\a lxTemplateForm->templateTab->value=2
+\r 2
+\a lxTemplateForm->templateTab->page2->pScrollRegion->value= '( "\"vss\"      \"vss\"     (\"Metal1\" \"pin\")        0.06   0.06   1     t" )
+\r ("\"vss\"      \"vss\"     (\"Metal1\" \"pin\")        0.06   0.06   1     t")
+\a (lxiLGTextStyleCB)
+\p > 
+\a hiiSetCurrentForm('lxPinTextStyleForm)
+\r t
+\a lxPinTextStyleForm->labelLayerPurposeChoice->value= "Same As Pin"
+\r "Same As Pin"
+\a lxPinTextStyleForm->height->value=0.05
+\r 0.05
+\a hiFormDone(lxPinTextStyleForm)
+\r t
+\r t
+\a hiiSetCurrentForm('lxTemplateForm)
+\r t
+\a hiFormDone(lxTemplateForm)
+\r t
+\o INFO (LX-1073): Update Components and Nets report:
+\o   Instances created:             0
+\o   Instances deleted:             0
+\o   Instance masters updated:      0
+\o   Instance connectivity updated: 0
+\o   Pins created:                  1
+\o   Pins deleted:                  0
+\r t
+\a mouseSingleSelectPt()
+\i -0.07:-0.21
+\r nil
+\a leSelBoxOrStretch()
+\i -0.145:-0.16
+\i -0.145:-0.16
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 0.28:-0.42
+\r t
+\r t
+\a leSelBoxOrStretch()
+\i 0.105:-0.34
+\a le0MoveForm->le0MoveFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\i 0.105:-0.34
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 0.235:-0.035
+\r t
+\r t
+\a leHiSave()
+\r t
+\a mouseSingleSelectPt()
+\i 0.53:1.78
+\r t
+\a leHiEditProp()
+\r t
+\a geiPlInvokePlistAction("editorNum0" "cancel")
+\r t
+\a mouseSingleSelectPt()
+\i 1.015:1.405
+\r nil
+\a mouseSingleSelectPt()
+\i 0.535:1.83
+\r t
+\a _lxHiMousePopUp()
+\i 0.535:1.83
+\i 0.535:1.83
+\r nil
+\a hiPopupDown(_cxtMenu)
+\r t
+\a leHiFlatten()
+\r t
+\a hiiSetCurrentForm('leFlattenForm)
+\r t
+\a leFlattenForm->flattenPCells->value= t
+\r t
+\a hiFormDone(leFlattenForm)
+\r t
+\a leHiSave()
+\r t
+\a mouseSingleSelectPt()
+\i 1.61:1.515
+\r nil
+\a mouseSingleSelectPt()
+\i 0.915:1.07
+\r nil
+\a hiZoomInAtMouse()
+\i 0.12:0.455
+\r t
+\a hiZoomInAtMouse()
+\i 0.195:0.525
+\r t
+\a mouseSingleSelectPt()
+\i 0.35:0.67
+\r t
+\a leHiDelete()
+\r t
+\a mouseSingleSelectPt()
+\i 0.22:0.895
+\r t
+\a leHiDelete()
+\r t
+\a leSelBoxOrStretch()
+\i 0.56:1.27
+\i 0.56:1.27
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 0.56:1.31
+\r t
+\r t
+\a mouseSingleSelectPt()
+\i 0.105:1.675
+\r t
+\a leHiDelete()
+\r t
+\a lxHiReInitDesign()
+\p > 
+\a hiDBoxCancel(lxiDialogBox)
+\r t
+\r nil
+\a lxHiCreateInstFromSch()
+\p > 
+\a cancelEnterFun()
+\r t
+\r nil
+\a lxHiUpdateComponentsAndNets()
+\o INFO (LX-1063): Building the update components and nets form...
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Metal1 pin"
+\r "Metal1 pin"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Metal1 pin"
+\r "Metal1 pin"
+\p > 
+\a lxHiReInitDesign()
+\p > 
+\a hiDBoxOK(lxiDialogBox)
+\r t
+\r nil
+\a hiiSetCurrentForm('lxTemplateForm)
+\r t
+\a lxTemplateForm->templateTab->value=2
+\r 2
+\a (lxiLGTextStyleCB)
+\p > 
+\a hiiSetCurrentForm('lxPinTextStyleForm)
+\r t
+\a hiFormDone(lxPinTextStyleForm)
+\r t
+\r t
+\a hiiSetCurrentForm('lxTemplateForm)
+\r t
+\a hiFormDone(lxTemplateForm)
+\r t
+\o INFO (LX-1073): Update Components and Nets report:
+\o   Instances created:             0
+\o   Instances deleted:             0
+\o   Instance masters updated:      0
+\o   Instance connectivity updated: 0
+\o   Pins created:                  3
+\o   Pins deleted:                  0
+\r t
+\a mouseSingleSelectPt()
+\i 0.225:-0.34
+\r t
+\a leSelBoxOrStretch()
+\i 0.21:-0.34
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\i 0.21:-0.34
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 0.33:-0.335
+\r t
+\r t
+\a mouseSingleSelectPt()
+\i 0.35:-0.335
+\r t
+\a leHiMove()
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\p > 
+\a mouseAddPt(t)
+\i 0.332:-0.35
+\r t
+\a mouseAddPt(t)
+\i 0.386:0.6755
+\r t
+\r t
+\a hiUndo()
+\r t
+\a mouseSingleSelectPt()
+\i 0.36:-0.335
+\r t
+\a leHiMove()
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\p > 
+\a mouseAddPt(t)
+\i 0.351:-0.3345
+\r t
+\a mouseAddPt(t)
+\i 0.421:0.66
+\r t
+\r t
+\a mouseSingleSelectPt()
+\i 0.09:-0.355
+\r nil
+\a mouseSingleSelectPt()
+\i 0.09:-0.34
+\r nil
+\a mouseSingleSelectPt()
+\i 0.105:-0.28
+\r t
+\a leHiMove()
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\p > 
+\a mouseAddPt(t)
+\i 0.1065:-0.292
+\r t
+\a mouseAddPt(t)
+\i 0.2115:1.72
+\r t
+\r t
+\a mouseSingleSelectPt()
+\i 0.13:-0.45
+\r t
+\a leHiMove()
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\p > 
+\a mouseAddPt(t)
+\i 0.126:-0.412
+\r t
+\a cancelEnterFun()
+\r t
+\r nil
+\a mouseSingleSelectPt()
+\i 0.105:-0.4
+\r t
+\a leHiMove()
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\p > 
+\a mouseAddPt(t)
+\i 0.1145:-0.4005
+\r t
+\a mouseAddPt(t)
+\i 0.1765:0.959
+\r t
+\r t
+\a mouseSingleSelectPt()
+\i 1.05:0.615
+\r nil
+\a _pvsOpenIPVSrunForm( 'lvs ?timeout 30 )
+\r t
+\o No error data base is open.
+\o *INFO* using "/users/Cours/ele8304/2/Labs/Tuto/inverseur/pvsUI.log" as a master PVS run log file
+\o INFO: LVS BROWSER running
+\w *WARNING* PVS Color scheme: Color scheme is not set which might lead to error shapes or probes being displayed in unexpected colors. See /CMC/tools/cadence/PVS16.12.000_lnx86/tools/pvs/samples/color_setup/README for how to set up the color scheme.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\o Started command server on port: 46291
+\o "Starting connectivity database server: /CMC/tools/cadence/PVS16.12.000_lnx86/bin/pvsProbeServer -ecdb /export/tmp/8304_2/verifications/lvs/.inv.ecdb"
+\o "Setting cell map file: /export/tmp/8304_2/verifications/lvs/lay_cellMap.txt"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Nwell drawing"
+\r "Nwell drawing"
+\w *WARNING* (LX-2075): Layer-purpose pair ("Nwell" "drawing") is not defined as a valid LPP.
+\w Setting the LPP to ("Oxide" "drawing") instead.
+\w You can change this to any purpose on any of the following layers - ("Oxide" "Poly" "Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7" "Metal8" "Metal9" "Metal10" "Metal11") - or use
+\w the Constraint Manager to define additional valid layers.
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a lxTemplateForm->templateTab->page2->pLPP_1->value = "Oxide drawing"
+\r "Oxide drawing"
+\a le0MoveForm->le0MoveFormLayerField->value = "As Is"
+\r "As Is"
+\a le0CopyForm->le0CopyFormLayerField->value = "Nwell drawing"
+\r "Nwell drawing"
+\a leRectForm->slotLayer->value = "y0 drawing"
+\r "y0 drawing"
+\o "Starting probe server on port: 34162"
+\o No error data base is open.
+\a _qrcuiOpenPVSRunForm()
+\o QRC Run: Loading Technology Data. Standby...
+\p > 
+\a hiiSetCurrentForm('vuipreRcxForm)
+\r t
+\a hiFormDone(vuipreRcxForm)
+\r t
+\w *WARNING* Template file "/CMC/kits/AMSKIT616_GPDK/tech/gpdk045_v_4_0/pvs/.rcx_setup.tpl" cannot be found
+\o *Info* Default Substrate Tech Dir is not defined, replaced with the empty name*Info* Ignoring peecMode from the State File
+\o Load complete.
+\p > 
+\a hiiSetCurrentForm('vuiRcxRunForm)
+\r t
+\a vuiRcxRunForm->vuiRCXTabField->page1->vuiRCXFlowTab->ruleSetField->value="rcx_typical"
+\w *WARNING* Template file "/CMC/kits/AMSKIT616_GPDK/tech/gpdk045_v_4_0/pvs/.rcx_setup.tpl" cannot be found
+\r "rcx_typical"
+\a vuiRcxRunForm->vuiRCXTabField->value=2
+\r 2
+\a vuiRcxRunForm->vuiRCXTabField->value=4
+\r 4
+\a hiFormDone(vuiRcxRunForm)
+\w *WARNING* Cell View Exists. Overwrite?
+\w 
+\w Library: ele8304
+\w Cell:    inv
+\w View:    av_extracted
+\p > 
+\a hiDBoxOK(vuiDBox)
+\r t
+\o CCLFile is /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.ccl
+\o LogFile is /export/tmp/8304_2/verifications/lvs/svdb/qrc.inv.log
+\o Starting the ipc:52 Run: IPC Id 20742: pid Quantus QRC.
+\r t
+\r nil
+\a hiiSetCurrentForm('tmp40)
+\r t
+\a hiFormDone(tmp40)
+\r t
+\# Memory report: Maximum memory size now 12,808 MB at UTC 2018.10.02 20:05:21.059
+\o The Quantus QRC run "inv" completed successfully
+\o The output is in : 
+\o 
+\o Library: ele8304
+\o Cell:    inv
+\o View:    av_extracted
+\o Redraws cellview "ele8304 inv av_extracted".
+\a hiDBoxOK(vuiRcxRunDialog)
+\r t
+\o  
+\o Library Manager new cellview request for cell "ele8304 inv_tb".
+\i deNew('(nil libName "ele8304" cellName "inv_tb"))
+\p > 
+\a hiiSetCurrentForm('deNewForm)
+\r t
+\# Available memory:         11,233 MB at UTC 2018.10.02 20:05:41.059
+\a hiFormDone(deNewForm)
+\p > 
+\a hiDBoxOK(deDBox)
+\r t
+\r t
+\a nrSetWindowVisibility(hedNewConfigDialog_w44 "show")
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w44)
+\r t
+\a nrResizeWindow(hedNewConfigDialog_w44 list(290 127 500 600))
+\r t
+\a hedNewConfigDialog_w44->useTemplate->value = t
+\r t
+\a nrSetWindowVisibility(hedNewConfigDialog_w44_useTemplateDialog "show")
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w44_useTemplateDialog)
+\r t
+\a nrResizeWindow(hedNewConfigDialog_w44_useTemplateDialog list(340 337 400 179))
+\r t
+\a hedNewConfigDialog_w44_useTemplateDialog->file->value = "/CMC/tools/cadence/IC617_lnx86/share/cdssetup/hierEditor/templates/spectre"
+\r "/CMC/tools/cadence/IC617_lnx86/share/cdssetup/hierEditor/templates/spectre"
+\a hedNewConfigDialog_w44_useTemplateDialog->name->value = "spectre"
+\r "spectre"
+\a hedNewConfigDialog_w44_useTemplateDialog->ok->value = t
+\r t
+\a hedNewConfigDialog_w44->libList->value = "myLib"
+\r "myLib"
+\a hedNewConfigDialog_w44->viewList->value = "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice"
+\r "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice"
+\a hedNewConfigDialog_w44->stopList->value = "spectre"
+\r "spectre"
+\a hedNewConfigDialog_w44->description->value = ""
+\r ""
+\a hedNewConfigDialog_w44->description->value = " Default template for spectre\\n Note:\\n      Please remember to replace Top Cell Library, Cell, and View\\n      fields with the actual names used by your design.\\n"
+\r " Default template for spectre\\n Note:\\n      Please remember to replace Top Cell Library, Cell, and View\\n      fields with the actual names used by your design.\\n"
+\a nrSetCurrentWindow(hedNewConfigDialog_w44)
+\r t
+\a _hedSelectLCV(hedNewConfigDialog_w44->hedLCVSelection "ele8304" "inv_tb" "schematic")
+\r t
+\a hedNewConfigDialog_w44->buildLibList->value = t
+\r t
+\a nrSetWindowVisibility(hedListBuilderDialog "show")
+\r t
+\a nrSetCurrentWindow(hedListBuilderDialog)
+\r t
+\a nrResizeWindow(hedListBuilderDialog list(624 320 652 387))
+\r t
+\a hedListBuilderDialog->remove->value = t
+\r t
+\a hedListBuilderDialog->toView->value = '("myLib" )
+\r ("myLib")
+\a hedListBuilderDialog->fromView->value = '("myLib" )
+\r ("myLib")
+\a hedListBuilderDialog->fromView->value = '("ele8304" )
+\r ("ele8304")
+\a hedListBuilderDialog->insert->value = t
+\r t
+\a hedListBuilderDialog->toView->value = '("ele8304" )
+\r ("ele8304")
+\a hedListBuilderDialog->ok->value = t
+\r t
+\a hedNewConfigDialog_w44->libList->value = "ele8304"
+\r "ele8304"
+\a nrSetCurrentWindow(hedNewConfigDialog_w44)
+\r t
+\a hedNewConfigDialog_w44->buildViewList->value = t
+\r t
+\a nrSetWindowVisibility(hedListBuilderDialog "show")
+\r t
+\a nrSetCurrentWindow(hedListBuilderDialog)
+\r t
+\a nrResizeWindow(hedListBuilderDialog list(624 320 652 387))
+\r t
+\a hedListBuilderDialog->addValue->value = "av_extracted"
+\r "av_extracted"
+\a hedListBuilderDialog->add->value = t
+\r t
+\a hedListBuilderDialog->toView->value = '("av_extracted" )
+\r ("av_extracted")
+\a hedListBuilderDialog->ok->value = t
+\r t
+\a hedNewConfigDialog_w44->viewList->value = "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice av_extracted"
+\r "spectre cmos_sch cmos.sch schematic veriloga ahdl pspice av_extracted"
+\a nrSetCurrentWindow(hedNewConfigDialog_w44)
+\r t
+\a hiResizeWindow(swindow(26) list(1099:164 1799:964))
+\r t
+\a nrResizeWindow(hedNewConfigDialog_w44 list(1199 168 500 600))
+\r t
+\a nrSetCurrentWindow(hedNewConfigDialog_w44)
+\r t
+\a hedNewConfigDialog_w44->ok->value = t
+\r t
+\a _seeHiTbClearHistory(window(44)->hiToolbars->hedToolbar_win44->hedSearchCombo_7)
+\r t
+\a _seeHiClearHistory(dwindow('hedSearchBrowser7))
+\r t
+\a _hedSetCurrent(window(44)->hedPartsTable "(ele8304 inv schematic)" 3 2)
+\r t
+\a _hedSelect(window(44)->hedPartsTable '((nil 3 3)))
+\r t
+\o Bound cell (ele8304 inv) to view 'av_extracted'.
+\a _hedSetViewBinding(window(44)->hedPartsTable "av_extracted")
+\r t
+\a hiPopupDown(_hedPartsTableMenu)
+\r t
+\a _hedDeSelect(window(44)->hedPartsTable '((nil 3 3)))
+\r t
+\# Memory report: Maximum memory size now 12,521 MB at UTC 2018.10.02 20:06:21.061
+\a _hedTriggerActionCB("update")
+\a nrSetWindowVisibility(hedUpdateSyncDialog "show")
+\r t
+\a nrSetCurrentWindow(hedUpdateSyncDialog)
+\r t
+\a nrResizeWindow(hedUpdateSyncDialog list(782 332 335 363))
+\r t
+\a hedUpdateSyncDialog->ok->value = t
+\r t
+\r t
+\a _hedTriggerActionCB("save")
+\r t
+\a dwindow('hedTopCell7)->ade->value = t
+\r t
+\w *WARNING* (icLic-203) Failed to check out license Analog_Design_Environment_L ("95200") to run ADE L because of status code -18.
+\w Attempting to check out the next available license Analog_Design_Environment_XL ("95210") per license checkout order L, XL, GXL.
+\o *INFO* (icLic-302) License Analog_Design_Environment_XL ("95210") was used to run ADE L.
+\a hiResizeWindow(swindow(27) list(1013:284 1705:759))
+\r t
+\a sevChooseSimulator('sevSession8)
+\p > 
+\a hiiSetCurrentForm('sevSimulatorForm8)
+\r t
+\a sevSimulatorForm8->simulator->value="spectre"
+\r "spectre"
+\a hiFormDone(sevSimulatorForm8)
+\p > 
+\a hiDBoxOK(aaMessage)
+\r t
+\a sevSetTableItem(connectModulesForm->ieFormTableBox 0 2 "")
+\r t
+\w *WARNING* (icLic-203) Failed to check out license Analog_Design_Environment_L ("95200") to run ADE L because of status code -18.
+\w Attempting to check out the next available license Analog_Design_Environment_XL ("95210") per license checkout order L, XL, GXL.
+\o *INFO* (icLic-302) License Analog_Design_Environment_XL ("95210") was used to run ADE L.
+\o INFO (ADE-1104): You are changing the simulator. All options that can be recognized
+\o      by the new simulator will be retained. All other options will be ignored.
+\o      You will not be warned about any ignored option. Be sure to check all your
+\o      forms (Analysis, Options, etc) to verify you have the setup you require 
+\r t
+\r t
+\a sevLoadState('sevSession8)
+\p > 
+\a hiiSetCurrentForm('sevLoadForm8)
+\r t
+\a hiFormDone(sevLoadForm8)
+\r t
+\r t
+\a sevTableSelectRows(sevAnaForm8->anaListBox 1)
+\r t
+\a sevNetlistAndRun('sevSession8)
+\o Delete psf data in /export/tmp/8304_2/simulations/inv_tb/spectre/config/psf.
+\o generate netlist...
+\o Begin Incremental Netlisting Oct  2 16:07:00 2018
+\o WARNING (OSSHNL-335): Design configuration has changed since last netlisting session in this run
+\o directory. Netlist(s) from last session cannot be reused for incremental
+\o netlisting. Therefore, re-netlisting the design.
+\o 
+\o End netlisting Oct  2 16:07:00 2018
+\o 
+\o Netlisting Statistics:
+\o 	Number of components:   52
+\o 
+\o 	Elapsed time:          1.0s (52.00/s)
+\o Errors: 0	Warnings: 0
+\o       ...successful.
+\o compose simulator input file...
+\o       ...successful.
+\o start simulator if needed...
+\o       ...successful.
+\r t
+\o simulate...
+\o INFO (ADE-3071): Simulation completed successfully.
+\o reading simulation data...
+\o       ...successful.
+\a rdbLoadResults("sevSession8" "/export/tmp/8304_2/simulations/inv_tb/spectre/config/psf")
+\r t
+\o net /vin selected but not highlighted
+\o net /vout selected but not highlighted
+\o terminal /I0/vdd selected but not highlighted
+\o terminal /I0/vss selected but not highlighted
+\# Memory report: using       1,569 MB, process size 2,558 MB at UTC 2018.10.02 20:07:04.819
+\a hiSetCurrentWindow(window(47))
+\r t
+\a hiSetCurrentWindow(window(45))
+\r t
+\a sevTableSelectRows(sevOutForm8->outListBox 2)
+\r t
+\a sevTableSelectRows(sevOutForm8->outListBox '( 2 3 4 5 ))
+\r t
+\a sevDeleteSelections('sevSession8)
+\r t
+\a sevTableSelectRows(sevAnaForm8->anaListBox 0)
+\r t
+\a sevTableSelectRows(sevAnaForm8->anaListBox 1)
+\r t
+\a sevNetlistAndRun('sevSession8)
+\o Delete psf data in /export/tmp/8304_2/simulations/inv_tb/spectre/config/psf.
+\o generate netlist...
+\o Begin Incremental Netlisting Oct  2 16:07:16 2018
+\o End netlisting Oct  2 16:07:16 2018
+\o 
+\o 	The netlist is up to date.
+\o 	Time taken to compare the design with netlist:   0.0s
+\o       ...successful.
+\o compose simulator input file...
+\o       ...successful.
+\o start simulator if needed...
+\o       ...successful.
+\r t
+\o simulate...
+\o INFO (ADE-3071): Simulation completed successfully.
+\o reading simulation data...
+\o       ...successful.
+\o net /vin selected but not highlighted
+\o net /vout selected but not highlighted
+\a hiSetCurrentWindow(window(47))
+\r t
+\a _ddtExecuteAction(awvGetCurrentWindow()->vivaSession "splitAllStrips")
+\r t
+\# Memory report: Maximum memory size now 13,219 MB at UTC 2018.10.02 20:08:51.146
+\a hiCloseWindow(swindow(28))
+\r t
+\a _hiSetCurrentWinNum(46)
+\r t
+\a hiCloseWindow(window(46))
+\r t
+\a _hiSetCurrentWinNum(45)
+\r t
+\a hiCloseWindow(swindow(24))
+\r t
+\a hiCloseWindow(swindow(26))
+\r t
+\a hiCloseWindow(swindow(25))
+\r t
+\# Memory report: Maximum memory size now 13,513 MB at UTC 2018.10.02 20:09:41.148
+\a hiQuit()
+\p > 
+\a hiResizeWindow(swindow(27) list(1023:287 1715:762))
+\r t
+\a hiDBoxOK(hiQuitDBox)
+\r t
+\p > 
+\a hiDBoxOK(sevblockingDialogBox)
+\w *WARNING* (icLic-203) Failed to check out license Analog_Design_Environment_L ("95200") to run ADE L because of status code -18.
+\w Attempting to check out the next available license Analog_Design_Environment_XL ("95210") per license checkout order L, XL, GXL.
+\o *INFO* (icLic-302) License Analog_Design_Environment_XL ("95210") was used to run ADE L.
+\p > 
+\a hiiSetCurrentForm('sevSaveForm8)
+\r t
+\a hiFormDone(sevSaveForm8)
+\p > 
+\a hiDBoxOK(sevblockingDialogBox)
+\r t
+\o Loading adpServer.cxt 
+\r t
+\r t
+\o Simulation design variables differ from those on the cellView,
+\o they have been saved in the file "/tmp/saved-design-variables".
+\o To save future changes, copy variables to cellView before exiting.
+\o 
+\# Memory report: on exit          1,522 MB, process size 2,511 MB at UTC 2018.10.02 20:09:58.726
+\# Memory report: peak usage       1,570 MB, process size 2,559 MB

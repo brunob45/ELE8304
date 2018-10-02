@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      8304_2
+HostName                       vlsi315.vlsi.polymtl.ca
+ProcessIdentifier              16875
+ProcessCreationTime_UTC        1538503598
+ProcessCreationTime_Readable   Tue Oct  2 14:06:38 2018 EDT
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /users/Cours/ele8304/2/Labs/Tuto/inverseur/ele8304/inv/layout/layout.oa.cdslck
+TimeEditLocked                 Tue Oct  2 15:58:23 2018 EDT

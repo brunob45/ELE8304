@@ -11,6 +11,6 @@ ProcessCreationTime_UTC        1538503594
 ProcessCreationTime_Readable   Tue Oct  2 14:06:34 2018 EDT
 AppIdentifier                  /CMC/tools/cadence/IC617_lnx86/tools/dfII/bin/64bit/virtuoso
 OSType                         lnx86
-ReasonForPlacingEditLock       Not specified
-FilePathUsedToEditLock         /users/Cours/ele8304/2/Labs/Tuto/inverseur/ele8304/inv_tb/config/expand.cfg
-TimeEditLocked                 Tue Oct  2 16:06:25 2018 EDT
+ReasonForPlacingEditLock       
+FilePathUsedToEditLock         /users/Cours/ele8304/2/Labs/Tuto/inverseur/ele8304/inv/physConfig/physExpand.cfg
+TimeEditLocked                 Tue Oct  2 15:58:24 2018 EDT
