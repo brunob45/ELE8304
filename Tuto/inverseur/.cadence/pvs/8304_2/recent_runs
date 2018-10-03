@@ -1,2 +1,3 @@
-1538510642 0 1538510642 "/export/tmp/8304_2/verifications/lvs/" "lvsbrowser" "" "" "" "/export/tmp/8304_2/verifications/lvs/" "auCdl" "auCdl schematic" "/export/tmp/8304_2/verifications/lvs/lay_cellMap.txt" "" "" "" "" true
+1538603287 0 1538603287 "/export/tmp/8304_2/verifications/lvs" "lvsbrowser" "" "" "" "/export/tmp/8304_2/verifications/lvs/" "auCdl" "auCdl schematic" "/export/tmp/8304_2/verifications/lvs/lay_cellMap.txt" "" "" "" "" true
+1538603221 0 1538603221 "/export/tmp/8304_2/verifications/drc/nand.drc_errors.ascii" "drcbrowser" "" "" "" "" "" "" "" "" "" "" "" true
 1538509375 0 1538509375 "/export/tmp/8304_2/verifications/drc/inv.drc_errors.ascii" "drcbrowser" "" "" "" "" "" "" "" "" "" "" "" true

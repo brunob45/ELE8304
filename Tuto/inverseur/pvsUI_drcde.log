@@ -8,15 +8,15 @@ All rights reserved worldwide.
 
 Build O/S:       Linux x86_64 2.6.18-194.el5
 Executed on:     vlsi315 (Linux x86_64 3.10.0-862.14.4.el7.x86_64)
-Process Id:      1788
-Starting Time:   Tue Oct  2 15:42:59 2018 (Tue Oct  2 19:42:59 2018 GMT)
-With parameters: -sf /export/tmp/8304_2/verifications/drc/inv.drc_errors.ascii.index /export/tmp/8304_2/verifications/drc/inv.drc_errors.ascii /export/tmp/8304_2/verifications/drc/inv.drc_errors.ascii.pvstdb 
+Process Id:      28415
+Starting Time:   Wed Oct  3 17:47:05 2018 (Wed Oct  3 21:47:05 2018 GMT)
+With parameters: -sf /export/tmp/8304_2/verifications/drc/nand.drc_errors.ascii.index /export/tmp/8304_2/verifications/drc/nand.drc_errors.ascii /export/tmp/8304_2/verifications/drc/nand.drc_errors.ascii.pvstdb 
 ********************************************************************************
 
-Waiting for write lock on /export/tmp/8304_2/verifications/drc/inv.drc_errors.ascii.index.
+Waiting for write lock on /export/tmp/8304_2/verifications/drc/nand.drc_errors.ascii.index.
 Obtained lock after 0 seconds.
 
 Summary: 0 markers created.
 
 pvstdb completed.
-43820438204382043820Checking in SoftShare license Phys_Ver_Sys_Results_Mgr ... succeeded (1s).
+38832388323883238832Checking in SoftShare license Phys_Ver_Sys_Results_Mgr ... succeeded (1s).
