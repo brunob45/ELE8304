@@ -1,0 +1,9 @@
+#
+# cds.lib par defaut pour le tuto compteur
+#
+DEFINE gpdk045 $LIB_TECHDIR/gpdk045/gpdk045
+DEFINE gsclib045_tech $LIB_TECHDIR/gsclib045/gsclib045_tech/oa22/gsclib045_tech
+DEFINE gsclib045 $LIB_TECHDIR/gsclib045/gsclib045/oa22/gsclib045
+DEFINE giolib045 $LIB_TECHDIR/giolib045/giolib045/oa22/giolib045
+# DEFINE ele8304 ele8304
+

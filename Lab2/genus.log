@@ -1,0 +1,1114 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 17.10-p007_1, built Thu Aug 03 2017
+Options: -overwrite 
+Date:    Mon Nov 05 15:22:24 2018
+Host:    vlsi304 (x86_64 w/Linux 3.10.0-862.14.4.el7.x86_64) (4cores*8cpus*1physical cpu*Intel(R) Core(TM) i7 CPU 960 @ 3.20GHz 8192KB) (12291636KB)
+OS:      Scientific Linux release 7.5 (Nitrogen)
+
+Checking out license: Genus_Synthesis
+
+Loading tool scripts...
+Finished loading tool scripts (13 seconds elapsed).
+
+WARNING: This version of the tool is 459 days old.
+genus@root:> ls
+UVVM
+asm
+doc
+genus.cmd
+genus.log
+implementation
+scripts
+simulation
+simulations
+sources
+genus@root:> cd scripts
+genus@root:> ls
+compile.tcl
+config.tcl
+genus@root:> ./config.tcl
+invalid command name "./config.tcl"
+genus@root:> help
+  help: provides help for specified command 
+
+Usage: help [-help] [-all] [-attribute] [-category <string>] [-command] [-detail] [-message] [-obj]
+           [-summary] [<string>] [<string>]
+
+    [-help]:
+        prints out the command usage 
+    [-all]:
+        prints out help for command/attribute/object/message 
+    [-attribute]:
+        perform attribute search only 
+    [-category <string>]:
+        filter attribute based on categories 
+    [-command]:
+        perform command search only 
+    [-detail]:
+        provide full informaiton in multi-match 
+    [-message]:
+        perform message search only 
+    [-obj]:
+        perform object search only 
+    [-summary]:
+        provide short description in single match 
+    [<string>]:
+        specify a command name, message ID, object type or attribute 
+    [<string>]:
+        specify an option name or attribute 
+genus@root:> help -command
+genus@root:> help help*
+
+============================================================
+Commands:
+  help:                 # provides help for specified command
+
+
+============================================================
+Attributes:
+  help(obj_type):       # string, read-only, default={}, indices={}
+                        # Description of the object type.
+  help(attribute):      # string, read-only, default=no_value, indices={}
+                        # Internal help message.
+  help(message):        # string, read-only, default=no_value, indices={}
+                        # Help of message.
+  help_always_visible(message):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Always display help text of message.
+  help(command):        # string, read-only, default={}, indices={}
+                        # Command help.
+  help(command_option): # string, read-only, default={}, indices={}
+                        # Command option help.
+genus@root:> help -help
+  help: provides help for specified command 
+
+Usage: help [-help] [-all] [-attribute] [-category <string>] [-command] [-detail] [-message] [-obj]
+           [-summary] [<string>] [<string>]
+
+    [-help]:
+        prints out the command usage 
+    [-all]:
+        prints out help for command/attribute/object/message 
+    [-attribute]:
+        perform attribute search only 
+    [-category <string>]:
+        filter attribute based on categories 
+    [-command]:
+        perform command search only 
+    [-detail]:
+        provide full informaiton in multi-match 
+    [-message]:
+        perform message search only 
+    [-obj]:
+        perform object search only 
+    [-summary]:
+        provide short description in single match 
+    [<string>]:
+        specify a command name, message ID, object type or attribute 
+    [<string>]:
+        specify an option name or attribute 
+genus@root:> help help*
+
+============================================================
+Commands:
+  help:                 # provides help for specified command
+
+
+============================================================
+Attributes:
+  help(obj_type):       # string, read-only, default={}, indices={}
+                        # Description of the object type.
+  help(attribute):      # string, read-only, default=no_value, indices={}
+                        # Internal help message.
+  help(message):        # string, read-only, default=no_value, indices={}
+                        # Help of message.
+  help_always_visible(message):
+                        # bool { 1 0 true false }, read/write, default=false, indices={}
+                        # Always display help text of message.
+  help(command):        # string, read-only, default={}, indices={}
+                        # Command help.
+  help(command_option): # string, read-only, default={}, indices={}
+                        # Command option help.
+genus@root:> source config.tcl
+Sourcing './config.tcl' (Mon Nov 05 15:25:00 EST 2018)...
+  Setting attribute of root '/': 'information_level' = 7
+  Setting attribute of root '/': 'hdl_vhdl_read_version' = 2008
+  Setting attribute of root '/': 'init_hdl_search_path' = /users/Cours/ele8304/2/Labs/Lab2/sources/hdl
+  Setting attribute of root '/': 'init_lib_search_path' = /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/lef /CMC/kits/AMSKIT616_GPDK/tech/giolib045/giolib045/lef /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/qrc/qx
+            Reading file '/CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_basicCells.lib'
+    Loading library fast_vdd1v0_basicCells.lib
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'Y' for the cell 'HOLDX1'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_basicCells.lib, Line 67517)
+
+  Message Summary for Library fast_vdd1v0_basicCells.lib:
+  *******************************************************
+  Could not find an attribute in the library. [LBR-436]: 574
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  *******************************************************
+ 
+            Reading file '/CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_extvdd1v0.lib'
+    Loading library fast_vdd1v0_extvdd1v0.lib
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'XNM1_altosg1' for the cell 'FSWNX1'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_extvdd1v0.lib, Line 159)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'XNM0_altosg1' for the cell 'FSWX1'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_extvdd1v0.lib, Line 338)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'XNM4_altosg1' for the cell 'HSWDNX1'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_extvdd1v0.lib, Line 553)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'XNM3_altosg1' for the cell 'HSWDNX1'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_extvdd1v0.lib, Line 593)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'XPM0_altosg1' for the cell 'HSWDX1'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_extvdd1v0.lib, Line 885)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'XPM3_altosg1' for the cell 'HSWDX1'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_extvdd1v0.lib, Line 925)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'XNM0_altosg1' for the cell 'HSWNX1'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_extvdd1v0.lib, Line 1181)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'XPM0_altosg1' for the cell 'HSWX1'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_extvdd1v0.lib, Line 1360)
+
+  Message Summary for Library fast_vdd1v0_extvdd1v0.lib:
+  ******************************************************
+  Could not find an attribute in the library. [LBR-436]: 72
+  Missing a function attribute in the output pin definition. [LBR-518]: 8
+  ******************************************************
+ 
+            Reading file '/CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib'
+    Loading library fast_vdd1v0_multibitsDFF.lib
+Info    : Appending library. [LBR-3]
+        : Appending library 'fast_vdd1v0' to the previously read library of the same name and nominal PVT. Cell definitions from the previously read library will not be overridden. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib)
+        : Appending libraries will overwrite some of the characteristics of the library.
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'Q1' for the cell 'SDFF2RX1'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib, Line 3574)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'Q2' for the cell 'SDFF2RX1'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib, Line 3578)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'Q1N' for the cell 'SDFF2RX1'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib, Line 3684)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'Q2N' for the cell 'SDFF2RX1'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib, Line 3688)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'Q1' for the cell 'SDFF2RX2'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib, Line 4486)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'Q2' for the cell 'SDFF2RX2'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib, Line 4490)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'Q1N' for the cell 'SDFF2RX2'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib, Line 4596)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'Q2N' for the cell 'SDFF2RX2'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib, Line 4600)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'Q1' for the cell 'SDFF4RX1'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib, Line 6358)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'Q2' for the cell 'SDFF4RX1'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib, Line 6362)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'Q3' for the cell 'SDFF4RX1'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib, Line 6366)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'Q4' for the cell 'SDFF4RX1'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib, Line 6370)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'Q1N' for the cell 'SDFF4RX1'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib, Line 6476)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'Q2N' for the cell 'SDFF4RX1'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib, Line 6480)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'Q3N' for the cell 'SDFF4RX1'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib, Line 6484)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'Q4N' for the cell 'SDFF4RX1'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib, Line 6488)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'Q1' for the cell 'SDFF4RX2'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib, Line 8262)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'Q2' for the cell 'SDFF4RX2'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib, Line 8266)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'Q3' for the cell 'SDFF4RX2'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib, Line 8270)
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'Q4' for the cell 'SDFF4RX2'. (File /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib, Line 8274)
+
+  Message Summary for Library fast_vdd1v0_multibitsDFF.lib:
+  *********************************************************
+  Could not find an attribute in the library. [LBR-436]: 96
+  Missing a function attribute in the output pin definition. [LBR-518]: 48
+  Appending library. [LBR-3]: 1
+  *********************************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.100000, 0.000000) in library 'fast_vdd1v0_multibitsDFF.lib'.
+        : The nominal operating condition represents either the nominal PVT values if specified in the library source, or the default PVT values (1.0, 1.0, 1.0).
+Warning : Ignoring unsupported lu_table_template. [LBR-403]
+        : Ignoring lu_table_template index type (input_voltage).
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.100000, 0.000000) in library 'fast_vdd1v0_extvdd1v0.lib'.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Otherwise, the library cell will be marked as unusable and as timing model.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+Info    : An output library pin lacks a function attribute. [LBR-41]
+        : Output pin 'HOLDX1/Y' has no function.
+        : If the remainder of this library cell's semantic checks are successful, it will be considered as a timing-model (because one of its outputs does not have a valid function.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP10' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP10' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP2' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP2' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP4' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP4' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP5' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP5' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP6' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP6' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP7' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP7' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP9' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP9' must have an output pin.
+Warning : Library cell only has usable test_cell function. [LBR-66]
+        : Cell 'SDFF2RX1' can be used as a regular flop/latch by tying off its test pins, or as a scan flop/latch in 'muxed_scan' style.
+        : This library has a valid test_cell function, but its regular cell function is either missing or not completely understood (e.g. if the cell has a state_table construct).
+Warning : Library cell only has usable test_cell function. [LBR-66]
+        : Cell 'SDFF2RX2' can be used as a regular flop/latch by tying off its test pins, or as a scan flop/latch in 'muxed_scan' style.
+Warning : Library cell only has usable test_cell function. [LBR-66]
+        : Cell 'SDFF4RX1' can be used as a regular flop/latch by tying off its test pins, or as a scan flop/latch in 'muxed_scan' style.
+Warning : Library cell only has usable test_cell function. [LBR-66]
+        : Cell 'SDFF4RX2' can be used as a regular flop/latch by tying off its test pins, or as a scan flop/latch in 'muxed_scan' style.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_2x1_HV_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_2x1_HV_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_1x2_HV_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_1x2_HV_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M3_M2_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M3_M2_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M3_M2_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M3_M2_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M3_M2_M_NH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M3_M2_M_SH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M3_M2_2x1_VH_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M3_M2_2x1_VH_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M3_M2_1x2_VH_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M3_M2_1x2_VH_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M4_M3_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M4_M3_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M4_M3_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M4_M3_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M4_M3_M_EV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M4_M3_M_WV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M4_M3_2x1_HV_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M4_M3_2x1_HV_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M4_M3_1x2_HV_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M4_M3_1x2_HV_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M5_M4_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M5_M4_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M5_M4_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M5_M4_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M5_M4_M_NH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M5_M4_M_SH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M5_M4_2x1_VH_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M5_M4_2x1_VH_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M5_M4_1x2_VH_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M5_M4_1x2_VH_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M6_M5_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M6_M5_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M6_M5_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M6_M5_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M6_M5_M_EV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M6_M5_M_WV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M6_M5_2x1_HV_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M6_M5_2x1_HV_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M6_M5_1x2_HV_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M6_M5_1x2_HV_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M7_M6_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M7_M6_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M7_M6_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M7_M6_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M7_M6_M_NH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M7_M6_M_SH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M7_M6_2x1_VH_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M7_M6_2x1_VH_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M7_M6_1x2_VH_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M7_M6_1x2_VH_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M8_M7_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M8_M7_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M8_M7_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M8_M7_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M8_M7_M_EV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M8_M7_M_WV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M8_M7_2x1_HV_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M8_M7_2x1_HV_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M8_M7_1x2_HV_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M8_M7_1x2_HV_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M9_M8_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M9_M8_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M9_M8_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M9_M8_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M9_M8_M_NH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M9_M8_M_SH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M9_M8_2x1_VH_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M9_M8_2x1_VH_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M9_M8_1x2_VH_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M9_M8_1x2_VH_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M10_M9_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M10_M9_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M10_M9_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M10_M9_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M10_M9_2x1_HV_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M10_M9_2x1_HV_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M10_M9_1x2_HV_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M10_M9_1x2_HV_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_M_NH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_M_SH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_2x1_VH_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_2x1_VH_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_1x2_VH_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_1x2_VH_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_2x1_HH_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_2x1_HH_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_2x1_HH_C' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_1x2_VV_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_1x2_VV_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_1x2_VV_C' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_2x2_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M3_M2_2x2_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M4_M3_2x2_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M5_M4_2x2_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M6_M5_2x2_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M7_M6_2x2_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M8_M7_2x2_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M9_M8_2x2_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M10_M9_2x2_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_VH_NEW' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_HH_NEW' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_HV_NEW' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_VV_NEW' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_M_NH_NEW' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_M_SH_NEW' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_1x2_VH_N_NEW' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_1x2_VH_S_NEW' has no resistance value.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'DFF2RX1' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'DFF2RX2' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'DFF2X1' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'DFF2X2' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'DFF4RX1' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'DFF4RX2' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'DFF4X1' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'DFF4X2' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'SDFF2RX1' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'SDFF2RX2' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'SDFF4RX1' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'SDFF4RX2' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'SPDFF2RX1' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'SPDFF2RX2' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'SPDFF4RX1' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'SPDFF4RX2' defined before, the previous macro will be overridden.
+
+  According to lef_library, there are total 11 routing layers [ V(5) / H(6) ]
+
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'CI' and 'S' in libcell 'ADDFHX1' is 'pos_unate', but unateness determined from function is 'non_unate'.
+        : The 'timing_sense' attribute will be respected.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'CI' and 'S' in libcell 'ADDFHX1' is 'neg_unate', but unateness determined from function is 'non_unate'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFHX1'.
+        : Setting the 'timing_sense' to non_unate.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'B' and 'S' in libcell 'ADDFHX1' is 'pos_unate', but unateness determined from function is 'non_unate'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'B' and 'S' in libcell 'ADDFHX1' is 'neg_unate', but unateness determined from function is 'non_unate'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFHX1'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'A' and 'S' in libcell 'ADDFHX1' is 'pos_unate', but unateness determined from function is 'non_unate'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'A' and 'S' in libcell 'ADDFHX1' is 'neg_unate', but unateness determined from function is 'non_unate'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFHX1'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'CI' and 'S' in libcell 'ADDFHX2' is 'pos_unate', but unateness determined from function is 'non_unate'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'CI' and 'S' in libcell 'ADDFHX2' is 'neg_unate', but unateness determined from function is 'non_unate'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFHX2'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'B' and 'S' in libcell 'ADDFHX2' is 'pos_unate', but unateness determined from function is 'non_unate'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'B' and 'S' in libcell 'ADDFHX2' is 'neg_unate', but unateness determined from function is 'non_unate'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFHX2'.
+Info    : Setting the maximum print count of this message to 10 if information_level is less than 9. [LBR-161]
+        : To print all the warning messages, set the information_level to 9.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFHX2'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFHX4'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFHX4'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFHX4'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFHXL'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFHXL'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFHXL'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFX1'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFX1'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFX1'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFX2'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFX2'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFX2'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFX4'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFX4'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n60' between pins 'RT' and 'Q' in libcell 'RDFFNQX1'.
+        : The library cell is sequential and it has a combinational arc involving at least one pin that is only used in scan mode.  You can enable such arcs by setting root-level attribute "ignore_scan_combinational_arcs" to false, but that will deem the cell unusable.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n90' between pins 'RT' and 'Q' in libcell 'RDFFNRQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n91' between pins 'RT' and 'Q' in libcell 'RDFFNRQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n92' between pins 'RT' and 'Q' in libcell 'RDFFNRQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n63' between pins 'RT' and 'Q' in libcell 'RDFFNRQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n90' between pins 'RT' and 'Q' in libcell 'RDFFNRX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n91' between pins 'RT' and 'Q' in libcell 'RDFFNRX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n92' between pins 'RT' and 'Q' in libcell 'RDFFNRX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n63' between pins 'RT' and 'Q' in libcell 'RDFFNRX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_QN_n64' between pins 'RT' and 'QN' in libcell 'RDFFNRX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_QN_n65' between pins 'RT' and 'QN' in libcell 'RDFFNRX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_QN_n66' between pins 'RT' and 'QN' in libcell 'RDFFNRX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n60' between pins 'RT' and 'Q' in libcell 'RDFFNSQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n61' between pins 'RT' and 'Q' in libcell 'RDFFNSQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n62' between pins 'RT' and 'Q' in libcell 'RDFFNSQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n60' between pins 'RT' and 'Q' in libcell 'RDFFNSRQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n91' between pins 'RT' and 'Q' in libcell 'RDFFNSRQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n62' between pins 'RT' and 'Q' in libcell 'RDFFNSRQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n63' between pins 'RT' and 'Q' in libcell 'RDFFNSRQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n64' between pins 'RT' and 'Q' in libcell 'RDFFNSRQX1'.
+  Libraries have 330 usable logic and 163 usable sequential lib-cells.
+Info    : Inconsistent pin direction prevents conversion to pgpin. [PHYS-145]
+        : Direction of pin 'CK' of library cell 'SRDFFRQX1' is inconsistent with direction of pin in LEF.
+        : Although the pin is considered a power or ground pin in LEF, to be converted to pgpin, the direction of the pin must be consistent in both lib and LEF libraries.
+
+  According to qrc_tech_file, there are total 11 routing layers [ V(5) / H(6) ]
+
+Done reading qrc_tech_file
+genus@root:> source config.tcl
+Sourcing './config.tcl' (Mon Nov 05 15:25:59 EST 2018)...
+  Setting attribute of root '/': 'information_level' = 7
+  Setting attribute of root '/': 'hdl_vhdl_read_version' = 2008
+  Setting attribute of root '/': 'init_hdl_search_path' = /users/Cours/ele8304/2/Labs/Lab2/sources/hdl
+Warning : Cannot modify library search path after reading library(s). [TUI-83]
+        : Cannot modify 'init_lib_search_path' attribute to '/CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/lef /CMC/kits/AMSKIT616_GPDK/tech/giolib045/giolib045/lef /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/qrc/qx'
+        : You must set the 'init_lib_search_path' attribute before you set the 'library' attribute.
+  Setting attribute of root '/': 'init_lib_search_path' = /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/lef /CMC/kits/AMSKIT616_GPDK/tech/giolib045/giolib045/lef /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/qrc/qx
+Freeing libraries in memory (  { fast_vdd1v0_basicCells.lib }  { fast_vdd1v0_extvdd1v0.lib }  { fast_vdd1v0_multibitsDFF.lib } )
+
+            Reading file '/CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_basicCells.lib'
+    Loading library fast_vdd1v0_basicCells.lib
+            Reading file '/CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_extvdd1v0.lib'
+    Loading library fast_vdd1v0_extvdd1v0.lib
+            Reading file '/CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib'
+    Loading library fast_vdd1v0_multibitsDFF.lib
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.100000, 0.000000) in library 'fast_vdd1v0_multibitsDFF.lib'.
+Warning : Ignoring unsupported lu_table_template. [LBR-403]
+        : Ignoring lu_table_template index type (input_voltage).
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.100000, 0.000000) in library 'fast_vdd1v0_extvdd1v0.lib'.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+Info    : An output library pin lacks a function attribute. [LBR-41]
+        : Output pin 'HOLDX1/Y' has no function.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP10' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP10' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP2' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP2' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP4' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP4' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP5' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP5' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP6' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP6' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP7' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP7' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP9' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP9' must have an output pin.
+Warning : Library cell only has usable test_cell function. [LBR-66]
+        : Cell 'SDFF2RX1' can be used as a regular flop/latch by tying off its test pins, or as a scan flop/latch in 'muxed_scan' style.
+Warning : Library cell only has usable test_cell function. [LBR-66]
+        : Cell 'SDFF2RX2' can be used as a regular flop/latch by tying off its test pins, or as a scan flop/latch in 'muxed_scan' style.
+Warning : Library cell only has usable test_cell function. [LBR-66]
+        : Cell 'SDFF4RX1' can be used as a regular flop/latch by tying off its test pins, or as a scan flop/latch in 'muxed_scan' style.
+Warning : Library cell only has usable test_cell function. [LBR-66]
+        : Cell 'SDFF4RX2' can be used as a regular flop/latch by tying off its test pins, or as a scan flop/latch in 'muxed_scan' style.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFHX1'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFHX1'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFHX1'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFHX2'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFHX2'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFHX2'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFHX4'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFHX4'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFHX4'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFHXL'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFHXL'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFHXL'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFX1'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFX1'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFX1'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFX2'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFX2'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFX2'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFX4'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFX4'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n60' between pins 'RT' and 'Q' in libcell 'RDFFNQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n90' between pins 'RT' and 'Q' in libcell 'RDFFNRQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n91' between pins 'RT' and 'Q' in libcell 'RDFFNRQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n92' between pins 'RT' and 'Q' in libcell 'RDFFNRQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n63' between pins 'RT' and 'Q' in libcell 'RDFFNRQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n90' between pins 'RT' and 'Q' in libcell 'RDFFNRX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n91' between pins 'RT' and 'Q' in libcell 'RDFFNRX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n92' between pins 'RT' and 'Q' in libcell 'RDFFNRX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n63' between pins 'RT' and 'Q' in libcell 'RDFFNRX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_QN_n64' between pins 'RT' and 'QN' in libcell 'RDFFNRX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_QN_n65' between pins 'RT' and 'QN' in libcell 'RDFFNRX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_QN_n66' between pins 'RT' and 'QN' in libcell 'RDFFNRX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n60' between pins 'RT' and 'Q' in libcell 'RDFFNSQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n61' between pins 'RT' and 'Q' in libcell 'RDFFNSQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n62' between pins 'RT' and 'Q' in libcell 'RDFFNSQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n60' between pins 'RT' and 'Q' in libcell 'RDFFNSRQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n91' between pins 'RT' and 'Q' in libcell 'RDFFNSRQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n62' between pins 'RT' and 'Q' in libcell 'RDFFNSRQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n63' between pins 'RT' and 'Q' in libcell 'RDFFNSRQX1'.
+Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
+        : The arc is named 'RT_Q_n64' between pins 'RT' and 'Q' in libcell 'RDFFNSRQX1'.
+  Libraries have 330 usable logic and 163 usable sequential lib-cells.
+Info    : Inconsistent pin direction prevents conversion to pgpin. [PHYS-145]
+        : Direction of pin 'CK' of library cell 'SRDFFRQX1' is inconsistent with direction of pin in LEF.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_2x1_HV_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_2x1_HV_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_1x2_HV_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_1x2_HV_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M3_M2_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M3_M2_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M3_M2_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M3_M2_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M3_M2_M_NH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M3_M2_M_SH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M3_M2_2x1_VH_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M3_M2_2x1_VH_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M3_M2_1x2_VH_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M3_M2_1x2_VH_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M4_M3_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M4_M3_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M4_M3_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M4_M3_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M4_M3_M_EV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M4_M3_M_WV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M4_M3_2x1_HV_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M4_M3_2x1_HV_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M4_M3_1x2_HV_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M4_M3_1x2_HV_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M5_M4_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M5_M4_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M5_M4_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M5_M4_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M5_M4_M_NH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M5_M4_M_SH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M5_M4_2x1_VH_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M5_M4_2x1_VH_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M5_M4_1x2_VH_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M5_M4_1x2_VH_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M6_M5_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M6_M5_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M6_M5_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M6_M5_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M6_M5_M_EV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M6_M5_M_WV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M6_M5_2x1_HV_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M6_M5_2x1_HV_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M6_M5_1x2_HV_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M6_M5_1x2_HV_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M7_M6_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M7_M6_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M7_M6_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M7_M6_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M7_M6_M_NH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M7_M6_M_SH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M7_M6_2x1_VH_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M7_M6_2x1_VH_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M7_M6_1x2_VH_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M7_M6_1x2_VH_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M8_M7_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M8_M7_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M8_M7_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M8_M7_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M8_M7_M_EV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M8_M7_M_WV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M8_M7_2x1_HV_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M8_M7_2x1_HV_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M8_M7_1x2_HV_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M8_M7_1x2_HV_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M9_M8_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M9_M8_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M9_M8_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M9_M8_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M9_M8_M_NH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M9_M8_M_SH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M9_M8_2x1_VH_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M9_M8_2x1_VH_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M9_M8_1x2_VH_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M9_M8_1x2_VH_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M10_M9_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M10_M9_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M10_M9_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M10_M9_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M10_M9_2x1_HV_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M10_M9_2x1_HV_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M10_M9_1x2_HV_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M10_M9_1x2_HV_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_M_NH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_M_SH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_2x1_VH_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_2x1_VH_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_1x2_VH_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_1x2_VH_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_2x1_HH_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_2x1_HH_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_2x1_HH_C' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_1x2_VV_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_1x2_VV_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_1x2_VV_C' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M2_M1_2x2_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M3_M2_2x2_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M4_M3_2x2_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M5_M4_2x2_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M6_M5_2x2_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M7_M6_2x2_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M8_M7_2x2_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M9_M8_2x2_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M10_M9_2x2_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_VH_NEW' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_HH_NEW' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_HV_NEW' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_VV_NEW' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_M_NH_NEW' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_M_SH_NEW' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_1x2_VH_N_NEW' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'M11_M10_1x2_VH_S_NEW' has no resistance value.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'DFF2RX1' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'DFF2RX2' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'DFF2X1' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'DFF2X2' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'DFF4RX1' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'DFF4RX2' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'DFF4X1' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'DFF4X2' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'SDFF2RX1' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'SDFF2RX2' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'SDFF4RX1' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'SDFF4RX2' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'SPDFF2RX1' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'SPDFF2RX2' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'SPDFF4RX1' defined before, the previous macro will be overridden.
+Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
+        : Macro 'SPDFF4RX2' defined before, the previous macro will be overridden.
+
+  According to lef_library, there are total 11 routing layers [ V(5) / H(6) ]
+
+Info    : Inconsistent pin direction prevents conversion to pgpin. [PHYS-145]
+        : Direction of pin 'CK' of library cell 'SRDFFRQX1' is inconsistent with direction of pin in LEF.
+
+  According to qrc_tech_file, there are total 11 routing layers [ V(5) / H(6) ]
+
+Done reading qrc_tech_file
+
+Another Ctrl-C within 1 second will terminate the tool.
+Abnormal exit.
