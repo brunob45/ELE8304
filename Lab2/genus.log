@@ -5,14 +5,14 @@ of Cadence Design Systems, Inc. in the United States and other countries.
 
 Version: 17.10-p007_1, built Thu Aug 03 2017
 Options: -overwrite 
-Date:    Mon Nov 05 15:22:24 2018
+Date:    Mon Nov 05 15:50:26 2018
 Host:    vlsi304 (x86_64 w/Linux 3.10.0-862.14.4.el7.x86_64) (4cores*8cpus*1physical cpu*Intel(R) Core(TM) i7 CPU 960 @ 3.20GHz 8192KB) (12291636KB)
 OS:      Scientific Linux release 7.5 (Nitrogen)
 
 Checking out license: Genus_Synthesis
 
 Loading tool scripts...
-Finished loading tool scripts (13 seconds elapsed).
+Finished loading tool scripts (10 seconds elapsed).
 
 WARNING: This version of the tool is 459 days old.
 genus@root:> ls
@@ -30,111 +30,15 @@ genus@root:> cd scripts
 genus@root:> ls
 compile.tcl
 config.tcl
-genus@root:> ./config.tcl
-invalid command name "./config.tcl"
-genus@root:> help
-  help: provides help for specified command 
-
-Usage: help [-help] [-all] [-attribute] [-category <string>] [-command] [-detail] [-message] [-obj]
-           [-summary] [<string>] [<string>]
-
-    [-help]:
-        prints out the command usage 
-    [-all]:
-        prints out help for command/attribute/object/message 
-    [-attribute]:
-        perform attribute search only 
-    [-category <string>]:
-        filter attribute based on categories 
-    [-command]:
-        perform command search only 
-    [-detail]:
-        provide full informaiton in multi-match 
-    [-message]:
-        perform message search only 
-    [-obj]:
-        perform object search only 
-    [-summary]:
-        provide short description in single match 
-    [<string>]:
-        specify a command name, message ID, object type or attribute 
-    [<string>]:
-        specify an option name or attribute 
-genus@root:> help -command
-genus@root:> help help*
-
-============================================================
-Commands:
-  help:                 # provides help for specified command
-
-
-============================================================
-Attributes:
-  help(obj_type):       # string, read-only, default={}, indices={}
-                        # Description of the object type.
-  help(attribute):      # string, read-only, default=no_value, indices={}
-                        # Internal help message.
-  help(message):        # string, read-only, default=no_value, indices={}
-                        # Help of message.
-  help_always_visible(message):
-                        # bool { 1 0 true false }, read/write, default=false, indices={}
-                        # Always display help text of message.
-  help(command):        # string, read-only, default={}, indices={}
-                        # Command help.
-  help(command_option): # string, read-only, default={}, indices={}
-                        # Command option help.
-genus@root:> help -help
-  help: provides help for specified command 
-
-Usage: help [-help] [-all] [-attribute] [-category <string>] [-command] [-detail] [-message] [-obj]
-           [-summary] [<string>] [<string>]
-
-    [-help]:
-        prints out the command usage 
-    [-all]:
-        prints out help for command/attribute/object/message 
-    [-attribute]:
-        perform attribute search only 
-    [-category <string>]:
-        filter attribute based on categories 
-    [-command]:
-        perform command search only 
-    [-detail]:
-        provide full informaiton in multi-match 
-    [-message]:
-        perform message search only 
-    [-obj]:
-        perform object search only 
-    [-summary]:
-        provide short description in single match 
-    [<string>]:
-        specify a command name, message ID, object type or attribute 
-    [<string>]:
-        specify an option name or attribute 
-genus@root:> help help*
-
-============================================================
-Commands:
-  help:                 # provides help for specified command
-
-
-============================================================
-Attributes:
-  help(obj_type):       # string, read-only, default={}, indices={}
-                        # Description of the object type.
-  help(attribute):      # string, read-only, default=no_value, indices={}
-                        # Internal help message.
-  help(message):        # string, read-only, default=no_value, indices={}
-                        # Help of message.
-  help_always_visible(message):
-                        # bool { 1 0 true false }, read/write, default=false, indices={}
-                        # Always display help text of message.
-  help(command):        # string, read-only, default={}, indices={}
-                        # Command help.
-  help(command_option): # string, read-only, default={}, indices={}
-                        # Command option help.
+fv
+shifter.tcl
+genus@root:> rm -r fv
+genus@root:> ls
+compile.tcl
+config.tcl
+shifter.tcl
 genus@root:> source config.tcl
-Sourcing './config.tcl' (Mon Nov 05 15:25:00 EST 2018)...
+Sourcing './config.tcl' (Mon Nov 05 15:51:00 EST 2018)...
   Setting attribute of root '/': 'information_level' = 7
   Setting attribute of root '/': 'hdl_vhdl_read_version' = 2008
   Setting attribute of root '/': 'init_hdl_search_path' = /users/Cours/ele8304/2/Labs/Lab2/sources/hdl
@@ -674,441 +578,232 @@ Info    : Inconsistent pin direction prevents conversion to pgpin. [PHYS-145]
   According to qrc_tech_file, there are total 11 routing layers [ V(5) / H(6) ]
 
 Done reading qrc_tech_file
-genus@root:> source config.tcl
-Sourcing './config.tcl' (Mon Nov 05 15:25:59 EST 2018)...
-  Setting attribute of root '/': 'information_level' = 7
-  Setting attribute of root '/': 'hdl_vhdl_read_version' = 2008
-  Setting attribute of root '/': 'init_hdl_search_path' = /users/Cours/ele8304/2/Labs/Lab2/sources/hdl
-Warning : Cannot modify library search path after reading library(s). [TUI-83]
-        : Cannot modify 'init_lib_search_path' attribute to '/CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/lef /CMC/kits/AMSKIT616_GPDK/tech/giolib045/giolib045/lef /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/qrc/qx'
-        : You must set the 'init_lib_search_path' attribute before you set the 'library' attribute.
-  Setting attribute of root '/': 'init_lib_search_path' = /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/lef /CMC/kits/AMSKIT616_GPDK/tech/giolib045/giolib045/lef /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/qrc/qx
-Freeing libraries in memory (  { fast_vdd1v0_basicCells.lib }  { fast_vdd1v0_extvdd1v0.lib }  { fast_vdd1v0_multibitsDFF.lib } )
+genus@root:> source shifter.tcl
+Sourcing './shifter.tcl' (Mon Nov 05 15:51:10 EST 2018)...
+              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/std/standard.vhdl'
+            Reading VHDL file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd'
+              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/ieee/std_logic_1164.vhdl'
+              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/cadence/attributes.vhdl'
+              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/std/textio.vhdl'
+              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/ieee/numeric_std.vhdl'
+Info    : Error summary. [VHDLPT-508]
+        : 0 errors and 118 warnings reported.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'rv_shifter' from file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd'.
+Info    : Binding to architecture. [ELAB-5]
+        : Elaborating architecture 'shifter_arch' for entity 'rv_shifter'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'rv_shifter' with default parameters value.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'others' in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 19.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'in_direction' in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 17.
+Info    : Unused module input port. [CDFG-500]
+        : Input port 'in_arith' is not used in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 10.
+        : The value of the input port is not used within the design.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'rv_shifter'.
+Checking for analog nets.... 
+Check completed for analog nets.
+Info: Checking for source rtl...
+Info: Check completed for source rtl...
+        Computing net loads.
+UM:  flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:            14             46                                      elaborate
+  Checking the design.
 
-            Reading file '/CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_basicCells.lib'
-    Loading library fast_vdd1v0_basicCells.lib
-            Reading file '/CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_extvdd1v0.lib'
-    Loading library fast_vdd1v0_extvdd1v0.lib
-            Reading file '/CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib'
-    Loading library fast_vdd1v0_multibitsDFF.lib
-Info    : Created nominal operating condition. [LBR-412]
-        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.100000, 0.000000) in library 'fast_vdd1v0_multibitsDFF.lib'.
-Warning : Ignoring unsupported lu_table_template. [LBR-403]
-        : Ignoring lu_table_template index type (input_voltage).
-Info    : Created nominal operating condition. [LBR-412]
-        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.100000, 0.000000) in library 'fast_vdd1v0_extvdd1v0.lib'.
-Warning : Library cell has no output pins defined. [LBR-9]
-        : Library cell 'ANTENNA' must have an output pin.
-Warning : Library cell has no output pins defined. [LBR-9]
-        : Library cell 'ANTENNA' must have an output pin.
-Info    : An output library pin lacks a function attribute. [LBR-41]
-        : Output pin 'HOLDX1/Y' has no function.
-Warning : Library cell has no output pins defined. [LBR-9]
-        : Library cell 'DECAP10' must have an output pin.
-Warning : Library cell has no output pins defined. [LBR-9]
-        : Library cell 'DECAP10' must have an output pin.
-Warning : Library cell has no output pins defined. [LBR-9]
-        : Library cell 'DECAP2' must have an output pin.
-Warning : Library cell has no output pins defined. [LBR-9]
-        : Library cell 'DECAP2' must have an output pin.
-Warning : Library cell has no output pins defined. [LBR-9]
-        : Library cell 'DECAP3' must have an output pin.
-Warning : Library cell has no output pins defined. [LBR-9]
-        : Library cell 'DECAP3' must have an output pin.
-Warning : Library cell has no output pins defined. [LBR-9]
-        : Library cell 'DECAP4' must have an output pin.
-Warning : Library cell has no output pins defined. [LBR-9]
-        : Library cell 'DECAP4' must have an output pin.
-Warning : Library cell has no output pins defined. [LBR-9]
-        : Library cell 'DECAP5' must have an output pin.
-Warning : Library cell has no output pins defined. [LBR-9]
-        : Library cell 'DECAP5' must have an output pin.
-Warning : Library cell has no output pins defined. [LBR-9]
-        : Library cell 'DECAP6' must have an output pin.
-Warning : Library cell has no output pins defined. [LBR-9]
-        : Library cell 'DECAP6' must have an output pin.
-Warning : Library cell has no output pins defined. [LBR-9]
-        : Library cell 'DECAP7' must have an output pin.
-Warning : Library cell has no output pins defined. [LBR-9]
-        : Library cell 'DECAP7' must have an output pin.
-Warning : Library cell has no output pins defined. [LBR-9]
-        : Library cell 'DECAP8' must have an output pin.
-Warning : Library cell has no output pins defined. [LBR-9]
-        : Library cell 'DECAP8' must have an output pin.
-Warning : Library cell has no output pins defined. [LBR-9]
-        : Library cell 'DECAP9' must have an output pin.
-Warning : Library cell has no output pins defined. [LBR-9]
-        : Library cell 'DECAP9' must have an output pin.
-Warning : Library cell only has usable test_cell function. [LBR-66]
-        : Cell 'SDFF2RX1' can be used as a regular flop/latch by tying off its test pins, or as a scan flop/latch in 'muxed_scan' style.
-Warning : Library cell only has usable test_cell function. [LBR-66]
-        : Cell 'SDFF2RX2' can be used as a regular flop/latch by tying off its test pins, or as a scan flop/latch in 'muxed_scan' style.
-Warning : Library cell only has usable test_cell function. [LBR-66]
-        : Cell 'SDFF4RX1' can be used as a regular flop/latch by tying off its test pins, or as a scan flop/latch in 'muxed_scan' style.
-Warning : Library cell only has usable test_cell function. [LBR-66]
-        : Cell 'SDFF4RX2' can be used as a regular flop/latch by tying off its test pins, or as a scan flop/latch in 'muxed_scan' style.
-Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
-        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFHX1'.
-Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
-        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFHX1'.
-Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
-        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFHX1'.
-Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
-        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFHX2'.
-Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
-        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFHX2'.
-Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
-        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFHX2'.
-Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
-        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFHX4'.
-Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
-        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFHX4'.
-Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
-        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFHX4'.
-Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
-        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFHXL'.
-Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
-        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFHXL'.
-Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
-        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFHXL'.
-Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
-        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFX1'.
-Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
-        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFX1'.
-Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
-        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFX1'.
-Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
-        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFX2'.
-Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
-        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFX2'.
-Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
-        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFX2'.
-Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
-        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFX4'.
-Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
-        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFX4'.
-Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
-        : The arc is named 'RT_Q_n60' between pins 'RT' and 'Q' in libcell 'RDFFNQX1'.
-Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
-        : The arc is named 'RT_Q_n90' between pins 'RT' and 'Q' in libcell 'RDFFNRQX1'.
-Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
-        : The arc is named 'RT_Q_n91' between pins 'RT' and 'Q' in libcell 'RDFFNRQX1'.
-Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
-        : The arc is named 'RT_Q_n92' between pins 'RT' and 'Q' in libcell 'RDFFNRQX1'.
-Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
-        : The arc is named 'RT_Q_n63' between pins 'RT' and 'Q' in libcell 'RDFFNRQX1'.
-Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
-        : The arc is named 'RT_Q_n90' between pins 'RT' and 'Q' in libcell 'RDFFNRX1'.
-Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
-        : The arc is named 'RT_Q_n91' between pins 'RT' and 'Q' in libcell 'RDFFNRX1'.
-Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
-        : The arc is named 'RT_Q_n92' between pins 'RT' and 'Q' in libcell 'RDFFNRX1'.
-Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
-        : The arc is named 'RT_Q_n63' between pins 'RT' and 'Q' in libcell 'RDFFNRX1'.
-Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
-        : The arc is named 'RT_QN_n64' between pins 'RT' and 'QN' in libcell 'RDFFNRX1'.
-Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
-        : The arc is named 'RT_QN_n65' between pins 'RT' and 'QN' in libcell 'RDFFNRX1'.
-Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
-        : The arc is named 'RT_QN_n66' between pins 'RT' and 'QN' in libcell 'RDFFNRX1'.
-Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
-        : The arc is named 'RT_Q_n60' between pins 'RT' and 'Q' in libcell 'RDFFNSQX1'.
-Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
-        : The arc is named 'RT_Q_n61' between pins 'RT' and 'Q' in libcell 'RDFFNSQX1'.
-Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
-        : The arc is named 'RT_Q_n62' between pins 'RT' and 'Q' in libcell 'RDFFNSQX1'.
-Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
-        : The arc is named 'RT_Q_n60' between pins 'RT' and 'Q' in libcell 'RDFFNSRQX1'.
-Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
-        : The arc is named 'RT_Q_n91' between pins 'RT' and 'Q' in libcell 'RDFFNSRQX1'.
-Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
-        : The arc is named 'RT_Q_n62' between pins 'RT' and 'Q' in libcell 'RDFFNSRQX1'.
-Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
-        : The arc is named 'RT_Q_n63' between pins 'RT' and 'Q' in libcell 'RDFFNSRQX1'.
-Info    : Automatically disabling a scan-only combinational arc. [LBR-77]
-        : The arc is named 'RT_Q_n64' between pins 'RT' and 'Q' in libcell 'RDFFNSRQX1'.
-  Libraries have 330 usable logic and 163 usable sequential lib-cells.
-Info    : Inconsistent pin direction prevents conversion to pgpin. [PHYS-145]
-        : Direction of pin 'CK' of library cell 'SRDFFRQX1' is inconsistent with direction of pin in LEF.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M2_M1_HV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M2_M1_VV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M2_M1_VH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M2_M1_HH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M2_M1_2x1_HV_E' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M2_M1_2x1_HV_W' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M2_M1_1x2_HV_N' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M2_M1_1x2_HV_S' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M3_M2_VH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M3_M2_HH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M3_M2_HV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M3_M2_VV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M3_M2_M_NH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M3_M2_M_SH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M3_M2_2x1_VH_E' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M3_M2_2x1_VH_W' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M3_M2_1x2_VH_N' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M3_M2_1x2_VH_S' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M4_M3_HV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M4_M3_VV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M4_M3_VH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M4_M3_HH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M4_M3_M_EV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M4_M3_M_WV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M4_M3_2x1_HV_E' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M4_M3_2x1_HV_W' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M4_M3_1x2_HV_N' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M4_M3_1x2_HV_S' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M5_M4_VH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M5_M4_HH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M5_M4_HV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M5_M4_VV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M5_M4_M_NH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M5_M4_M_SH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M5_M4_2x1_VH_E' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M5_M4_2x1_VH_W' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M5_M4_1x2_VH_N' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M5_M4_1x2_VH_S' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M6_M5_HV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M6_M5_VV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M6_M5_VH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M6_M5_HH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M6_M5_M_EV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M6_M5_M_WV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M6_M5_2x1_HV_E' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M6_M5_2x1_HV_W' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M6_M5_1x2_HV_N' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M6_M5_1x2_HV_S' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M7_M6_VH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M7_M6_HH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M7_M6_HV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M7_M6_VV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M7_M6_M_NH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M7_M6_M_SH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M7_M6_2x1_VH_E' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M7_M6_2x1_VH_W' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M7_M6_1x2_VH_N' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M7_M6_1x2_VH_S' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M8_M7_HV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M8_M7_VV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M8_M7_VH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M8_M7_HH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M8_M7_M_EV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M8_M7_M_WV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M8_M7_2x1_HV_E' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M8_M7_2x1_HV_W' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M8_M7_1x2_HV_N' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M8_M7_1x2_HV_S' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M9_M8_VH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M9_M8_HH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M9_M8_HV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M9_M8_VV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M9_M8_M_NH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M9_M8_M_SH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M9_M8_2x1_VH_E' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M9_M8_2x1_VH_W' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M9_M8_1x2_VH_N' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M9_M8_1x2_VH_S' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M10_M9_HV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M10_M9_VV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M10_M9_VH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M10_M9_HH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M10_M9_2x1_HV_E' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M10_M9_2x1_HV_W' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M10_M9_1x2_HV_N' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M10_M9_1x2_HV_S' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M11_M10_VH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M11_M10_HH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M11_M10_HV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M11_M10_VV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M11_M10_M_NH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M11_M10_M_SH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M11_M10_2x1_VH_E' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M11_M10_2x1_VH_W' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M11_M10_1x2_VH_N' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M11_M10_1x2_VH_S' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M2_M1_2x1_HH_E' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M2_M1_2x1_HH_W' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M2_M1_2x1_HH_C' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M2_M1_1x2_VV_N' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M2_M1_1x2_VV_S' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M2_M1_1x2_VV_C' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M2_M1_2x2_HV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M3_M2_2x2_VH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M4_M3_2x2_HV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M5_M4_2x2_VH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M6_M5_2x2_HV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M7_M6_2x2_VH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M8_M7_2x2_HV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M9_M8_2x2_VH' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M10_M9_2x2_HV' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M11_M10_VH_NEW' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M11_M10_HH_NEW' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M11_M10_HV_NEW' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M11_M10_VV_NEW' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M11_M10_M_NH_NEW' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M11_M10_M_SH_NEW' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M11_M10_1x2_VH_N_NEW' has no resistance value.
-Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
-        : Via 'M11_M10_1x2_VH_S_NEW' has no resistance value.
-Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
-        : Macro 'DFF2RX1' defined before, the previous macro will be overridden.
-Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
-        : Macro 'DFF2RX2' defined before, the previous macro will be overridden.
-Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
-        : Macro 'DFF2X1' defined before, the previous macro will be overridden.
-Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
-        : Macro 'DFF2X2' defined before, the previous macro will be overridden.
-Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
-        : Macro 'DFF4RX1' defined before, the previous macro will be overridden.
-Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
-        : Macro 'DFF4RX2' defined before, the previous macro will be overridden.
-Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
-        : Macro 'DFF4X1' defined before, the previous macro will be overridden.
-Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
-        : Macro 'DFF4X2' defined before, the previous macro will be overridden.
-Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
-        : Macro 'SDFF2RX1' defined before, the previous macro will be overridden.
-Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
-        : Macro 'SDFF2RX2' defined before, the previous macro will be overridden.
-Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
-        : Macro 'SDFF4RX1' defined before, the previous macro will be overridden.
-Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
-        : Macro 'SDFF4RX2' defined before, the previous macro will be overridden.
-Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
-        : Macro 'SPDFF2RX1' defined before, the previous macro will be overridden.
-Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
-        : Macro 'SPDFF2RX2' defined before, the previous macro will be overridden.
-Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
-        : Macro 'SPDFF4RX1' defined before, the previous macro will be overridden.
-Warning : Macro already defined before, the previous macro will be overridden. [PHYS-107]
-        : Macro 'SPDFF4RX2' defined before, the previous macro will be overridden.
+ 	 Check Design Report
+	 -------------------- 
 
-  According to lef_library, there are total 11 routing layers [ V(5) / H(6) ]
+  Unresolved References & Empty Modules
+  ------------------------------------- 
+No unresolved references in design 'rv_shifter'
 
-Info    : Inconsistent pin direction prevents conversion to pgpin. [PHYS-145]
-        : Direction of pin 'CK' of library cell 'SRDFFRQX1' is inconsistent with direction of pin in LEF.
+No empty modules in design 'rv_shifter'
 
-  According to qrc_tech_file, there are total 11 routing layers [ V(5) / H(6) ]
+  Done Checking the design.
+genus@root:> ls fv
+rv_shifter
+genus@root:> help elaborate
+Commands:
+  elaborate: elaborates previously read HDL files and creates corresponding design and subdesigns 
 
-Done reading qrc_tech_file
+Usage: elaborate [-parameters <string>] [-lib_path <string>]+ [-lib_extension <string>]+ [<string>+]
+
+    [-parameters <string>]:
+        specifies a list of parameter/value pairs for top-level Verilog module or VHDL entity. For 
+        example, elab -parameters {{width 5} {depth 10}}. 
+    [-lib_path <string>]:
+        defines Verilog library search path 
+    [-lib_extension <string>]:
+        defines Verilog library file extension 
+    [<string>+]:
+        the top-level Verilog modules or VHDL architectures to elaborate 
+
+
+genus@root:> read_hdl -vhdl shifter.vhd
+              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/std/standard.vhdl'
+            Reading VHDL file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd'
+              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/ieee/std_logic_1164.vhdl'
+              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/cadence/attributes.vhdl'
+              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/std/textio.vhdl'
+              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/ieee/numeric_std.vhdl'
+Info    : Error summary. [VHDLPT-508]
+        : 0 errors and 118 warnings reported.
+genus@root:> elaborate rv_shifter
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'rv_shifter' from file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd'.
+Info    : Binding to architecture. [ELAB-5]
+        : Elaborating architecture 'shifter_arch' for entity 'rv_shifter'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'rv_shifter' with default parameters value.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'others' in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 19.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'in_direction' in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 17.
+Info    : Unused module input port. [CDFG-500]
+        : Input port 'in_arith' is not used in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 10.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'rv_shifter'.
+Checking for analog nets.... 
+Check completed for analog nets.
+Info: Checking for source rtl...
+Info: Check completed for source rtl...
+design:rv_shifter_1
+Commands:
+
+
+Attributes:
+
+Commands:
+
+
+Attributes:
+
+Commands:
+
+genus@root:> help check_design
+Commands:
+  check_design: reports information on design state 
+
+Usage: check_design [-undriven] [-unloaded] [-unloaded_comb] [-multiple_driver] [-unresolved] [-constant]
+           [-through_tie_cell] [-assigns] [-all] [-preserved] [-physical_only] [-logical_only]
+           [-lib_lef_consistency] [-report_scan_pins] [-skip_scan_pins] [-vname]
+           [-threshold_fanout <integer>] [-only_user_hierarchy] [-long_module_name] [-status] [<design>]
+
+    [-undriven]:
+        reports undriven ports and pins 
+    [-unloaded]:
+        reports the unloaded ports and sequential elements (flops and latches) 
+    [-unloaded_comb]:
+        reports the unloaded comb elements 
+    [-multiple_driver]:
+        reports multidriven ports and pins 
+    [-unresolved]:
+        reports the unresolved references and empty modules 
+    [-constant]:
+        reports the constant pins, ports in the design 
+    [-through_tie_cell]:
+        reports the constant pins, ports in the design through tie cell 
+    [-assigns]:
+        reports assign statements from the design 
+    [-all]:
+        report all information 
+    [-preserved]:
+        reports all preserved instances in the design 
+    [-physical_only]:
+        report all instances linked to physical only libcells 
+    [-logical_only]:
+        report all instances linked to logical only libcells 
+    [-lib_lef_consistency]:
+        reports all the lib-lef inconsistencies 
+    [-report_scan_pins]:
+        reports all the scan pins also during checks 
+    [-skip_scan_pins]:
+        skips the scan pins during checks 
+    [-vname]:
+        reports only 'vnames of objects' 
+    [-threshold_fanout <integer>]:
+        reports only the undriven and constant pins with fanout value equal to and above the specified 
+        threshold 
+    [-only_user_hierarchy]:
+        report only user created hierarchies 
+    [-long_module_name]:
+        report the subdesigns whose name is greater than 1.5k 
+    [-status]:
+        returns the status, 1 for any reported instances, 0 by default 
+    [<design>]:
+        specify the design name for which the check netlist is to be performed 
+
+
+genus@root:> source shifter.tcl
+Sourcing './shifter.tcl' (Mon Nov 05 15:53:36 EST 2018)...
+              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/std/standard.vhdl'
+            Reading VHDL file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd'
+              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/ieee/std_logic_1164.vhdl'
+              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/cadence/attributes.vhdl'
+              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/std/textio.vhdl'
+              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/ieee/numeric_std.vhdl'
+Info    : Error summary. [VHDLPT-508]
+        : 0 errors and 118 warnings reported.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'rv_shifter' from file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd'.
+Info    : Binding to architecture. [ELAB-5]
+        : Elaborating architecture 'shifter_arch' for entity 'rv_shifter'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'rv_shifter' with default parameters value.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'others' in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 19.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'in_direction' in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 17.
+Info    : Unused module input port. [CDFG-500]
+        : Input port 'in_arith' is not used in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 10.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'rv_shifter'.
+Checking for analog nets.... 
+Check completed for analog nets.
+Info: Checking for source rtl...
+Info: Check completed for source rtl...
+Error   : Multiple designs are available. Specify the design you want to use. [TUI-17] [check_design]
+        : There is no unique design here.
+        : Specify a design by using the cd command to change to that design's directory or specify the design as an argument for the command.
+Failed on find_unique_design
+genus@root:> rm fv -r
+genus@root:> ls
+compile.tcl
+config.tcl
+shifter.tcl
+genus@root:> source shifter.tcl
+Sourcing './shifter.tcl' (Mon Nov 05 15:54:51 EST 2018)...
+              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/std/standard.vhdl'
+            Reading VHDL file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd'
+              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/ieee/std_logic_1164.vhdl'
+              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/cadence/attributes.vhdl'
+              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/std/textio.vhdl'
+              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/ieee/numeric_std.vhdl'
+Info    : Error summary. [VHDLPT-508]
+        : 0 errors and 118 warnings reported.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'rv_shifter' from file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd'.
+Info    : Binding to architecture. [ELAB-5]
+        : Elaborating architecture 'shifter_arch' for entity 'rv_shifter'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'rv_shifter' with default parameters value.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'others' in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 19.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'in_direction' in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 17.
+Info    : Unused module input port. [CDFG-500]
+        : Input port 'in_arith' is not used in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 10.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'rv_shifter'.
+Checking for analog nets.... 
+Check completed for analog nets.
+Info: Checking for source rtl...
+Info: Check completed for source rtl...
+Error   : Multiple designs are available. Specify the design you want to use. [TUI-17] [check_design]
+        : There is no unique design here.
+Failed on find_unique_design
 
 Another Ctrl-C within 1 second will terminate the tool.
 Abnormal exit.
