@@ -17,7 +17,8 @@ begin
     process (in_data, in_shamt, in_arith) is
     begin
         case in_direction is
-            when '1' => out_data <= in_data srl to_integer(unsigned(in_shamt));
+            when '1' =>
+out_data <= in_data srl to_integer(unsigned(in_shamt));
             when '0' => out_data <= in_data sll to_integer(unsigned(in_shamt));
             when others => out_data <= in_data;
         end case;
