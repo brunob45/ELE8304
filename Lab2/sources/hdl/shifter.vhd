@@ -21,33 +21,20 @@ architecture shifter_arch of rv_shifter is
   signal shift_count : unsigned(N-1 downto 0);
 
 begin
-
   shift_count <= unsigned(in_shamt);
+  tmp(0) <= mid_rev;  
 
-  REVERSE1: for I in 0 to 2**N-1 generate
+  REVERSE: for I in 0 to 2**N-1 generate
     mid_rev(I) <= in_data(2**N-1-I) when in_direction = '0' else in_data(I);
     out_data(I) <= mid_sh(2**N-1-I) when in_direction = '0' else mid_sh(I);
-  end generate REVERSE1;
-
-  tmp(0) <= mid_rev;  
+  end generate REVERSE;
 
   SHIFT: for I in 1 to 2**N-1 generate
     with in_arith select tmp(I) <=
-      std_logic_vector(shift_right(signed(tmp(I-1)), 1)) when '1',
-      std_logic_vector(shift_right(unsigned(tmp(I-1)), 1)) when others; 
+      std_logic_vector(shift_right(signed(tmp(I-1)), 1)) when '1', -- signed conversion means arithmetic shift
+      std_logic_vector(shift_right(unsigned(tmp(I-1)), 1)) when others; -- unsigned for logic shift
   end generate SHIFT;
 
   mid_sh <= std_logic_vector(tmp(to_integer(shift_count)));
 
---  mid_sh <= mid_rev srl unsigned(in_shamt);
---  out_data <= mid_sh;
---    process (in_data, in_shamt, in_arith) is
---    begin
---        case in_direction is
---            when '1' =>
---out_data <= in_data srl to_integer(unsigned(in_shamt));
---            when '0' => out_data <= in_data sll to_integer(unsigned(in_shamt));
---            when others => out_data <= in_data;
---        end case;
---    end process;
 end shifter_arch;
