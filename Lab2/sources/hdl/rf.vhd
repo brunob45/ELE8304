@@ -24,13 +24,13 @@ architecture arch of rv_rf is
   type REGISTERS_TYPE is array (2**REG-1 downto 0) of std_logic_vector(XLEN-1 downto 0);
   signal addr_ra_w_eq, addr_rb_w_eq : boolean;
   signal registers : REGISTERS_TYPE;
-  signal mid_data_a, mid_data_b, mid_data_w : std_logic_vector(XLEN-1 downto 0);
+  signal mid_data_a, mid_data_b : std_logic_vector(XLEN-1 downto 0);
 begin
   addr_ra_w_eq <= in_addr_ra = in_addr_w;
   addr_rb_w_eq <= in_addr_rb = in_addr_w;
 
-  mid_data_a <= registers(to_integer(unsigned(in_addr_ra)));
-  mid_data_b <= registers(to_integer(unsigned(in_addr_rb)));
+  mid_data_a <= in_data_w when addr_ra_w_eq else registers(to_integer(unsigned(in_addr_ra)));
+  mid_data_b <= in_data_w when addr_ra_w_eq else registers(to_integer(unsigned(in_addr_rb)));
 
   REGISTERS_MEMORY: process(in_rstn, in_clk) is
   begin
@@ -48,11 +48,8 @@ begin
   OUTPUT: process(in_clk)
   begin
     if (in_clk'event) and (in_clk = '1') then
-      mid_data_w <= in_data_w;
+      out_data_ra <= mid_data_a;
+      out_data_rb <= mid_data_b;
     end if;
   end process;
-
-  out_data_ra <= mid_data_w when addr_ra_w_eq else mid_data_a;
-  out_data_rb <= mid_data_w when addr_rb_w_eq else mid_data_b;
-
 end arch;
