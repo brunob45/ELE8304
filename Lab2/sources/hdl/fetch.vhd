@@ -36,13 +36,22 @@ architecture arch of rv_pipeline_fetch is
     out_read: out std_logic_vector(DATA_WIDTH-1 downto 0));
   end component;
   
-  signal imem_addr : std_logic_vector(ADDR_WIDTH-1 downto 0);
+  signal imem_addr_byte, imem_addr_word : std_logic_vector(ADDR_WIDTH-1 downto 0) := x"00000000";
   signal imem_read : std_logic_vector(DATA_WIDTH-1 downto 0);
 begin
   u_pc : rv_pc port map (
-    in_clk, in_rstn, in_stall => in_stall, in_transfert => in_transfert, in_target => in_target, out_pc => imem_addr);
-  i_imem : imem port map (
-    in_addr => imem_addr, out_read => imem_read);
+    in_clk, in_rstn, 
+    in_stall => in_stall, 
+    in_transfert => in_transfert, 
+    in_target => in_target, 
+    out_pc => imem_addr_byte
+  );
+  
+  -- Memory is addressed as word, so we divide the address by 4 (shift right 2x)
+  imem_addr_word(ADDR_WIDTH-3 downto 0) <= imem_addr_byte(ADDR_WIDTH-1 downto 2);
+
+  u_imem : imem port map (
+    in_addr => imem_addr_word, out_read => imem_read);
 
   fetch : process (in_clk, in_rstn)
   begin 

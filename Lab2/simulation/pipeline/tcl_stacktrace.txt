@@ -1,0 +1,26 @@
+Mon Nov 26 14:08:36 EST 2018
+Trace back: grab failed: another application has grab
+    while executing
+"grab -global $menu"
+    (procedure "tk_popup" line 9)
+    invoked from within
+"tk_popup $menu $x $y"
+    (procedure "mti_popupinternal" line 15)
+    invoked from within
+"mti_popupinternal .projectpopup_popup .main_pane.project.interior.cs.body.project.lwchildsite.clipper.canvas.sfchildsite"
+    ("after" script)
+  <2:/CMC/tools/mentor/modelsim.10.7/modeltech/linux_x86_64/tk8.6/bgerror.tcl:106: ::tkerror {grab failed: another application has grab}
+  <1:eval:1: ::tk::dialog::error::bgerror {grab failed: another application has grab}
+Mon Nov 26 14:09:06 EST 2018
+Trace back: grab failed: another application has grab
+    while executing
+"grab -global $menu"
+    (procedure "tk_popup" line 9)
+    invoked from within
+"tk_popup $menu $x $y"
+    (procedure "mti_popupinternal" line 15)
+    invoked from within
+"mti_popupinternal .projectpopup_popup .main_pane.project.interior.cs.body.project.lwchildsite.clipper.canvas.sfchildsite"
+    ("after" script)
+  <2:/CMC/tools/mentor/modelsim.10.7/modeltech/linux_x86_64/tk8.6/bgerror.tcl:106: ::tkerror {grab failed: another application has grab}
+  <1:proc:14: ::tk::dialog::error::bgerror {grab failed: another application has grab}

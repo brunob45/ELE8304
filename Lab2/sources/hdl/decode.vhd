@@ -16,9 +16,13 @@ entity rv_pipeline_decode is
     in_flush: in std_logic;
     in_rd_data : in std_logic_vector(DATA_WIDTH-1 downto 0);
     in_rd_addr : in std_logic_vector(ADDR_WIDTH-1 downto 0);
+
     out_rs1_data, out_rs2_data, out_imm : out std_logic_vector(DATA_WIDTH-1 downto 0);
     out_jump, out_branch : out std_logic;
-    out_pc : out std_logic_vector(ADDR_WIDTH downto 0)
+    out_pc : out std_logic_vector(ADDR_WIDTH downto 0);
+    out_opcode : out std_logic_vector(2 downto 0);
+    out_use_src2 : out std_logic;
+    out_lw, out_sw : out std_logic
   );
     
 end rv_pipeline_decode;
@@ -45,7 +49,8 @@ architecture arch of rv_pipeline_decode is
   signal opcode : std_logic_vector(6 downto 0);
   signal func3 : std_logic_vector(2 downto 0);
   signal u_imm, j_imm, i_imm, s_imm, b_imm, imm, rs1, rs2 : std_logic_vector(DATA_WIDTH-1 downto 0) := x"00000000";
-  signal rd : std_logic_vector(4 downto 0);
+  signal lw, sw : std_logic;
+--  signal rd : std_logic_vector(4 downto 0);
 
 begin
   u_rf : rv_rf port map (
@@ -64,7 +69,7 @@ begin
   func3 <= in_instr(14 downto 12);
   rs1_addr <= in_instr(19 downto 15);
   rs2_addr <= in_instr(24 downto 20);
-  rd <= in_instr(11 downto 7);
+--  rd <= in_instr(11 downto 7);
 
 -- decode
   i_imm(10 downto 0) <= in_instr(30 downto 20);
@@ -78,8 +83,8 @@ begin
   j_imm (19 downto 0) <= in_instr(19 downto 12) & in_instr(20) & in_instr(30 downto 21) & '0';
 
   gen_imm : for I in 11 to 31 generate
-    j_imm(I) <= in_instr(31);
     i_imm(I) <= in_instr(31);
+    s_imm(I) <= in_instr(31);
     gen_b: if I >= 12 generate
       b_imm(I) <= in_instr(31);
     end generate gen_b;
@@ -102,7 +107,10 @@ begin
       imm <= i_imm;
     end if;
   end process decode;
-   
+  
+  lw <= '1' when opcode = "0000011" else '0';
+  sw <= '1' when opcode = "0100011" else '1';
+
 -- ID/EX
   idex : process (in_clk, in_rstn)
   begin 
@@ -112,6 +120,10 @@ begin
       out_imm <= imm;
       out_rs1_data <= rs1;
       out_rs2_data <= rs2;
+      out_use_src2 <= (opcode(5) and (not opcode(2)));
+      out_opcode <= func3;
+      out_lw <= lw;
+      out_sw <= sw;
     end if;
   end process idex;
 
