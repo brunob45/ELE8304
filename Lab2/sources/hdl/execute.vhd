@@ -14,15 +14,20 @@ entity rv_pipeline_execute is
     in_jump, in_branch: in std_logic;
     in_rs1_data, in_rs2_data, in_imm : in std_logic_vector(DATA_WIDTH-1 downto 0);
     in_pc : in std_logic_vector(ADDR_WIDTH downto 0); -- a verifier
-    in_lw, in_sw : in std_logic;
-    in_opcode : in std_logic_vector(2 downto 0);
-    in_use_src2 : in std_logic;
+    in_loadword, in_storeword : in std_logic;
 
     out_pc_transfer : out std_logic_vector(ADDR_WIDTH downto 0);
     out_alu_result : out std_logic_vector(DATA_WIDTH-1 downto 0);
     out_store_data : out std_logic_vector(DATA_WIDTH-1 downto 0);
     out_pc_target : out std_logic_vector(ADDR_WIDTH-1 downto 0);
-    out_lw, out_sw : out std_logic
+    out_loadword, out_storeword : out std_logic;
+    out_flush : out std_logic;
+
+    in_alu_arith : in std_logic;
+    in_alu_sign : in std_logic;
+    in_alu_opcode : in std_logic_vector(2 downto 0);
+    in_alu_shamt : in std_logic_vector(4 downto 0);
+    in_alu_use_src2 : in std_logic
   );
     
 end rv_pipeline_execute;
@@ -53,27 +58,20 @@ component rv_adder is
 end component;
 
   -- signaux
-  signal alu_in : std_logic_vector(DATA_WIDTH-1 downto 0);
-  signal shamt : std_logic_vector(4 downto 0);
-  signal sub, arith : std_logic;
-  signal sign : std_logic;
+  signal alu_in, alu_out : std_logic_vector(DATA_WIDTH-1 downto 0);
 
 begin
-  shamt <= in_imm(4 downto 0);
-  sub <= in_imm(10) and in_use_src2;
-  arith <= in_imm(10);
-  sign <= '0' when in_opcode = "011" else '1'; -- use signed values unless SLT(I)U
-  alu_in <= in_rs2_data when in_use_src2 = '1' else in_imm;
+  alu_in <= in_rs2_data when in_alu_use_src2 = '1' else in_imm;
   
   -- port map if need be
   u_alu : rv_alu port map (
-    in_arith => arith,
-    in_sign => sign,
-    in_opcode => in_opcode,
-    in_shamt => shamt,
+    in_arith => in_alu_arith,
+    in_sign => in_alu_sign,
+    in_opcode => in_alu_opcode,
+    in_shamt => in_alu_shamt,
     in_src1 => in_rs1_data,
     in_src2 => alu_in,
-    out_res => out_alu_result
+    out_res => alu_out
   );
 
   u_adder : rv_adder port map(
@@ -83,5 +81,14 @@ begin
     in_sub => '0',
     out_sum => out_pc_target
   );
+
+-- EX/ME register
+  exme : process(in_clk)
+  begin
+    if in_clk'event and in_clk = '1' then
+      out_alu_result <= alu_out;
+      out_store_data <= in_rs2_data;
+    end if;
+  end process;
 
 end arch;

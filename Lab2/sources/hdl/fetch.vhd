@@ -14,7 +14,9 @@ entity rv_pipeline_fetch is
     in_target : in std_logic_vector(ADDR_WIDTH-1 downto 0);
     in_stall : in std_logic;
     in_flush: in std_logic;
-    out_instr : out std_logic_vector(DATA_WIDTH-1 downto 0)
+    out_instr : out std_logic_vector(DATA_WIDTH-1 downto 0);
+    out_imem_addr : out std_logic_vector(ADDR_WIDTH-1 downto 0);
+    in_imem_read : in std_logic_vector(DATA_WIDTH-1 downto 0)
   );
     
 end rv_pipeline_fetch;
@@ -29,15 +31,11 @@ architecture arch of rv_pipeline_fetch is
     out_pc : out std_logic_vector(ADDR_WIDTH-1 downto 0)
   );
   end component;
-
-  component imem is
-  port(
-    in_addr : in std_logic_vector(ADDR_WIDTH-1 downto 0);    
-    out_read: out std_logic_vector(DATA_WIDTH-1 downto 0));
-  end component;
   
-  signal imem_addr_byte, imem_addr_word : std_logic_vector(ADDR_WIDTH-1 downto 0) := x"00000000";
+  signal imem_addr_byte, imem_addr_word : std_logic_vector(ADDR_WIDTH-1 downto 0);
   signal imem_read : std_logic_vector(DATA_WIDTH-1 downto 0);
+  signal zero : std_logic_vector(DATA_WIDTH-1 downto 0) := std_logic_vector(to_unsigned(0, DATA_WIDTH));
+
 begin
   u_pc : rv_pc port map (
     in_clk, in_rstn, 
@@ -48,20 +46,18 @@ begin
   );
   
   -- Memory is addressed as word, so we divide the address by 4 (shift right 2x)
-  imem_addr_word(ADDR_WIDTH-3 downto 0) <= imem_addr_byte(ADDR_WIDTH-1 downto 2);
+  out_imem_addr <= "00" & imem_addr_byte(ADDR_WIDTH-1 downto 2);
 
-  u_imem : imem port map (
-    in_addr => imem_addr_word, out_read => imem_read);
-
+-- ID/EX register
   fetch : process (in_clk, in_rstn)
   begin 
-    if (in_rstn ='0') then
-      out_instr <= imem_read;
+    if (in_rstn = '0') then
+      out_instr <= zero;
     elsif (in_clk'event) and (in_clk = '1') then
       if (in_stall = '0') then
-        out_instr <= imem_read;
---      elsif (in_flush = '1') then 
-        
+        out_instr <= in_imem_read;
+      elsif (in_flush = '1') then 
+        out_instr <= zero;
       end if;
     end if;
       

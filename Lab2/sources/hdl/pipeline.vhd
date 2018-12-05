@@ -3,17 +3,27 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity rv_pipeline is
+library work;
+use work.all;
+
+entity rv_core is
   generic ( 
     ADDR_WIDTH : positive := 10;
     DATA_WIDTH : positive := 32;
     REG_WIDTH : positive := 5
   ); 
   port (
-    in_clk, in_rstn : std_logic;
-end rv_pipeline;
+    in_rstn, in_clk : in std_logic;
+    in_imem_read : in std_logic_vector(31 downto 0);
+    out_imem_addr : out std_logic_vector(9 downto 0);
+    in_dmem_read : in std_logic_vector(31 downto 0);
+    out_dmem_we : out std_logic;
+    out_dmem_addr : out std_logic_vector(9 downto 0);
+    out_dmem_write : out std_logic_vector(31 downto 0)
+  );
+end rv_core;
 
-architecture arch of rv_pipeline is
+architecture arch of rv_core is
   -- components
   component rv_pipeline_fetch is
     port (
@@ -69,17 +79,6 @@ architecture arch of rv_pipeline is
       out_rd_addr : out std_logic_vector(DATA_WIDTH-1 downto 0)
     );   
   end component;
-  component rv_pipeline_memory is
-    port (
-      in_clk, in_rstn : in std_logic;
-      in_store_data : in std_logic_vector(DATA_WIDTH-1 downto 0);
-      in_alu_result : in std_logic_vector(DATA_WIDTH-1 downto 0);
-      in_rd_addr : in std_logic_vector(ADDR_WIDTH-1 downto 0);
-      in_lw, in_sw : in std_logic;
-      out_rd_data : out std_logic_vector(DATA_WIDTH-1 downto 0);
-      out_rd_addr : out std_logic_vector(DATA_WIDTH-1 downto 0)
-    );
-  end component;
 
   -- signaux
   signal ex_if_transfer, ex_if_stall, ex_if_id_flush, id_ex_lw, id_ex_sw : std_logic;
@@ -100,7 +99,7 @@ begin
     in_transfert => ex_if_transfer,
     in_target => ex_if_target,
     in_stall => ex_if_stall,
-    in_flush => ex_if_flush
+    in_flush => ex_if_id_flush,
     out_instr => if_id_instr
   );
   u_decode : rv_pipeline_decode
@@ -135,11 +134,11 @@ begin
     in_sw => id_ex_sw,
     in_opcode => id_ex_opcode,
     in_use_src2 => id_ex_use_src2,
-    out_pc_transfer => ex_me_pc_transfer,
+--    out_pc_transfer => ex_me_pc_transfer,
     out_alu_result => ex_me_alu_result,
     out_store_data => ex_me_store_data,
-    out_pc_target => ex_me_pc_target,
-    out_lw, out_sw : out std_logic
+    out_pc_target => ex_me_pc_target
+--    out_lw, out_sw : out std_logic
   );
   u_memory : rv_pipeline_memory
   port map (
@@ -147,7 +146,7 @@ begin
     in_store_data => ex_me_store_data,
     in_alu_result => ex_me_alu_result,
     in_rd_addr => ex_me_pc_target,
-    in_lw, in_sw : in std_logic;
+--    in_lw, in_sw : in std_logic;
     out_rd_data => wb_id_data,
     out_rd_addr => wb_id_addr
   );
