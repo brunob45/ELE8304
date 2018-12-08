@@ -13,6 +13,7 @@ entity rv_pipeline_execute is
     in_rs1_data, in_rs2_data, in_imm : in WORD;
     in_pc : in ADDRESS;
     in_loadword, in_storeword : in FLAG;
+    out_loadword, out_storeword : out FLAG;
 
     in_alu_arith : in FLAG;
     in_alu_sign : in FLAG;
@@ -20,11 +21,10 @@ entity rv_pipeline_execute is
     in_alu_shamt : in SHAMT;
     in_alu_use_src2 : in FLAG;
 
-    out_pc_transfer : out ADDRESS;
+    out_pc_transfer : out FLAG;
+    out_pc_target : out ADDRESS;
     out_alu_result : out WORD;
     out_store_data : out WORD;
-    out_pc_target : out ADDRESS;
-    out_loadword, out_storeword : out FLAG;
     out_flush : out FLAG
   );
     
@@ -34,6 +34,7 @@ architecture arch of rv_pipeline_execute is
 -- SIGNAUX
   signal alu_src2, alu_out : WORD;
   signal pc_target : ADDRESS;
+  signal pc_transfer : FLAG;
 
 begin
   -- selection d'entree ALU
@@ -62,6 +63,7 @@ begin
 --  if in_branch = '1' then
     -- TODO
 --  end if;
+  pc_transfer <= in_branch;
 
 -- EX/ME register
   exme : process(in_clk)
@@ -74,6 +76,7 @@ begin
 
       out_alu_result <= alu_out;
       out_pc_target <= pc_target;
+      out_pc_transfer <= pc_transfer;
     end if;
   end process;
 

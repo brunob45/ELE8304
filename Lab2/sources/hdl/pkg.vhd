@@ -111,7 +111,7 @@ end component;
     out_pc : out ADDRESS;
     out_opcode : out OPCODE;
     out_use_src2 : out FLAG;
-    out_lw, out_sw : out FLAG
+    out_loadword, out_storeword : out FLAG
   );   
   end component;
 
@@ -120,16 +120,16 @@ end component;
     in_clk, in_rstn : in FLAG;
     in_jump, in_branch: in FLAG;
     in_rs1_data, in_rs2_data, in_imm : in WORD;
-    in_pc : in ADDRESS; -- a verifier
-    in_lw, in_sw : in FLAG;
+    in_pc : in ADDRESS;
+    in_loadword, in_storeword : in FLAG;
     in_opcode : in OPCODE;
     in_use_src2 : in FLAG;
 
-    out_pc_transfer : out ADDRESS;
+    out_pc_transfer : out FLAG;
+    out_pc_target : out ADDRESS;
     out_alu_result : out WORD;
     out_store_data : out WORD;
-    out_pc_target : out ADDRESS;
-    out_lw, out_sw : out FLAG
+    out_loadword, out_storeword : out FLAG
   );  
   end component;
 
@@ -139,7 +139,7 @@ end component;
     in_store_data : in WORD;
     in_alu_result : in WORD;
     in_rd_addr : in REG_ADDR;
-    in_lw, in_sw : in FLAG;
+    in_loadword, in_storeword : in FLAG;
     out_rd_data : out WORD;
     out_rd_addr : out WORD
   );   
