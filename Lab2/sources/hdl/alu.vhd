@@ -2,45 +2,24 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+library work;
+use work.mini_riscv.all;
+
 entity rv_alu is
-    generic (XLEN : natural := 32);
+  generic (XLEN : natural := DATA_WIDTH);
   port (
     in_arith : in std_logic;
     in_sign : in std_logic;
-    in_opcode : in std_logic_vector(2 downto 0);
-    in_shamt : in std_logic_vector(4 downto 0);
+    in_opcode : in OPCODE;
+    in_shamt : in SHAMT;
     in_src1 : in std_logic_vector(XLEN-1 downto 0);
     in_src2 : in std_logic_vector(XLEN-1 downto 0);
     out_res : out std_logic_vector(XLEN-1 downto 0)
   );
 end entity rv_alu;
 
-
 architecture arch of rv_alu is
-  constant ALUOP_WIDTH : natural := 3;
-  constant SHAMT_WIDTH : natural := 5;
-
-  component rv_adder is
-    generic ( N : positive := XLEN );
-    port (
-      in_a : in std_logic_vector(N-1 downto 0);
-      in_b : in std_logic_vector(N-1 downto 0);
-      in_sign : in std_logic;
-      in_sub : in std_logic;
-      out_sum : out std_logic_vector(N downto 0)
-    );
-  end component;
-
-  component rv_shifter is
-    generic( N : positive := SHAMT_WIDTH );
-      port(
-      in_data : in std_logic_vector(2**N-1 downto 0);
-      in_shamt : in std_logic_vector(N-1 downto 0);
-      in_arith : in std_logic;
-      in_direction : in std_logic;
-      out_data : out std_logic_vector(2**N-1 downto 0));
-  end component;
-
+-- SINGAUX
   signal out_sh, out_slt, out_and, out_xor, out_or, out_tmp : std_logic_vector(XLEN-1 downto 0);
   signal out_add : std_logic_vector(XLEN downto 0);
   signal sh_dir : std_logic;

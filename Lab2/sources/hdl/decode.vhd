@@ -3,57 +3,40 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+library work;
+use work.mini_riscv.all;
+
 entity rv_pipeline_decode is
-  generic ( 
-    ADDR_WIDTH : positive := 10;
-    DATA_WIDTH : positive := 32;
-    REG_WIDTH : positive := 5
-  );
   port (
-    in_clk, in_rstn : in std_logic;
-    in_instr : in std_logic_vector(DATA_WIDTH-1 downto 0);
-    in_we : in std_logic;
-    in_flush: in std_logic;
-    in_rd_data : in std_logic_vector(DATA_WIDTH-1 downto 0);
-    in_rd_addr : in std_logic_vector(ADDR_WIDTH-1 downto 0);
+    in_clk, in_rstn : in FLAG;
+    in_instr : in WORD;
+    in_we : in FLAG;
+    in_flush: in FLAG;
+    in_rd_data : in WORD;
+    in_rd_addr : in REG_ADDR;
 
-    out_rs1_data, out_rs2_data, out_imm : out std_logic_vector(DATA_WIDTH-1 downto 0);
-    out_pc : out std_logic_vector(ADDR_WIDTH downto 0);
+    out_rs1_data, out_rs2_data, out_imm : out WORD;
+    in_pc : in ADDRESS;
+    out_pc : out ADDRESS;
 
-    out_jump, out_branch : out std_logic;
-    out_loadword, out_storeword : out std_logic;
+    out_jump, out_branch : out FLAG;
+    out_loadword, out_storeword : out FLAG;
 
-    out_alu_arith : out std_logic;
-    out_alu_sign : out std_logic;
-    out_alu_opcode : out std_logic_vector(2 downto 0);
-    out_alu_shamt : out std_logic_vector(4 downto 0);
-    out_alu_use_src2 : out std_logic
+    out_alu_arith : out FLAG;
+    out_alu_sign : out FLAG;
+    out_alu_opcode : out OPCODE;
+    out_alu_shamt : out SHAMT;
+    out_alu_use_src2 : out FLAG
   );
     
 end rv_pipeline_decode;
 
 architecture arch of rv_pipeline_decode is
-  component rv_rf is
-  generic (
-    REG : natural := REG_WIDTH;
-    XLEN : natural := DATA_WIDTH
-  );
-  port (
-    in_clk, in_rstn : in std_logic;
-    in_we : in std_logic;
-    in_addr_ra : in std_logic_vector(REG-1 downto 0);
-    out_data_ra : out std_logic_vector(XLEN-1 downto 0);
-    in_addr_rb : in std_logic_vector(REG-1 downto 0);
-    out_data_rb : out std_logic_vector(XLEN-1 downto 0);
-    in_addr_w : in std_logic_vector(REG-1 downto 0);
-    in_data_w : in std_logic_vector(XLEN-1 downto 0)
-  );
-  end component;
-
-  signal opcode : std_logic_vector(6 downto 0);
-  signal funct3 : std_logic_vector(2 downto 0);
-  signal rs1_addr, rs2_addr : std_logic_vector(4 downto 0);
-  signal u_imm, j_imm, i_imm, s_imm, b_imm : std_logic_vector(DATA_WIDTH-1 downto 0) := x"00000000";
+-- SIGNAUX
+  signal local_opcode : std_logic_vector(6 downto 0);
+  signal funct3 : OPCODE;
+  signal rs1_addr, rs2_addr : REG_ADDR;
+  signal u_imm, j_imm, i_imm, s_imm, b_imm : WORD;
 
 begin
   rs1_addr <= in_instr(19 downto 15);
@@ -71,7 +54,7 @@ begin
   );
 
 -- predecode
-  opcode <= in_instr(6 downto 0);
+  local_opcode <= in_instr(6 downto 0);
   funct3 <= in_instr(14 downto 12);
 
 -- decode
@@ -100,40 +83,56 @@ begin
   idex : process (in_clk, in_rstn)
   begin 
     if (in_clk'event) and (in_clk = '1') then
-      case opcode is
-        when "0110111" => out_imm <= u_imm;
-        when "1101111" => out_imm <= j_imm;
-        when "1100011" => out_imm <= b_imm;
-        when "0100011" => out_imm <= s_imm;
-        when others => out_imm <= i_imm;
-      end case;
+      if (in_flush = '1') then
+        out_rs1_data <= ZERO_VALUE;
+        out_rs2_data <= ZERO_VALUE;
+        out_imm <= ZERO_VALUE;
+        out_pc <= ZERO_ADDR;
+        out_jump <= '0';
+        out_branch <= '0';
+        out_loadword <= '0';
+        out_storeword <= '0';
+        out_alu_arith <= '0';
+        out_alu_sign <= '0';
+        out_alu_opcode <= "000";
+        out_alu_shamt <= "00000";
+        out_alu_use_src2 <= '0';    
+      else
+        case local_opcode is
+          when "0110111" => out_imm <= u_imm;
+          when "1101111" => out_imm <= j_imm;
+          when "1100011" => out_imm <= b_imm;
+          when "0100011" => out_imm <= s_imm;
+          when others => out_imm <= i_imm;
+        end case;
        
---      out_pc <= ?
-      out_jump <= (opcode(6) and opcode(2));
-      out_branch <= (opcode(6) and not opcode(2));
-      if opcode = "0000011" then
-        out_loadword <= '1';
-      else
-         out_loadword <= '0';
-      end if;
-
-      if opcode = "0100011" then
-        out_storeword <= '1';
-      else
-         out_storeword <= '0';
-      end if;
+        out_pc <= in_pc;
+        out_jump <= (local_opcode(6) and local_opcode(2));
+        out_branch <= (local_opcode(6) and not local_opcode(2));
+        if local_opcode = "0000011" then
+          out_loadword <= '1';
+        else
+           out_loadword <= '0';
+        end if;
+  
+        if local_opcode = "0100011" then
+          out_storeword <= '1';
+        else
+           out_storeword <= '0';
+        end if;
 
 -- use signed values unless SLT(I)U
-      if funct3 = "011" then
-        out_storeword <= '0';
-      else
-         out_storeword <= '1';
+        if funct3 = "011" then
+          out_storeword <= '0';
+        else
+           out_storeword <= '1';
+        end if;
+  
+        out_alu_arith <= i_imm(10);
+        out_alu_opcode <= funct3;
+        out_alu_shamt <= i_imm(4 downto 0);
+        out_alu_use_src2 <= (local_opcode(5) and (not local_opcode(2)));
       end if;
-
-      out_alu_arith <= i_imm(10);
-      out_alu_opcode <= funct3;
-      out_alu_shamt <= i_imm(4 downto 0);
-      out_alu_use_src2 <= (opcode(5) and (not opcode(2)));
     end if;
   end process idex;
 

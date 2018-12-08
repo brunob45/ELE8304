@@ -2,6 +2,9 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+library work;
+use work.mini_riscv.all;
+
 entity rv_hadd is
   port (
     in_a : in std_logic;

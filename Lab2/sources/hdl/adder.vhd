@@ -2,8 +2,11 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+library work;
+use work.mini_riscv.all;
+
 entity rv_adder is
-  generic ( N : positive := 32 );
+  generic ( N : positive := DATA_WIDTH );
   port (
     in_a : in std_logic_vector(N-1 downto 0);
     in_b : in std_logic_vector(N-1 downto 0);

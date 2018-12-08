@@ -3,62 +3,36 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+library work;
+use work.mini_riscv.all;
+
 entity rv_pipeline_execute is
-  generic ( 
-    ADDR_WIDTH : positive := 10;
-    DATA_WIDTH : positive := 32;
-    REG_WIDTH : positive := 5
-  );
   port (
-    in_clk, in_rstn : in std_logic;
-    in_jump, in_branch: in std_logic;
-    in_rs1_data, in_rs2_data, in_imm : in std_logic_vector(DATA_WIDTH-1 downto 0);
-    in_pc : in std_logic_vector(ADDR_WIDTH downto 0);
-    in_loadword, in_storeword : in std_logic;
+    in_clk, in_rstn : in FLAG;
+    in_jump, in_branch: in FLAG;
+    in_rs1_data, in_rs2_data, in_imm : in WORD;
+    in_pc : in ADDRESS;
+    in_loadword, in_storeword : in FLAG;
 
-    in_alu_arith : in std_logic;
-    in_alu_sign : in std_logic;
-    in_alu_opcode : in std_logic_vector(2 downto 0);
-    in_alu_shamt : in std_logic_vector(4 downto 0);
-    in_alu_use_src2 : in std_logic;
+    in_alu_arith : in FLAG;
+    in_alu_sign : in FLAG;
+    in_alu_opcode : in OPCODE;
+    in_alu_shamt : in SHAMT;
+    in_alu_use_src2 : in FLAG;
 
-    out_pc_transfer : out std_logic_vector(ADDR_WIDTH downto 0);
-    out_alu_result : out std_logic_vector(DATA_WIDTH-1 downto 0);
-    out_store_data : out std_logic_vector(DATA_WIDTH-1 downto 0);
-    out_pc_target : out std_logic_vector(ADDR_WIDTH-1 downto 0);
-    out_loadword, out_storeword : out std_logic;
-    out_flush : out std_logic
+    out_pc_transfer : out ADDRESS;
+    out_alu_result : out WORD;
+    out_store_data : out WORD;
+    out_pc_target : out ADDRESS;
+    out_loadword, out_storeword : out FLAG;
+    out_flush : out FLAG
   );
     
 end rv_pipeline_execute;
 
 architecture arch of rv_pipeline_execute is
-  -- components
-  component rv_alu is
-    generic (XLEN : natural := 32);
-  port (
-    in_arith : in std_logic;
-    in_sign : in std_logic;
-    in_opcode : in std_logic_vector(2 downto 0);
-    in_shamt : in std_logic_vector(4 downto 0);
-    in_src1 : in std_logic_vector(XLEN-1 downto 0);
-    in_src2 : in std_logic_vector(XLEN-1 downto 0);
-    out_res : out std_logic_vector(XLEN-1 downto 0)
-  );
-end component;
-
-component rv_adder is
-  generic ( N : positive := 32 );
-  port (
-    in_a : in std_logic_vector(N-1 downto 0);
-    in_b : in std_logic_vector(N-1 downto 0);
-    in_sign : in std_logic;
-    in_sub : in std_logic;
-    out_sum : out std_logic_vector(N downto 0));
-end component;
-
-  -- signaux
-  signal alu_in, alu_out : std_logic_vector(DATA_WIDTH-1 downto 0);
+-- SIGNAUX
+  signal alu_in, alu_out : WORD;
 
 begin
   alu_in <= in_rs2_data when in_alu_use_src2 = '1' else in_imm;
@@ -81,8 +55,6 @@ begin
     in_sub => '0',
     out_sum => out_pc_target
   );
-
-
 
 -- EX/ME register
   exme : process(in_clk)

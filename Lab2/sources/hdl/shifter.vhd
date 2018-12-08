@@ -2,9 +2,12 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+library work;
+use work.mini_riscv.all;
+
 
 entity rv_shifter is
-  generic (N : positive := 5);
+  generic (N : positive := SHAMT_WIDTH);
     port (
     in_data      : in  std_logic_vector(2**N-1 downto 0);
     in_shamt     : in  std_logic_vector(N-1 downto 0);
