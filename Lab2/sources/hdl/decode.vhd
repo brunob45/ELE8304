@@ -101,14 +101,14 @@ begin
   begin 
     if (in_clk'event) and (in_clk = '1') then
       case opcode is
-        when "0110111" => out_imm <= u_imm;
-        when "1101111" => out_imm <= j_imm;
-        when "1100011" => out_imm <= b_imm;
-        when "0100011" => out_imm <= s_imm;
-        when others => out_imm <= i_imm;
+        when "0110111" => out_imm <= u_imm; -- LUI
+        when "1101111" => out_imm <= j_imm; -- JAL
+        when "1100011" => out_imm <= b_imm; -- JALR
+        when "0100011" => out_imm <= s_imm; -- BEQ
+        when others => out_imm <= i_imm;    -- autres
       end case;
        
---      out_pc <= ?
+      -- out_pc <= ?
       out_jump <= (opcode(6) and opcode(2));
       out_branch <= (opcode(6) and not opcode(2));
       if opcode = "0000011" then
@@ -123,7 +123,7 @@ begin
          out_storeword <= '0';
       end if;
 
--- use signed values unless SLT(I)U
+    -- use signed values unless SLT(I)U
       if funct3 = "011" then
         out_storeword <= '0';
       else

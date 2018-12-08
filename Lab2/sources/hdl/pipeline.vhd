@@ -92,7 +92,7 @@ architecture arch of rv_core is
   signal ex_me_alu_result, ex_me_store_data : std_logic_vector(DATA_WIDTH-1 downto 0);
   signal ex_me_pc_target : std_logic_vector(ADDR_WIDTH-1 downto 0);
 begin
-  -- port map if need be
+  -- port map
   u_fetch : rv_pipeline_fetch
   port map (
     in_clk, in_rstn,

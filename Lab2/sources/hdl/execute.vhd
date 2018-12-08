@@ -54,14 +54,15 @@ component rv_adder is
     in_b : in std_logic_vector(N-1 downto 0);
     in_sign : in std_logic;
     in_sub : in std_logic;
-    out_sum : out std_logic_vector(N downto 0));
+    out_sum : out std_logic_vector(N downto 0)
+    );
 end component;
 
   -- signaux
-  signal alu_in, alu_out : std_logic_vector(DATA_WIDTH-1 downto 0);
+  signal alu_src2, alu_out : std_logic_vector(DATA_WIDTH-1 downto 0);
 
 begin
-  alu_in <= in_rs2_data when in_alu_use_src2 = '1' else in_imm;
+  alu_src2 <= in_rs2_data when in_alu_use_src2 = '1' else in_imm;
   
   -- port map
   u_alu : rv_alu port map (
@@ -70,11 +71,11 @@ begin
     in_opcode => in_alu_opcode,
     in_shamt => in_alu_shamt,
     in_src1 => in_rs1_data,
-    in_src2 => alu_in,
+    in_src2 => alu_src2,
     out_res => alu_out
   );
 
-  u_adder : rv_adder port map(
+  u_adder : rv_adder port map (
     in_a => in_imm,
     in_b => in_pc,
     in_sign => '0',
@@ -82,7 +83,9 @@ begin
     out_sum => out_pc_target
   );
 
-
+  if in_branch = '1' then
+    -- TODO
+  end if;
 
 -- EX/ME register
   exme : process(in_clk)
