@@ -38,6 +38,7 @@ architecture arch of rv_pipeline_execute is
   signal alu_src2, alu_out : WORD;
   signal pc_target : ADDRESS;
   signal pc_transfer : FLAG;
+  signal branch, jump : boolean;
 
 begin
   -- selection d'entree ALU
@@ -66,7 +67,9 @@ begin
 --  if in_branch = '1' then
     -- TODO
 --  end if;
-  pc_transfer <= in_branch;
+  branch <= (in_rs1_data = in_rs2_data) and (in_branch = '1');
+  jump <= (in_jump = '1');
+  pc_transfer <= '1' when branch or jump else '0';
 
 -- EX/ME register
   exme : process(in_clk)
