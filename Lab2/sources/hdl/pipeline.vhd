@@ -101,6 +101,10 @@ begin
     in_loadword => ex_me_loadword, 
     in_storeword => ex_me_storeword,
     out_rd_data => wb_id_data,
-    out_rd_addr => wb_id_addr
+    out_rd_addr => wb_id_addr,
+    in_dmem_read => in_dmem_read,
+    out_dmem_we => out_dmem_we,
+    out_dmem_addr => out_dmem_addr,
+    out_dmem_write => out_dmem_write
   );
 end arch;

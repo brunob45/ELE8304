@@ -145,7 +145,23 @@ end component;
     in_rd_addr : in REG_ADDR;
     in_loadword, in_storeword : in FLAG;
     out_rd_data : out WORD;
-    out_rd_addr : out REG_ADDR
+    out_rd_addr : out REG_ADDR;
+    in_dmem_read : in WORD;
+    out_dmem_we : out FLAG;
+    out_dmem_addr : out ADDRESS;
+    out_dmem_write : out WORD
   );   
+  end component;
+
+  component rv_core is
+  port (
+    in_rstn, in_clk : in FLAG;
+    in_imem_read : in WORD;
+    out_imem_addr : out ADDRESS;
+    in_dmem_read : in WORD;
+    out_dmem_we : out FLAG;
+    out_dmem_addr : out ADDRESS;
+    out_dmem_write : out WORD
+  );
   end component;
 end mini_riscv;
