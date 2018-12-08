@@ -14,7 +14,7 @@ entity rv_pipeline_execute is
     in_jump, in_branch: in std_logic;
     in_rs1_data, in_rs2_data, in_imm : in std_logic_vector(DATA_WIDTH-1 downto 0);
     in_pc : in std_logic_vector(ADDR_WIDTH downto 0);
-    in_loadword, in_storeword : in std_logic;
+    in_lw, in_sw : in std_logic;
 
     in_alu_arith : in std_logic;
     in_alu_sign : in std_logic;
@@ -22,11 +22,11 @@ entity rv_pipeline_execute is
     in_alu_shamt : in std_logic_vector(4 downto 0);
     in_alu_use_src2 : in std_logic;
 
-    out_pc_transfer : out std_logic_vector(ADDR_WIDTH downto 0);
+    out_pc_transfer : out std_logic;
     out_alu_result : out std_logic_vector(DATA_WIDTH-1 downto 0);
     out_store_data : out std_logic_vector(DATA_WIDTH-1 downto 0);
     out_pc_target : out std_logic_vector(ADDR_WIDTH-1 downto 0);
-    out_loadword, out_storeword : out std_logic;
+    out_lw, out_sw : out std_logic;
     out_flush : out std_logic
   );
     
@@ -62,8 +62,6 @@ end component;
   signal alu_src2, alu_out : std_logic_vector(DATA_WIDTH-1 downto 0);
 
 begin
-  alu_src2 <= in_rs2_data when in_alu_use_src2 = '1' else in_imm;
-  
   -- port map
   u_alu : rv_alu port map (
     in_arith => in_alu_arith,
@@ -83,6 +81,14 @@ begin
     out_sum => out_pc_target
   );
 
+  -- selection d'entree ALU
+  alu_src2 <= in_rs2_data when in_alu_use_src2 = '1' else in_imm;
+
+  -- passthrough
+  out_lw <= in_lw;
+  out_sw <= in_sw;
+
+  -- branchements
   if in_branch = '1' then
     -- TODO
   end if;
