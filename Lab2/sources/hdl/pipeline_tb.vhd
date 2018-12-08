@@ -26,7 +26,7 @@ end core_tb;
 
 architecture tb of core_tb is
   signal rstn : FLAG := '1';
-  signal clk : FLAG;
+  signal clk : FLAG := '0';
   signal imem_read : WORD;
   signal imem_addr : ADDRESS;
   signal dmem_read : WORD;
@@ -53,6 +53,7 @@ begin
     out_dmem_addr => dmem_addr,
     out_dmem_write => dmem_write
   );
+
   u_dmem : dmem
   port map (
     in_clk => clk,

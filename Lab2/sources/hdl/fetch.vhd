@@ -10,20 +10,20 @@ entity rv_pipeline_fetch is
   port (
     in_clk, in_rstn : in FLAG;
     in_transfert : in FLAG;
-    in_target : in ADDRESS;
+    in_target : in WORD;
     in_stall : in FLAG;
     in_flush: in FLAG;
     out_instr : out WORD;
     out_imem_addr : out ADDRESS;
     in_imem_read : in WORD;
-    out_pc : out ADDRESS
+    out_pc : out WORD
   );
     
 end rv_pipeline_fetch;
 
 architecture arch of rv_pipeline_fetch is
 -- SIGNAUX
-  signal pc : ADDRESS;
+  signal pc : WORD;
   signal imem_read : WORD;
 
 begin
@@ -46,7 +46,7 @@ begin
     elsif (in_clk'event) and (in_clk = '1') then
       if (in_flush = '1') then
         out_instr <= ZERO_VALUE;
-        pc <= ZERO_ADDR;
+        pc <= ZERO_VALUE;
       elsif (in_stall = '0') then
         out_instr <= in_imem_read;
         out_pc <= pc;

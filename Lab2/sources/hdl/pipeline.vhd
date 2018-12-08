@@ -20,18 +20,19 @@ end rv_core;
 architecture arch of rv_core is
   -- signaux
   signal ex_if_transfer, ex_if_stall, ex_if_id_flush : FLAG;
-  signal ex_if_target : ADDRESS;
-  signal if_id_instr : WORD;
+  signal ex_if_target, if_id_instr : WORD;
   signal wb_id_we, id_ex_jump, id_ex_branch, id_ex_use_src2 : FLAG;
   signal wb_id_addr : REG_ADDR;
-  signal id_ex_pc : ADDRESS;
   signal wb_id_data, id_ex_rs1, id_ex_rs2, id_ex_imm: WORD;
-  signal id_ex_opcode : OPCODE;
+  signal id_ex_alu_opcode : OPCODE;
   signal ex_me_alu_result, ex_me_store_data : WORD;
-  signal if_id_pc, de_ex_pc : ADDRESS;
+  signal id_ex_pc, if_id_pc : WORD;
   signal id_ex_loadword, id_ex_storeword : FLAG;
   signal ex_me_loadword, ex_me_storeword : FLAG;
   signal id_ex_rd_addr, ex_me_rd_addr : REG_ADDR;
+  signal id_ex_alu_arith, id_ex_alu_sign : FLAG;
+  signal id_ex_alu_shamt : SHAMT;
+  
 
 begin
 -- port map
@@ -43,6 +44,8 @@ begin
     in_stall => ex_if_stall,
     in_flush => ex_if_id_flush,
     out_instr => if_id_instr,
+    out_imem_addr => out_imem_addr,
+    in_imem_read => in_imem_read,
     out_pc => if_id_pc
   );
 
@@ -61,10 +64,13 @@ begin
     out_branch => id_ex_branch,
     in_pc => if_id_pc,
     out_pc => id_ex_pc,
-    out_opcode => id_ex_opcode,
-    out_use_src2 => id_ex_use_src2,
+    out_alu_opcode => id_ex_alu_opcode,
+    out_alu_use_src2 => id_ex_use_src2,
     out_loadword => id_ex_loadword,
-    out_storeword => id_ex_storeword
+    out_storeword => id_ex_storeword,
+    out_alu_sign => id_ex_alu_sign,
+    out_alu_arith => id_ex_alu_arith,
+    out_alu_shamt => id_ex_alu_shamt
   );
 
   u_execute : rv_pipeline_execute
@@ -81,9 +87,11 @@ begin
     in_storeword => id_ex_storeword,
     out_loadword => ex_me_loadword, 
     out_storeword => ex_me_storeword,
-
-    in_opcode => id_ex_opcode,
-    in_use_src2 => id_ex_use_src2,
+    in_alu_arith => id_ex_alu_arith,
+    in_alu_sign => id_ex_alu_sign,
+    in_alu_opcode => id_ex_alu_opcode,
+    in_alu_shamt => id_ex_alu_shamt,
+    in_alu_use_src2 => id_ex_use_src2,
     out_pc_transfer => ex_if_transfer,
     out_alu_result => ex_me_alu_result,
     out_store_data => ex_me_store_data,

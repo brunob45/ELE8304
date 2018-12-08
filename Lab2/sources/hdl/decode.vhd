@@ -16,8 +16,8 @@ entity rv_pipeline_decode is
     in_rd_addr : in REG_ADDR;
 
     out_rs1_data, out_rs2_data, out_imm : out WORD;
-    in_pc : in ADDRESS;
-    out_pc : out ADDRESS;
+    in_pc : in WORD;
+    out_pc : out WORD;
 
     out_jump, out_branch : out FLAG;
     out_loadword, out_storeword : out FLAG;
@@ -88,7 +88,7 @@ begin
         out_rs1_data <= ZERO_VALUE;
         out_rs2_data <= ZERO_VALUE;
         out_imm <= ZERO_VALUE;
-        out_pc <= ZERO_ADDR;
+        out_pc <= ZERO_VALUE;
         out_jump <= '0';
         out_branch <= '0';
         out_loadword <= '0';

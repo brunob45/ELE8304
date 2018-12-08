@@ -23,20 +23,6 @@ entity rv_pipeline_memory is
 end rv_pipeline_memory;
 
 architecture arch of rv_pipeline_memory is
--- COMPONENT
-  component dmem is
-    generic(
-      ADDR_WIDTH : positive := 10;
-      DATA_WIDTH : positive := 32
-  );
-    port(
-      in_clk  : in std_logic;
-      in_we   : in std_logic;
-      in_addr : in std_logic_vector(ADDR_WIDTH-1 downto 0);
-      in_write: in std_logic_vector(DATA_WIDTH-1 downto 0);
-      out_read: out std_logic_vector(DATA_WIDTH-1 downto 0));
-  end component;
-
 -- SIGNAUX
   signal alu_result : WORD;
   signal dmem_addr : ADDRESS;

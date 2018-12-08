@@ -11,7 +11,7 @@ entity rv_pipeline_execute is
     in_clk, in_rstn : in FLAG;
     in_jump, in_branch: in FLAG;
     in_rs1_data, in_rs2_data, in_imm : in WORD;
-    in_pc : in ADDRESS;
+    in_pc : in WORD;
     in_loadword, in_storeword : in FLAG;
     out_loadword, out_storeword : out FLAG;
 
@@ -22,7 +22,7 @@ entity rv_pipeline_execute is
     in_alu_use_src2 : in FLAG;
 
     out_pc_transfer : out FLAG;
-    out_pc_target : out ADDRESS;
+    out_pc_target : out WORD;
     out_alu_result : out WORD;
     out_store_data : out WORD;
     out_flush : out FLAG;
@@ -36,7 +36,7 @@ end rv_pipeline_execute;
 architecture arch of rv_pipeline_execute is
 -- SIGNAUX
   signal alu_src2, alu_out : WORD;
-  signal pc_target : ADDRESS;
+  signal pc_target : std_logic_vector(DATA_WIDTH downto 0);
   signal pc_transfer : FLAG;
   signal branch, jump : boolean;
 
@@ -64,9 +64,6 @@ begin
   );
 
   -- branchements
---  if in_branch = '1' then
-    -- TODO
---  end if;
   branch <= (in_rs1_data = in_rs2_data) and (in_branch = '1');
   jump <= (in_jump = '1');
   pc_transfer <= '1' when branch or jump else '0';
@@ -81,7 +78,7 @@ begin
       out_store_data <= in_rs2_data;
 
       out_alu_result <= alu_out;
-      out_pc_target <= pc_target;
+      out_pc_target <= pc_target(DATA_WIDTH-1 downto 0);
       out_pc_transfer <= pc_transfer;
       out_rd_addr <= in_rd_addr;
     end if;

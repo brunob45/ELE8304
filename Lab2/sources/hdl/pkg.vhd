@@ -89,11 +89,13 @@ end component;
   port (
     in_clk, in_rstn : in FLAG;
     in_transfert : in FLAG;
-    in_target : in ADDRESS;
+    in_target : in WORD;
     in_stall : in FLAG;
     in_flush: in FLAG;
     out_instr : out WORD;
-    out_pc : out ADDRESS
+    out_imem_addr : out ADDRESS;
+    in_imem_read : in WORD;
+    out_pc : out WORD
   );
   end component;
 
@@ -105,13 +107,19 @@ end component;
     in_flush: in FLAG;
     in_rd_data : in WORD;
     in_rd_addr : in REG_ADDR;
+
     out_rs1_data, out_rs2_data, out_imm : out WORD;
+    in_pc : in WORD;
+    out_pc : out WORD;
+
     out_jump, out_branch : out FLAG;
-    in_pc : in ADDRESS;
-    out_pc : out ADDRESS;
-    out_opcode : out OPCODE;
-    out_use_src2 : out FLAG;
     out_loadword, out_storeword : out FLAG;
+
+    out_alu_arith : out FLAG;
+    out_alu_sign : out FLAG;
+    out_alu_opcode : out OPCODE;
+    out_alu_shamt : out SHAMT;
+    out_alu_use_src2 : out FLAG;
     out_rd_addr : out REG_ADDR
   );   
   end component;
@@ -121,16 +129,21 @@ end component;
     in_clk, in_rstn : in FLAG;
     in_jump, in_branch: in FLAG;
     in_rs1_data, in_rs2_data, in_imm : in WORD;
-    in_pc : in ADDRESS;
+    in_pc : in WORD;
     in_loadword, in_storeword : in FLAG;
-    in_opcode : in OPCODE;
-    in_use_src2 : in FLAG;
+    out_loadword, out_storeword : out FLAG;
+
+    in_alu_arith : in FLAG;
+    in_alu_sign : in FLAG;
+    in_alu_opcode : in OPCODE;
+    in_alu_shamt : in SHAMT;
+    in_alu_use_src2 : in FLAG;
 
     out_pc_transfer : out FLAG;
-    out_pc_target : out ADDRESS;
+    out_pc_target : out WORD;
     out_alu_result : out WORD;
     out_store_data : out WORD;
-    out_loadword, out_storeword : out FLAG;
+    out_flush : out FLAG;
 
     in_rd_addr : in REG_ADDR;
     out_rd_addr : out REG_ADDR

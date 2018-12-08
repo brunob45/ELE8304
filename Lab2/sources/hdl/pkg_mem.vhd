@@ -17,7 +17,7 @@ component dmem is
 
   component imem is
   generic(        
-    INIT_FILE  : string   := "../asm/init.hex";
+    INIT_FILE  : string   := "../../asm/init.hex";
     ADDR_WIDTH : positive := 10;
     DATA_WIDTH : positive := 32);
   port(
