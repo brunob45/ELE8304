@@ -31,7 +31,7 @@ architecture arch of rv_core is
   signal if_id_pc, de_ex_pc : ADDRESS;
   signal id_ex_loadword, id_ex_storeword : FLAG;
   signal ex_me_loadword, ex_me_storeword : FLAG;
-  signal ex_me_rd_addr : ADDRESS;
+  signal id_ex_rd_addr, ex_me_rd_addr : REG_ADDR;
 
 begin
 -- port map
@@ -45,6 +45,7 @@ begin
     out_instr => if_id_instr,
     out_pc => if_id_pc
   );
+
   u_decode : rv_pipeline_decode
   port map (
     in_clk, in_rstn,
@@ -65,6 +66,7 @@ begin
     out_loadword => id_ex_loadword,
     out_storeword => id_ex_storeword
   );
+
   u_execute : rv_pipeline_execute
   port map (
     in_clk, in_rstn,
@@ -85,14 +87,17 @@ begin
     out_pc_transfer => ex_if_transfer,
     out_alu_result => ex_me_alu_result,
     out_store_data => ex_me_store_data,
-    out_pc_target => ex_if_target
+    out_pc_target => ex_if_target,
+    in_rd_addr => id_ex_rd_addr,
+    out_rd_addr => ex_me_rd_addr
   );
+
   u_memory : rv_pipeline_memory
   port map (
     in_clk, in_rstn,
     in_store_data => ex_me_store_data,
     in_alu_result => ex_me_alu_result,
---    in_rd_addr => ex_me_rd_addr,
+    in_rd_addr => ex_me_rd_addr,
     in_loadword => ex_me_loadword, 
     in_storeword => ex_me_storeword,
     out_rd_data => wb_id_data,

@@ -111,7 +111,8 @@ end component;
     out_pc : out ADDRESS;
     out_opcode : out OPCODE;
     out_use_src2 : out FLAG;
-    out_loadword, out_storeword : out FLAG
+    out_loadword, out_storeword : out FLAG;
+    out_rd_addr : out REG_ADDR
   );   
   end component;
 
@@ -129,7 +130,10 @@ end component;
     out_pc_target : out ADDRESS;
     out_alu_result : out WORD;
     out_store_data : out WORD;
-    out_loadword, out_storeword : out FLAG
+    out_loadword, out_storeword : out FLAG;
+
+    in_rd_addr : in REG_ADDR;
+    out_rd_addr : out REG_ADDR
   );  
   end component;
 
@@ -141,7 +145,7 @@ end component;
     in_rd_addr : in REG_ADDR;
     in_loadword, in_storeword : in FLAG;
     out_rd_data : out WORD;
-    out_rd_addr : out WORD
+    out_rd_addr : out REG_ADDR
   );   
   end component;
 end mini_riscv;

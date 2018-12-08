@@ -25,7 +25,10 @@ entity rv_pipeline_execute is
     out_pc_target : out ADDRESS;
     out_alu_result : out WORD;
     out_store_data : out WORD;
-    out_flush : out FLAG
+    out_flush : out FLAG;
+
+    in_rd_addr : in REG_ADDR;
+    out_rd_addr : out REG_ADDR
   );
     
 end rv_pipeline_execute;
@@ -77,6 +80,7 @@ begin
       out_alu_result <= alu_out;
       out_pc_target <= pc_target;
       out_pc_transfer <= pc_transfer;
+      out_rd_addr <= in_rd_addr;
     end if;
   end process;
 

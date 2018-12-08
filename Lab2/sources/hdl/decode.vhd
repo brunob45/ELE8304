@@ -26,7 +26,8 @@ entity rv_pipeline_decode is
     out_alu_sign : out FLAG;
     out_alu_opcode : out OPCODE;
     out_alu_shamt : out SHAMT;
-    out_alu_use_src2 : out FLAG
+    out_alu_use_src2 : out FLAG;
+    out_rd_addr : out REG_ADDR
   );
     
 end rv_pipeline_decode;
@@ -132,6 +133,7 @@ begin
         out_alu_opcode <= funct3;
         out_alu_shamt <= i_imm(4 downto 0);
         out_alu_use_src2 <= (local_opcode(5) and (not local_opcode(2)));
+        out_rd_addr <= (in_instr(11 downto 7));
       end if;
     end if;
   end process idex;
