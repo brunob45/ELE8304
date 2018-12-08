@@ -56,6 +56,7 @@ begin
     out_sh when "101",
     out_or when "110",
     out_and when others;
+    
   out_res <= out_tmp;
 
 end arch;

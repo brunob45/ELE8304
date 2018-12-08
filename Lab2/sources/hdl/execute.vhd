@@ -32,11 +32,13 @@ end rv_pipeline_execute;
 
 architecture arch of rv_pipeline_execute is
 -- SIGNAUX
-  signal alu_in, alu_out : WORD;
+  signal alu_src2, alu_out : WORD;
+  signal pc_target : ADDRESS;
 
 begin
-  alu_in <= in_rs2_data when in_alu_use_src2 = '1' else in_imm;
-  
+  -- selection d'entree ALU
+  alu_src2 <= in_rs2_data when in_alu_use_src2 = '1' else in_imm;
+
   -- port map
   u_alu : rv_alu port map (
     in_arith => in_alu_arith,
@@ -44,24 +46,34 @@ begin
     in_opcode => in_alu_opcode,
     in_shamt => in_alu_shamt,
     in_src1 => in_rs1_data,
-    in_src2 => alu_in,
+    in_src2 => alu_src2,
     out_res => alu_out
   );
 
-  u_adder : rv_adder port map(
+  u_adder : rv_adder port map (
     in_a => in_imm,
     in_b => in_pc,
     in_sign => '0',
     in_sub => '0',
-    out_sum => out_pc_target
+    out_sum => pc_target
   );
+
+  -- branchements
+--  if in_branch = '1' then
+    -- TODO
+--  end if;
 
 -- EX/ME register
   exme : process(in_clk)
   begin
     if in_clk'event and in_clk = '1' then
-      out_alu_result <= alu_out;
+      -- passthrough
+      out_loadword <= in_loadword;
+      out_storeword <= in_loadword;
       out_store_data <= in_rs2_data;
+
+      out_alu_result <= alu_out;
+      out_pc_target <= pc_target;
     end if;
   end process;
 
