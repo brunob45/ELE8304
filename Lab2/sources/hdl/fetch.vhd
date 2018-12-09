@@ -23,8 +23,8 @@ end rv_pipeline_fetch;
 
 architecture arch of rv_pipeline_fetch is
 -- SIGNAUX
-  signal pc : WORD;
-  signal imem_read : WORD;
+  signal pc : WORD := ZERO_VALUE;
+  signal imem_read : WORD := ZERO_VALUE;
 
 begin
   u_pc : rv_pc port map (
@@ -35,8 +35,8 @@ begin
     out_pc => pc
   );
   
-  -- Memory is addressed as word, so we divide the address by 4 (shift right 2x)
-  out_imem_addr <= "00" & pc(ADDR_WIDTH-1 downto 2);
+-- Memory is addressed as word, so we divide the address by 4 (shift right 2x)
+  out_imem_addr <= pc(ADDR_WIDTH+1 downto 2);
 
 -- ID/EX register
   fetch : process (in_clk, in_rstn)
@@ -46,7 +46,7 @@ begin
     elsif (in_clk'event) and (in_clk = '1') then
       if (in_flush = '1') then
         out_instr <= ZERO_VALUE;
-        pc <= ZERO_VALUE;
+        out_pc <= ZERO_VALUE;
       elsif (in_stall = '0') then
         out_instr <= in_imem_read;
         out_pc <= pc;

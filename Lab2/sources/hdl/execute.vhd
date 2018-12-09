@@ -26,6 +26,7 @@ entity rv_pipeline_execute is
     out_alu_result : out WORD;
     out_store_data : out WORD;
     out_flush : out FLAG;
+    out_stall : out FLAG;
 
     in_rd_addr : in REG_ADDR;
     out_rd_addr : out REG_ADDR
@@ -35,10 +36,10 @@ end rv_pipeline_execute;
 
 architecture arch of rv_pipeline_execute is
 -- SIGNAUX
-  signal alu_src2, alu_out : WORD;
-  signal pc_target : std_logic_vector(DATA_WIDTH downto 0);
-  signal pc_transfer : FLAG;
-  signal branch, jump : boolean;
+  signal alu_src2, alu_out : WORD := ZERO_VALUE;
+  signal pc_target : std_logic_vector(DATA_WIDTH downto 0) := '0'&ZERO_VALUE;
+  signal pc_transfer, stall, flush : FLAG := '0';
+  signal branch, jump : boolean := FALSE;
 
 begin
   -- selection d'entree ALU
@@ -81,6 +82,9 @@ begin
       out_pc_target <= pc_target(DATA_WIDTH-1 downto 0);
       out_pc_transfer <= pc_transfer;
       out_rd_addr <= in_rd_addr;
+
+      out_stall <= stall;
+      out_flush <= flush;
     end if;
   end process;
 

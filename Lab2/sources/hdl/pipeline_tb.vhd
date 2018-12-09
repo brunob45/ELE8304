@@ -25,6 +25,24 @@ entity core_tb is
 end core_tb;
 
 architecture tb of core_tb is
+  component rv_core is
+  port (
+    in_rstn, in_clk : in FLAG;
+    in_imem_read : in WORD;
+    out_imem_addr : out ADDRESS;
+    in_dmem_read : in WORD;
+    out_dmem_we : out FLAG;
+    out_dmem_addr : out ADDRESS;
+    out_dmem_write : out WORD;
+    
+    out_if_stall : out FLAG;
+    out_if_transfer : out FLAG;
+    out_if_flush : out FLAG;
+    out_if_pc : out WORD;
+    out_id_instr : out WORD
+  );
+  end component;
+
   signal rstn : FLAG := '1';
   signal clk : FLAG := '0';
   signal imem_read : WORD;
@@ -33,6 +51,9 @@ architecture tb of core_tb is
   signal dmem_we : FLAG;
   signal dmem_addr : ADDRESS;
   signal dmem_write : WORD;
+  signal stall, transfer, flush : FLAG;
+  signal instr : WORD;
+  signal pc : WORD;
   
   constant PERIOD   : time := 10 ns;
   constant TB_LOOP  : positive := 100;
@@ -51,7 +72,12 @@ begin
     in_dmem_read => dmem_read,
     out_dmem_we => dmem_we,
     out_dmem_addr => dmem_addr,
-    out_dmem_write => dmem_write
+    out_dmem_write => dmem_write,
+    out_if_stall => stall,
+    out_if_flush => flush,
+    out_if_transfer => transfer,
+    out_id_instr => instr,
+    out_if_pc => pc
   );
 
   u_dmem : dmem

@@ -13,28 +13,44 @@ entity rv_core is
     in_dmem_read : in WORD;
     out_dmem_we : out FLAG;
     out_dmem_addr : out ADDRESS;
-    out_dmem_write : out WORD
+    out_dmem_write : out WORD;
+    
+    out_if_stall : out FLAG;
+    out_if_transfer : out FLAG;
+    out_if_flush : out FLAG;
+    out_if_pc : out WORD;
+    out_id_instr : out WORD
   );
 end rv_core;
 
 architecture arch of rv_core is
   -- signaux
-  signal ex_if_transfer, ex_if_stall, ex_if_id_flush : FLAG;
-  signal ex_if_target, if_id_instr : WORD;
-  signal wb_id_we, id_ex_jump, id_ex_branch, id_ex_use_src2 : FLAG;
-  signal wb_id_addr : REG_ADDR;
-  signal wb_id_data, id_ex_rs1, id_ex_rs2, id_ex_imm: WORD;
-  signal id_ex_alu_opcode : OPCODE;
-  signal ex_me_alu_result, ex_me_store_data : WORD;
-  signal id_ex_pc, if_id_pc : WORD;
-  signal id_ex_loadword, id_ex_storeword : FLAG;
-  signal ex_me_loadword, ex_me_storeword : FLAG;
-  signal id_ex_rd_addr, ex_me_rd_addr : REG_ADDR;
-  signal id_ex_alu_arith, id_ex_alu_sign : FLAG;
-  signal id_ex_alu_shamt : SHAMT;
+  signal ex_if_transfer, ex_if_stall, ex_if_id_flush : FLAG := '0';
+  signal wb_id_we, id_ex_jump, id_ex_branch, id_ex_use_src2 : FLAG := '0';
+  signal id_ex_loadword, id_ex_storeword : FLAG := '0';
+  signal ex_me_loadword, ex_me_storeword : FLAG := '0';
+  signal id_ex_alu_arith, id_ex_alu_sign : FLAG := '0';
+
+  signal ex_if_target, if_id_instr : WORD := ZERO_VALUE;
+  signal wb_id_data, id_ex_rs1, id_ex_rs2, id_ex_imm: WORD := ZERO_VALUE;
+  signal ex_me_alu_result, ex_me_store_data : WORD := ZERO_VALUE;
+  signal id_ex_pc, if_id_pc : WORD := ZERO_VALUE;
+
+  signal wb_id_addr : REG_ADDR := "00000";
+  signal id_ex_rd_addr, ex_me_rd_addr : REG_ADDR := "00000";
+
+  signal id_ex_alu_opcode : OPCODE := "000";
+
+  signal id_ex_alu_shamt : SHAMT := "00000";
   
 
 begin
+  out_if_stall <= ex_if_stall;
+  out_if_flush <= ex_if_id_flush;
+  out_if_transfer <= ex_if_transfer;
+  out_id_instr <= if_id_instr;
+  out_if_pc <= if_id_pc;
+
 -- port map
   u_fetch : rv_pipeline_fetch
   port map (
@@ -95,6 +111,8 @@ begin
     out_pc_transfer => ex_if_transfer,
     out_alu_result => ex_me_alu_result,
     out_store_data => ex_me_store_data,
+    out_flush => ex_if_id_flush,
+    out_stall => ex_if_stall,
     out_pc_target => ex_if_target,
     in_rd_addr => id_ex_rd_addr,
     out_rd_addr => ex_me_rd_addr

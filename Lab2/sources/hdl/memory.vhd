@@ -24,9 +24,9 @@ end rv_pipeline_memory;
 
 architecture arch of rv_pipeline_memory is
 -- SIGNAUX
-  signal alu_result : WORD;
-  signal dmem_addr : ADDRESS;
-  signal rd_addr : REG_ADDR;
+  signal alu_result : WORD := ZERO_VALUE;
+  signal dmem_addr : ADDRESS := ZERO_ADDR;
+  signal rd_addr : REG_ADDR := "00000";
 
 begin
 -- la memoire est addressable par mots de 32 bits, alors il faut diviser l'addresse par 4

@@ -21,9 +21,10 @@ end entity rv_pc;
 
 architecture arch of rv_pc is
 -- SIGNAUX
+  constant reset : std_logic_vector(XLEN-1 downto 0) := std_logic_vector(to_unsigned(RESET_VECTOR, XLEN));
+ 
   signal out_add, out_mux : std_logic_vector(XLEN-1 downto 0);
-  signal reset : std_logic_vector(XLEN-1 downto 0) := std_logic_vector(to_unsigned(RESET_VECTOR, XLEN));
-  signal pc : std_logic_vector(XLEN-1 downto 0) := std_logic_vector(to_unsigned(RESET_VECTOR, XLEN));
+  signal pc : std_logic_vector(XLEN-1 downto 0) := reset;
 begin
   out_add <= std_logic_vector(unsigned(pc)+4);
   out_mux <= in_target when in_transfert = '1' else out_add;
