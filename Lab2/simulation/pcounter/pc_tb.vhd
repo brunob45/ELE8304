@@ -41,10 +41,11 @@ architecture tb of pc_tb is
   );
   end component;
 
-  signal in_clk, in_rstn : std_logic := '0';
-  signal  in_stall, in_transfert : std_logic := '0';
-  signal  in_target : std_logic_vector(XLEN-1 downto 0) := std_logic_vector(to_unsigned(100,XLEN));
-  signal  out_pc : std_logic_vector(XLEN-1 downto 0);
+  signal clk : std_logic := '0';
+  signal rstn : std_logic := '1';
+  signal in_stall, in_transfert : std_logic := '0';
+  signal in_target : std_logic_vector(XLEN-1 downto 0) := std_logic_vector(to_unsigned(100,XLEN));
+  signal out_pc : std_logic_vector(XLEN-1 downto 0);
 
   constant PERIOD   : time := 10 ns;
   constant TB_LOOP  : positive := 100;
@@ -54,12 +55,12 @@ begin
   
 
   -- Clock
-  in_clk <= not in_clk after PERIOD / 2;
+  clk <= not clk after PERIOD / 2;
 
   -- DUT
   u_pc : rv_pc
     port map (
-      in_clk, in_rstn,
+      clk, rstn,
       in_stall,
       in_transfert, 
       in_target,
@@ -71,7 +72,7 @@ begin
   begin
     report "<<---- Simulation Start ---->>";
     wait for PERIOD;
-    in_rstn <= '1';
+    rstn <= '1';
     wait for PERIOD*3;
     in_transfert <= '1';
     wait for PERIOD;

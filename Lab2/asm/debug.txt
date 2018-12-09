@@ -1,0 +1,63 @@
+
+start:
+	0	: 02010E63		# beq x2 x0 main
+	4	: AAA00293		# addi x5 x0 0xaaa
+	8	: 00550E63		# beq x10 x5 pass
+
+fail:
+	12	: FFFFF2B7		# lui x5 0xfffff
+	16	: FFF00313		# addi x6 x0 0xfff
+	20	: 0062E3B3		# or x7 x5 x6
+	24	: 00000113		# addi x2 x0 0
+	28	: 00712023		# sw x7 x2 0
+	32	: 0880006F		# jal x0 end
+
+pass:
+	36	: AAAAA2B7		# lui x5 0xaaaaa
+	40	: AAA00313		# addi x6 x0 0xaaa
+	44	: 0062C3B3		# xor x7 x5 x6
+	48	: 00007113		# andi x2 x0 0
+	52	: 00712023		# sw x7 x2 0
+	56	: 0700006F		# jal x0 end
+
+main:
+	60	: 00100113		# addi x2 x0 1
+	64	: 00211113		# slli x2 x2 2
+	68	: 018000EF		# jal x1 fibo
+	72	: FB9FF06F		# jal x0 start
+	76	: 00000013		# nop
+	80	: 00000013		# nop
+	84	: 00000013		# nop
+	88	: 00000013		# nop
+
+fibo:
+	92	: 01300593		# addi x11 x0 19
+	96	: 00100613		# addi x12 x0 1
+	100	: 000072B3		# and x5 x0 x0
+	104	: 00100313		# addi x6 x0 1
+	108	: 00512023		# sw x5 x2 0
+	112	: 00612223		# sw x6 x2 4
+
+loop:
+	116	: 0015BE13		# sltiu x28 x11 1
+	120	: 02CE0463		# beq x28 x12 endloop
+	124	: 40C585B3		# sub x11 x11 x12
+	128	: 00012283		# lw x5 x2 0
+	132	: 00412303		# lw x6 x2 4
+	136	: 006283B3		# add x7 x5 x6
+	140	: 00712423		# sw x7 x2 8
+	144	: 40215113		# srai x2 x2 2
+	148	: 00110113		# addi x2 x2 1
+	152	: 00211113		# slli x2 x2 2
+	156	: FD9FF06F		# jal x0 loop
+
+endloop:
+	160	: AAA00513		# addi x10 x0 0xaaa
+	164	: 00008067		# jalr x0 x1 0
+
+end:
+	168	: 00000013		# nop
+	172	: 00000013		# nop
+	176	: 00000013		# nop
+	180	: 00000013		# nop
+	184	: 00000013		# nop
