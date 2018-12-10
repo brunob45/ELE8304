@@ -12,19 +12,19 @@ entity rv_pipeline_memory is
     in_alu_result : in WORD;
     in_rd_addr : in REG_ADDR;
     in_loadword, in_storeword : in FLAG;
-    out_rd_data : out WORD;
-    out_rd_addr : out REG_ADDR;
     in_dmem_read : in WORD;
+    out_rd_addr : out REG_ADDR;
     out_dmem_we : out FLAG;
     out_dmem_addr : out ADDRESS;
-    out_dmem_write : out WORD
+    out_dmem_write : out WORD;
+    out_alu_result : out WORD;
+    out_loadword : out WORD
   );
 
 end rv_pipeline_memory;
 
 architecture arch of rv_pipeline_memory is
 -- SIGNAUX
-  signal alu_result : WORD := ZERO_VALUE;
   signal dmem_addr : ADDRESS := ZERO_ADDR;
   signal rd_addr : REG_ADDR := "00000";
 
@@ -34,17 +34,15 @@ begin
   out_dmem_we <= in_storeword;
   out_dmem_write <= in_store_data;
 
+  out_loadword <= in_loadword;
+
 -- registre ME/WB
   mewb : process (in_clk)
   begin 
     if (in_clk'event) and (in_clk = '1') then
       rd_addr <= in_rd_addr;
-      alu_result <= in_alu_result; 
+      out_alu_result <= in_alu_result; 
     end if;
   end process mewb;
-
--- multiplexeur dans write-back, inutile de faire un autre module juste pour ca
-  out_rd_data <= in_dmem_read when in_loadword = '1' else alu_result;
-  out_rd_addr <= rd_addr;
 
 end arch;

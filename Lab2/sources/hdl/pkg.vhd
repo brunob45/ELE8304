@@ -68,22 +68,22 @@ package mini_riscv is
   );
   end component;
 
-component rv_rf is
-  generic (
-    REG : natural := REG_ADDR_WIDTH;
-    XLEN : natural := DATA_WIDTH
-  );
-  port (
-    in_clk, in_rstn : in std_logic;
-    in_we : in std_logic;
-    in_addr_ra : in std_logic_vector(REG-1 downto 0);
-    out_data_ra : out std_logic_vector(XLEN-1 downto 0);
-    in_addr_rb : in std_logic_vector(REG-1 downto 0);
-    out_data_rb : out std_logic_vector(XLEN-1 downto 0);
-    in_addr_w : in std_logic_vector(REG-1 downto 0);
-    in_data_w : in std_logic_vector(XLEN-1 downto 0)
-  );
-end component;
+  component rv_rf is
+    generic (
+      REG : natural := REG_ADDR_WIDTH;
+      XLEN : natural := DATA_WIDTH
+    );
+    port (
+      in_clk, in_rstn : in std_logic;
+      in_we : in std_logic;
+      in_addr_ra : in std_logic_vector(REG-1 downto 0);
+      out_data_ra : out std_logic_vector(XLEN-1 downto 0);
+      in_addr_rb : in std_logic_vector(REG-1 downto 0);
+      out_data_rb : out std_logic_vector(XLEN-1 downto 0);
+      in_addr_w : in std_logic_vector(REG-1 downto 0);
+      in_data_w : in std_logic_vector(XLEN-1 downto 0)
+    );
+  end component;
 
   component rv_pipeline_fetch is
   port (
@@ -166,4 +166,17 @@ end component;
     out_dmem_write : out WORD
   );   
   end component;
+
+  component rv_pipeline_writeback is
+    port (
+      in_rd_addr : in WORD;
+      in_alu_result : in WORD;
+      in_dmem_read : in WORD;
+      in_lw : in FLAG;
+  
+      out_rd_data : out WORD;
+      out_rd_addr : out WORD
+    );
+  end component;
+
 end mini_riscv;

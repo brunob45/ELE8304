@@ -133,4 +133,16 @@ begin
     out_dmem_addr => out_dmem_addr,
     out_dmem_write => out_dmem_write
   );
+
+  u_writeback : rv_pipeline_writeback 
+    port map (
+      in_rd_addr : in WORD;
+      in_alu_result : in WORD;
+      in_dmem_read : in WORD;
+      in_lw : in FLAG;
+  
+      out_rd_data : out WORD;
+      out_rd_addr : out WORD
+    );
+    
 end arch;
