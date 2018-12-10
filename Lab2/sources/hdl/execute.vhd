@@ -32,7 +32,10 @@ entity rv_pipeline_execute is
     out_stall : out FLAG;
 
     in_rd_addr : in REG_ADDR;
-    out_rd_addr : out REG_ADDR
+    out_rd_addr : out REG_ADDR;
+    
+    in_rd_we : in FLAG;
+    out_rd_we : out FLAG
   );
     
 end rv_pipeline_execute;
@@ -91,6 +94,7 @@ begin
 
       out_stall <= '1' when in_loadword = '1' else '0';
       out_flush <= flush;
+      out_rd_we <= in_rd_we;
     end if;
   end process;
 

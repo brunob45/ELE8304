@@ -10,7 +10,7 @@ entity rv_pipeline_decode is
   port (
     in_clk, in_rstn : in FLAG;
     in_instr : in WORD;
-    in_we : in FLAG;
+    in_rd_we : in FLAG;
     in_flush: in FLAG;
     in_rd_data : in WORD;
     in_rd_addr : in REG_ADDR;
@@ -27,7 +27,8 @@ entity rv_pipeline_decode is
     out_alu_opcode : out OPCODE;
     out_alu_shamt : out SHAMT;
     out_alu_use_src2 : out FLAG;
-    out_rd_addr : out REG_ADDR
+    out_rd_addr : out REG_ADDR;
+    out_rd_we : out FLAG
   );
     
 end rv_pipeline_decode;
@@ -36,8 +37,9 @@ architecture arch of rv_pipeline_decode is
 -- SIGNAUX
   signal local_opcode : std_logic_vector(6 downto 0);
   signal funct3 : OPCODE;
-  signal rs1_addr, rs2_addr : REG_ADDR;
-  signal u_imm, j_imm, i_imm, s_imm, b_imm, rs1_data : WORD;
+  signal rs1_addr, rs2_addr : REG_ADDR := (others=>'0');
+  signal u_imm, j_imm, i_imm, s_imm, b_imm, rs1_data : WORD := ZERO_VALUE;
+  signal write_register : boolean;
 
 begin
   rs1_addr <= in_instr(19 downto 15);
@@ -45,7 +47,7 @@ begin
 
   u_rf : rv_rf port map (
     in_clk, in_rstn,
-    in_we => in_we,
+    in_we => in_rd_we,
     in_addr_ra => rs1_addr,
     out_data_ra => rs1_data,
     in_addr_rb => rs2_addr,
@@ -81,8 +83,10 @@ begin
     end generate gen_j;
   end generate gen_imm;
 
+  write_register <= local_opcode = "1100011" or local_opcode = "0100011";
+  
 -- ID/EX register
-  idex : process (in_clk, in_rstn, in_flush)
+  idex : process (in_clk, in_rstn)
   begin
     if (in_flush = '1') or (in_rstn = '0') then
       out_imm <= ZERO_VALUE;
@@ -95,6 +99,7 @@ begin
       out_alu_opcode <= "000";
       out_alu_shamt <= "00000";
       out_alu_use_src2 <= '0';
+      
     elsif (in_clk'event) and (in_clk = '1') then
       case local_opcode is
 	when "0110111" => out_imm <= u_imm;
@@ -119,7 +124,7 @@ begin
       if local_opcode = "0100011" then
 	out_storeword <= '1';
       else
-	  out_storeword <= '0';
+	out_storeword <= '0';
       end if;
 
       -- use signed values unless SLT(I)U
@@ -128,12 +133,16 @@ begin
       else
 	out_alu_sign <= '1';
       end if;
-
+      
       out_alu_arith <= i_imm(10);
       out_alu_opcode <= funct3;
       out_alu_shamt <= i_imm(4 downto 0);
       out_alu_use_src2 <= (local_opcode(5) and (not local_opcode(2)));
-      out_rd_addr <= (in_instr(11 downto 7));
+      if write_register then 
+        out_rd_we <= '1';
+      else 
+        out_rd_we <= '0';
+      end if;
     end if;
   end process idex;
 

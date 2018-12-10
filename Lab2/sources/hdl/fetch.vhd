@@ -23,8 +23,8 @@ end rv_pipeline_fetch;
 
 architecture arch of rv_pipeline_fetch is
 -- SIGNAUX
-  signal pc : WORD := ZERO_VALUE;
-  signal imem_read : WORD := ZERO_VALUE;
+  signal pc : WORD := (others => '0');
+  signal imem_read : WORD := (others => '0');
 
 begin
   u_pc : rv_pc port map (
@@ -41,15 +41,15 @@ begin
 -- ID/EX register
   fetch : process (in_clk, in_rstn)
   begin 
-    if (in_flush = '1') then
-        out_instr <= ZERO_VALUE;
-    elsif (in_rstn = '0') then
+    if (in_rstn = '0') then
       out_instr <= ZERO_VALUE;
     elsif (in_clk'event) and (in_clk = '1') then
-        -- out_pc <= ZERO_VALUE;
-    elsif (in_stall = '0') then
-      out_instr <= in_imem_read;
-      out_pc <= pc;
+      if (in_flush = '1') then
+        out_instr <= x"00000013";
+      elsif (in_stall = '0') then
+        out_instr <= in_imem_read;
+        out_pc <= pc;
+      end if;
     end if;
   end process;
 end arch;

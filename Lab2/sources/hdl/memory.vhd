@@ -12,13 +12,17 @@ entity rv_pipeline_memory is
     in_alu_result : in WORD;
     in_rd_addr : in REG_ADDR;
     in_loadword, in_storeword : in FLAG;
-    
     out_rd_addr : out REG_ADDR;
+    
     out_dmem_we : out FLAG;
     out_dmem_addr : out ADDRESS;
     out_dmem_write : out WORD;
+    
     out_alu_result : out WORD;
-    out_loadword : out FLAG
+    out_loadword : out FLAG;
+    
+    in_rd_we : in FLAG;
+    out_rd_we : out FLAG
   );
 
 end rv_pipeline_memory;
@@ -26,11 +30,13 @@ end rv_pipeline_memory;
 architecture arch of rv_pipeline_memory is
 -- SIGNAUX
   signal dmem_addr : ADDRESS := ZERO_ADDR;
+  signal alu_result : WORD := ZERO_VALUE;
   -- signal rd_addr : REG_ADDR := "00000";
 
 begin
+  alu_result <= in_alu_result;
 -- la memoire est addressable par mots de 32 bits, alors il faut diviser l'addresse par 4
-  out_dmem_addr <= "00" & in_alu_result(ADDR_WIDTH-1 downto 2);
+  out_dmem_addr <= "00" & alu_result(ADDR_WIDTH-1 downto 2);
   out_dmem_we <= in_storeword;
   out_dmem_write <= in_store_data;
 
@@ -39,8 +45,9 @@ begin
   begin 
     if (in_clk'event) and (in_clk = '1') then
       out_rd_addr <= in_rd_addr;
-      out_alu_result <= in_alu_result; 
+      out_alu_result <= alu_result; 
       out_loadword <= in_loadword;
+      out_rd_we <= in_rd_we;
     end if;
   end process mewb;
 

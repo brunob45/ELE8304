@@ -103,23 +103,27 @@ package mini_riscv is
   port (
     in_clk, in_rstn : in FLAG;
     in_instr : in WORD;
-    in_we : in FLAG;
+    in_rd_we : in FLAG;
     in_flush: in FLAG;
     in_rd_data : in WORD;
-    in_rd_addr : in REG_ADDR;
 
-    out_rs1_data, out_rs2_data, out_imm : out WORD;
     in_pc : in WORD;
     out_pc : out WORD;
 
     out_jump, out_branch : out FLAG;
     out_loadword, out_storeword : out FLAG;
-
+    
+    -- sorties pour l'ALU
+    out_rs1_data, out_rs2_data, out_imm : out WORD;
     out_alu_arith : out FLAG;
     out_alu_sign : out FLAG;
     out_alu_opcode : out OPCODE;
     out_alu_shamt : out SHAMT;
     out_alu_use_src2 : out FLAG;
+    
+    -- passthrough
+    out_rd_we : out FLAG;
+    in_rd_addr : in REG_ADDR;
     out_rd_addr : out REG_ADDR
   );   
   end component;
@@ -127,57 +131,79 @@ package mini_riscv is
   component rv_pipeline_execute is
   port (
     in_clk, in_rstn : in FLAG;
+    
+    -- entrees pour le branch
     in_jump, in_branch: in FLAG;
-    in_rs1_data, in_rs2_data, in_imm : in WORD;
     in_pc : in WORD;
-    in_loadword, in_storeword : in FLAG;
-    out_loadword, out_storeword : out FLAG;
-
+    
+    -- entrees pour l'ALU
+    in_rs1_data, in_rs2_data, in_imm : in WORD;
     in_alu_arith : in FLAG;
     in_alu_sign : in FLAG;
     in_alu_opcode : in OPCODE;
     in_alu_shamt : in SHAMT;
     in_alu_use_src2 : in FLAG;
 
+    -- sorties vers decode
     out_pc_transfer : out FLAG;
     out_pc_target : out WORD;
-    out_alu_result : out WORD;
-    out_store_data : out WORD;
     out_flush : out FLAG;
     out_stall : out FLAG;
-
+    
+    -- sorties vers memory
+    out_store_data : out WORD;
+    out_alu_result : out WORD;
+    
+    -- passthrough
+    in_loadword, in_storeword : in FLAG;
+    out_loadword, out_storeword : out FLAG;
     in_rd_addr : in REG_ADDR;
-    out_rd_addr : out REG_ADDR
+    out_rd_addr : out REG_ADDR;
+    in_rd_we : in FLAG;
+    out_rd_we : out FLAG
   );  
   end component;
 
   component rv_pipeline_memory is
   port (
     in_clk, in_rstn : in FLAG;
+    
+    -- entrees de execute
     in_store_data : in WORD;
     in_alu_result : in WORD;
     in_rd_addr : in REG_ADDR;
     in_loadword, in_storeword : in FLAG;
-    out_alu_result : out WORD;
+    
+    -- sorties vers writeback
     out_rd_addr : out REG_ADDR;
+    out_alu_result : out WORD;
+    out_loadword : out FLAG;
+    
+    -- sorties vers dmem    
     out_dmem_we : out FLAG;
     out_dmem_addr : out ADDRESS;
-    out_dmem_write : out WORD
-  );   
+    out_dmem_write : out WORD;
+    in_rd_we : in FLAG;
+    out_rd_we : out FLAG
+  );
   end component;
 
   component rv_pipeline_writeback is
-    port (
-      in_rd_addr : in REG_ADDR;
-      in_alu_result : in WORD;
-      in_dmem_read : in WORD;
-      in_lw : in FLAG;
-      in_we : in FLAG;
-  
-      out_rd_data : out WORD;
-      out_rd_addr : out REG_ADDR;
-      out_we : out FLAG
-    );
+  port (
+    -- entrees de memory
+    in_rd_addr : in REG_ADDR;
+    in_alu_result : in WORD;
+    in_loadword : in FLAG;
+    in_rd_we : in FLAG;
+    
+    -- entree de dmem
+    in_dmem_read : in WORD;
+
+    -- sorties vers decode
+    out_rd_data : out WORD;
+    out_rd_addr : out REG_ADDR;
+    out_rd_we : out FLAG
+  );
   end component;
 
 end mini_riscv;
