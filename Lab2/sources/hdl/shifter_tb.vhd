@@ -50,10 +50,18 @@ begin
 --    report "<<---- Simulation Start ---->>";
 
     in_data <= "0010110100000000";
+    in_shamt <= "0001";
+    in_arith <= '0';
+    in_direction <= '0';
+    wait for PERIOD;
+    in_direction <= '1';
     wait for PERIOD;
 --    report "out = " & to_hstring(out_data);
     in_data <= "0000111111110000";
+    in_shamt <= "1010";
+    in_arith <= '1';
     wait for PERIOD;
+    in_direction <= '0';
 --    report "out = " & to_hstring(out_data);    
     in_data <= "1111111111110000";
     wait for PERIOD;

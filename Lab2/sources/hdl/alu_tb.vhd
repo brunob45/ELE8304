@@ -74,7 +74,7 @@ begin
 -- shift right x3
     in_src1 <= std_logic_vector(to_unsigned(123, 32));
     in_opcode <= "101";
-    in_arith <= '0';
+    in_arith <= '1';
     in_shamt <= "00011";
     wait for PERIOD;
     
