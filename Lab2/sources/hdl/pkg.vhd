@@ -158,6 +158,7 @@ package mini_riscv is
     in_alu_result : in WORD;
     in_rd_addr : in REG_ADDR;
     in_loadword, in_storeword : in FLAG;
+    out_alu_result : out WORD;
     out_rd_addr : out REG_ADDR;
     out_dmem_we : out FLAG;
     out_dmem_addr : out ADDRESS;
@@ -171,9 +172,11 @@ package mini_riscv is
       in_alu_result : in WORD;
       in_dmem_read : in WORD;
       in_lw : in FLAG;
+      in_we : in FLAG;
   
       out_rd_data : out WORD;
-      out_rd_addr : out REG_ADDR
+      out_rd_addr : out REG_ADDR;
+      out_we : out FLAG
     );
   end component;
 

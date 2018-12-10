@@ -20,7 +20,9 @@ entity rv_core is
     out_if_flush : out FLAG;
     out_if_pc : out WORD;
     out_id_instr : out WORD;
-    out_jump, out_branch : out FLAG
+    -- debug
+    out_branch : out FLAG;
+    out_debug1, out_debug2 : out WORD
   );
 end rv_core;
 
@@ -31,7 +33,7 @@ architecture arch of rv_core is
   signal id_ex_loadword, id_ex_storeword : FLAG := '0';
   signal ex_me_loadword, ex_me_storeword : FLAG := '0';
   signal id_ex_alu_arith, id_ex_alu_sign : FLAG := '0';
-  signal me_wb_lw : FLAG := '0';
+  signal me_wb_lw, me_wb_we : FLAG := '0';
 
   signal ex_if_target, if_id_instr : WORD := ZERO_VALUE;
   signal id_ex_rs1, id_ex_rs2, id_ex_imm: WORD := ZERO_VALUE;
@@ -46,6 +48,9 @@ architecture arch of rv_core is
 
   signal id_ex_alu_shamt : SHAMT := "00000";
   
+  -- debug
+  signal debug1, debug2 : WORD := ZERO_VALUE;
+  
 
 begin
   out_if_stall <= ex_if_stall;
@@ -53,8 +58,13 @@ begin
   out_if_transfer <= ex_if_transfer;
   out_id_instr <= if_id_instr;
   out_if_pc <= if_id_pc;
-  out_branch <= id_ex_branch;
-  out_jump <= id_ex_jump;
+  -- debug
+  out_branch <= ex_if_transfer;
+  out_debug1 <= debug1;
+  out_debug2 <= debug2;
+  
+  debug1 <= wb_id_rd_data;
+  debug2(4 downto 0) <= wb_id_rd_addr;
 
 -- port map
   u_fetch : rv_pipeline_fetch
@@ -91,7 +101,8 @@ begin
     out_storeword => id_ex_storeword,
     out_alu_sign => id_ex_alu_sign,
     out_alu_arith => id_ex_alu_arith,
-    out_alu_shamt => id_ex_alu_shamt
+    out_alu_shamt => id_ex_alu_shamt,
+    out_rd_addr => id_ex_rd_addr
   );
 
   u_execute : rv_pipeline_execute
@@ -108,18 +119,20 @@ begin
     in_storeword => id_ex_storeword,
     out_loadword => ex_me_loadword, 
     out_storeword => ex_me_storeword,
+    
     in_alu_arith => id_ex_alu_arith,
     in_alu_sign => id_ex_alu_sign,
     in_alu_opcode => id_ex_alu_opcode,
     in_alu_shamt => id_ex_alu_shamt,
     in_alu_use_src2 => id_ex_use_src2,
+    in_rd_addr => id_ex_rd_addr,
+    
     out_pc_transfer => ex_if_transfer,
     out_alu_result => ex_me_alu_result,
     out_store_data => ex_me_store_data,
     out_flush => ex_if_id_flush,
     out_stall => ex_if_stall,
     out_pc_target => ex_if_target,
-    in_rd_addr => id_ex_rd_addr,
     out_rd_addr => ex_me_rd_addr
   );
 
@@ -131,8 +144,9 @@ begin
     in_rd_addr => ex_me_rd_addr,
     in_loadword => ex_me_loadword, 
     in_storeword => ex_me_storeword,
+    out_alu_result => me_wb_alu_result,
     out_rd_addr => me_wb_rd_addr,
-    out_dmem_we => out_dmem_we,
+    out_dmem_we => me_wb_we,
     out_dmem_addr => out_dmem_addr,
     out_dmem_write => out_dmem_write
   );
@@ -143,9 +157,11 @@ begin
       in_alu_result => me_wb_alu_result,
       in_dmem_read => in_dmem_read,
       in_lw => me_wb_lw,
+      in_we => me_wb_we,
   
       out_rd_data => wb_id_rd_data,
-      out_rd_addr => wb_id_rd_addr
+      out_rd_addr => wb_id_rd_addr,
+      out_we => wb_id_we
     );
     
 end arch;

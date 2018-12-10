@@ -40,7 +40,9 @@ architecture tb of core_tb is
     out_if_flush : out FLAG;
     out_if_pc : out WORD;
     out_id_instr : out WORD;
-    out_branch, out_jump : out FLAG
+    -- debug
+    out_branch : out FLAG;
+    out_debug1, out_debug2 : out WORD
   );
   end component;
 
@@ -55,7 +57,9 @@ architecture tb of core_tb is
   signal stall, transfer, flush : FLAG;
   signal instr : WORD;
   signal pc : WORD;
-  signal jump, branch : FLAG := '0';
+  -- debug
+  signal branch : FLAG := '0';
+  signal debug1, debug2 : WORD;
   
   constant PERIOD   : time := 10 ns;
   constant TB_LOOP  : positive := 100;
@@ -80,8 +84,10 @@ begin
     out_if_transfer => transfer,
     out_id_instr => instr,
     out_if_pc => pc,
-    out_jump => jump,
-    out_branch => branch
+    -- debug
+    out_branch => branch,
+    out_debug1 => debug1,
+    out_debug2 => debug2
   );
 
   u_dmem : dmem
@@ -105,7 +111,7 @@ begin
   begin
     report "<<---- Simulation Start ---->>";
 
-    wait for 20*PERIOD;
+    wait for 100*PERIOD;
       -- Assertion
       -- wait for 1*PERIOD;
       -- assert q = EXPECTED

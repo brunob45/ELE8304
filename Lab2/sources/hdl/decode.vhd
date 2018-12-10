@@ -1,10 +1,10 @@
-
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 library work;
 use work.mini_riscv.all;
+
 
 entity rv_pipeline_decode is
   port (
@@ -14,9 +14,9 @@ entity rv_pipeline_decode is
     in_flush: in FLAG;
     in_rd_data : in WORD;
     in_rd_addr : in REG_ADDR;
+    in_pc : in WORD;
 
     out_rs1_data, out_rs2_data, out_imm : out WORD;
-    in_pc : in WORD;
     out_pc : out WORD;
 
     out_jump, out_branch : out FLAG;
@@ -45,10 +45,10 @@ begin
 
   u_rf : rv_rf port map (
     in_clk, in_rstn,
-    in_we => in_we, 
-    in_addr_ra => rs1_addr, 
+    in_we => in_we,
+    in_addr_ra => rs1_addr,
     out_data_ra => rs1_data,
-    in_addr_rb => rs2_addr, 
+    in_addr_rb => rs2_addr,
     out_data_rb => out_rs2_data,
     in_addr_w => in_rd_addr,
     in_data_w => in_rd_data
@@ -82,61 +82,58 @@ begin
   end generate gen_imm;
 
 -- ID/EX register
-  idex : process (in_clk, in_rstn)
-  begin 
-    if (in_clk'event) and (in_clk = '1') then
-      if (in_flush = '1') then
-        out_imm <= ZERO_VALUE;
-        out_pc <= ZERO_VALUE;
-        out_jump <= '0';
-        out_branch <= '0';
-        out_loadword <= '0';
-        out_storeword <= '0';
-        out_alu_arith <= '0';
-        out_alu_sign <= '0';
-        out_alu_opcode <= "000";
-        out_alu_shamt <= "00000";
-        out_alu_use_src2 <= '0';    
+  idex : process (in_clk, in_rstn, in_flush)
+  begin
+    if (in_flush = '1') or (in_rstn = '0') then
+      out_imm <= ZERO_VALUE;
+      out_jump <= '0';
+      out_branch <= '0';
+      out_loadword <= '0';
+      out_storeword <= '0';
+      out_alu_arith <= '0';
+      out_alu_sign <= '0';
+      out_alu_opcode <= "000";
+      out_alu_shamt <= "00000";
+      out_alu_use_src2 <= '0';
+    elsif (in_clk'event) and (in_clk = '1') then
+      case local_opcode is
+	when "0110111" => out_imm <= u_imm;
+	when "1101111" => out_imm <= j_imm;
+	when "1100011" => out_imm <= b_imm;
+	when "0100011" => out_imm <= s_imm;
+	when others => out_imm <= i_imm;
+      end case;
+      if local_opcode = "1100111" then -- JALR when in_lw = '1'
+	out_pc <= rs1_data;
       else
-        case local_opcode is
-          when "0110111" => out_imm <= u_imm;
-          when "1101111" => out_imm <= j_imm;
-          when "1100011" => out_imm <= b_imm;
-          when "0100011" => out_imm <= s_imm;
-          when others => out_imm <= i_imm;
-        end case;
-        if local_opcode = "1100111" then -- JALR
-          out_pc <= rs1_data;
-        else
-          out_pc <= in_pc;
-        end if;
-        out_jump <= (local_opcode(6) and local_opcode(2));
-        out_branch <= (local_opcode(6) and not local_opcode(2));
-        if local_opcode = "0000011" then
-	  out_loadword <= '1';
-        else
-          out_loadword <= '0';
-        end if;
-  
-        if local_opcode = "0100011" then
-          out_storeword <= '1';
-        else
-           out_storeword <= '0';
-        end if;
-
--- use signed values unless SLT(I)U
-        if funct3 = "011" then
-          out_alu_sign <= '0';
-        else
-          out_alu_sign <= '1';
-        end if;
-  
-        out_alu_arith <= i_imm(10);
-        out_alu_opcode <= funct3;
-        out_alu_shamt <= i_imm(4 downto 0);
-        out_alu_use_src2 <= (local_opcode(5) and (not local_opcode(2)));
-        out_rd_addr <= (in_instr(11 downto 7));
+	out_pc <= in_pc;
       end if;
+      out_jump <= (local_opcode(6) and local_opcode(2));
+      out_branch <= (local_opcode(6) and not local_opcode(2));
+      if local_opcode = "0000011" then
+	out_loadword <= '1';
+      else
+	out_loadword <= '0';
+      end if;
+
+      if local_opcode = "0100011" then
+	out_storeword <= '1';
+      else
+	  out_storeword <= '0';
+      end if;
+
+      -- use signed values unless SLT(I)U
+      if funct3 = "011" then
+	out_alu_sign <= '0';
+      else
+	out_alu_sign <= '1';
+      end if;
+
+      out_alu_arith <= i_imm(10);
+      out_alu_opcode <= funct3;
+      out_alu_shamt <= i_imm(4 downto 0);
+      out_alu_use_src2 <= (local_opcode(5) and (not local_opcode(2)));
+      out_rd_addr <= (in_instr(11 downto 7));
     end if;
   end process idex;
 

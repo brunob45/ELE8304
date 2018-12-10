@@ -13,9 +13,9 @@ entity rv_pipeline_fetch is
     in_target : in WORD;
     in_stall : in FLAG;
     in_flush: in FLAG;
+    in_imem_read : in WORD;
     out_instr : out WORD;
     out_imem_addr : out ADDRESS;
-    in_imem_read : in WORD;
     out_pc : out WORD
   );
     
@@ -41,16 +41,15 @@ begin
 -- ID/EX register
   fetch : process (in_clk, in_rstn)
   begin 
-    if (in_rstn = '0') then
+    if (in_flush = '1') then
+        out_instr <= ZERO_VALUE;
+    elsif (in_rstn = '0') then
       out_instr <= ZERO_VALUE;
     elsif (in_clk'event) and (in_clk = '1') then
-      if (in_flush = '1') then
-        out_instr <= ZERO_VALUE;
-        out_pc <= ZERO_VALUE;
-      elsif (in_stall = '0') then
-        out_instr <= in_imem_read;
-        out_pc <= pc;
-      end if;
+        -- out_pc <= ZERO_VALUE;
+    elsif (in_stall = '0') then
+      out_instr <= in_imem_read;
+      out_pc <= pc;
     end if;
   end process;
 end arch;

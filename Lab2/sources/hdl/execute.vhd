@@ -41,7 +41,7 @@ architecture arch of rv_pipeline_execute is
 -- SIGNAUX
   signal alu_src2, alu_out : WORD := ZERO_VALUE;
   signal pc_target : std_logic_vector(DATA_WIDTH downto 0) := '0'&ZERO_VALUE;
-  signal pc_transfer, stall, flush : FLAG := '0';
+  signal pc_transfer, flush : FLAG := '0';
   signal branch, jump : boolean := FALSE;
 
 begin
@@ -70,17 +70,18 @@ begin
   -- branchements
   branch <= (in_rs1_data = in_rs2_data) and (in_branch = '1');
   jump <= (in_jump = '1');
-  pc_transfer <= '1' when branch or jump else '0';
+  pc_transfer <= '1' when (branch or jump) else '0';
   flush <= pc_transfer;
 
 -- EX/ME register
   exme : process(in_clk)
   begin
     if in_clk'event and in_clk = '1' then
-      -- report "rs1 = " & to_hstring(unsigned(in_rs1_data)) & " rs2 = " & to_hstring(unsigned(in_rs2_data))
+      -- report "rs1 = " & to_hstring(unsigned(in_rs1_data)) & " rs2 = " & to_hstring(unsigned(in_rs2_data)) severity warning;
+      -- report "alu out = " & to_hstring(unsigned(alu_out)) severity warning;
       -- passthrough
       out_loadword <= in_loadword;
-      out_storeword <= in_loadword;
+      out_storeword <= in_storeword;
       out_store_data <= in_rs2_data;
 
       out_alu_result <= alu_out;
@@ -88,7 +89,7 @@ begin
       out_pc_transfer <= pc_transfer;
       out_rd_addr <= in_rd_addr;
 
-      out_stall <= stall;
+      out_stall <= '1' when in_loadword = '1' else '0';
       out_flush <= flush;
     end if;
   end process;
