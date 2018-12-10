@@ -158,9 +158,7 @@ package mini_riscv is
     in_alu_result : in WORD;
     in_rd_addr : in REG_ADDR;
     in_loadword, in_storeword : in FLAG;
-    out_rd_data : out WORD;
     out_rd_addr : out REG_ADDR;
-    in_dmem_read : in WORD;
     out_dmem_we : out FLAG;
     out_dmem_addr : out ADDRESS;
     out_dmem_write : out WORD
@@ -169,13 +167,13 @@ package mini_riscv is
 
   component rv_pipeline_writeback is
     port (
-      in_rd_addr : in WORD;
+      in_rd_addr : in REG_ADDR;
       in_alu_result : in WORD;
       in_dmem_read : in WORD;
       in_lw : in FLAG;
   
       out_rd_data : out WORD;
-      out_rd_addr : out WORD
+      out_rd_addr : out REG_ADDR
     );
   end component;
 

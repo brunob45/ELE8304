@@ -39,7 +39,8 @@ architecture tb of core_tb is
     out_if_transfer : out FLAG;
     out_if_flush : out FLAG;
     out_if_pc : out WORD;
-    out_id_instr : out WORD
+    out_id_instr : out WORD;
+    out_branch, out_jump : out FLAG
   );
   end component;
 
@@ -54,6 +55,7 @@ architecture tb of core_tb is
   signal stall, transfer, flush : FLAG;
   signal instr : WORD;
   signal pc : WORD;
+  signal jump, branch : FLAG := '0';
   
   constant PERIOD   : time := 10 ns;
   constant TB_LOOP  : positive := 100;
@@ -77,7 +79,9 @@ begin
     out_if_flush => flush,
     out_if_transfer => transfer,
     out_id_instr => instr,
-    out_if_pc => pc
+    out_if_pc => pc,
+    out_jump => jump,
+    out_branch => branch
   );
 
   u_dmem : dmem

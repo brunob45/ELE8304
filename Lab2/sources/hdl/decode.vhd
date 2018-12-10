@@ -37,7 +37,7 @@ architecture arch of rv_pipeline_decode is
   signal local_opcode : std_logic_vector(6 downto 0);
   signal funct3 : OPCODE;
   signal rs1_addr, rs2_addr : REG_ADDR;
-  signal u_imm, j_imm, i_imm, s_imm, b_imm : WORD;
+  signal u_imm, j_imm, i_imm, s_imm, b_imm, rs1_data : WORD;
 
 begin
   rs1_addr <= in_instr(19 downto 15);
@@ -47,12 +47,13 @@ begin
     in_clk, in_rstn,
     in_we => in_we, 
     in_addr_ra => rs1_addr, 
-    out_data_ra => out_rs1_data,
+    out_data_ra => rs1_data,
     in_addr_rb => rs2_addr, 
-    out_data_rb => out_rs1_data,
+    out_data_rb => out_rs2_data,
     in_addr_w => in_rd_addr,
     in_data_w => in_rd_data
   );
+  out_rs1_data <= rs1_data;
 
 -- predecode
   local_opcode <= in_instr(6 downto 0);
@@ -85,8 +86,6 @@ begin
   begin 
     if (in_clk'event) and (in_clk = '1') then
       if (in_flush = '1') then
-        out_rs1_data <= ZERO_VALUE;
-        out_rs2_data <= ZERO_VALUE;
         out_imm <= ZERO_VALUE;
         out_pc <= ZERO_VALUE;
         out_jump <= '0';
@@ -106,14 +105,17 @@ begin
           when "0100011" => out_imm <= s_imm;
           when others => out_imm <= i_imm;
         end case;
-       
-        out_pc <= in_pc;
+        if local_opcode = "1100111" then -- JALR
+          out_pc <= rs1_data;
+        else
+          out_pc <= in_pc;
+        end if;
         out_jump <= (local_opcode(6) and local_opcode(2));
         out_branch <= (local_opcode(6) and not local_opcode(2));
         if local_opcode = "0000011" then
-          out_loadword <= '1';
+	  out_loadword <= '1';
         else
-           out_loadword <= '0';
+          out_loadword <= '0';
         end if;
   
         if local_opcode = "0100011" then
@@ -124,9 +126,9 @@ begin
 
 -- use signed values unless SLT(I)U
         if funct3 = "011" then
-          out_storeword <= '0';
+          out_alu_sign <= '0';
         else
-           out_storeword <= '1';
+          out_alu_sign <= '1';
         end if;
   
         out_alu_arith <= i_imm(10);

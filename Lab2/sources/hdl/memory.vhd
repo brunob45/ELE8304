@@ -12,13 +12,12 @@ entity rv_pipeline_memory is
     in_alu_result : in WORD;
     in_rd_addr : in REG_ADDR;
     in_loadword, in_storeword : in FLAG;
-    in_dmem_read : in WORD;
     out_rd_addr : out REG_ADDR;
     out_dmem_we : out FLAG;
     out_dmem_addr : out ADDRESS;
     out_dmem_write : out WORD;
     out_alu_result : out WORD;
-    out_loadword : out WORD
+    out_loadword : out FLAG
   );
 
 end rv_pipeline_memory;
@@ -34,14 +33,13 @@ begin
   out_dmem_we <= in_storeword;
   out_dmem_write <= in_store_data;
 
-  out_loadword <= in_loadword;
-
 -- registre ME/WB
   mewb : process (in_clk)
   begin 
     if (in_clk'event) and (in_clk = '1') then
       rd_addr <= in_rd_addr;
       out_alu_result <= in_alu_result; 
+      out_loadword <= in_loadword;
     end if;
   end process mewb;
 

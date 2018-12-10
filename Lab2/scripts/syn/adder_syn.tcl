@@ -1,6 +1,9 @@
+source ~/Labs/Lab2/scripts/config.tcl
+source ~/Labs/Lab2/scripts/elab/adder_elaborate.tcl
+
 set ::env(LAB2_SRC_SDC) /users/Cours/ele8304/2/Labs/Lab2/sources/sdc
-set ::env(LAB2_SYN_REP) /users/Cours/ele8304/2/Labs/Lab2/syn/rep
-set ::env(LAB2_SYN_NET) /users/Cours/ele8304/2/Labs/Lab2/syn/net
+set ::env(LAB2_SYN_REP) /users/Cours/ele8304/2/Labs/Lab2/implementation/syn/reports
+set ::env(LAB2_SYN_NET) /users/Cours/ele8304/2/Labs/Lab2/implementation/syn/netlists
 
 read_sdc $::env(LAB2_SRC_SDC)/timing.sdc
 report_timing -lint > $::env(LAB2_SYN_REP)/adder_timing_lint.rpt
@@ -22,3 +25,10 @@ write_hdl > $::env(LAB2_SYN_NET)/adder_opt.v
 
 write_hdl > $::env(LAB2_SYN_NET)/adder_net.v
 write_sdf > $::env(LAB2_SYN_NET)/adder_net.sdf
+
+report_timing > $::env(LAB2_SYN_REP)/adder_timing.rpt
+report_area > $::env(LAB2_SYN_REP)/adder_area.rpt
+report_gates > $::env(LAB2_SYN_REP)/adder_gates.rpt
+report_power > $::env(LAB2_SYN_REP)/adder_power.rpt
+
+gui_show

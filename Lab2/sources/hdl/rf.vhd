@@ -24,7 +24,7 @@ end entity rv_rf;
 
 architecture arch of rv_rf is
 -- SIGNAUX
-  signal registers : REGISTER_ARRAY;
+  signal registers : REGISTER_ARRAY := ((others=> (others=>'0')));
   signal addr_w_valid, addr_ra_w_eq, addr_rb_w_eq : boolean;
 
 begin

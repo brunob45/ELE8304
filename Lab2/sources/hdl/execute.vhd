@@ -1,10 +1,13 @@
-
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 library work;
 use work.mini_riscv.all;
+
+library std;
+use std.textio.all;
+use std.env.all;
 
 entity rv_pipeline_execute is
   port (
@@ -68,11 +71,13 @@ begin
   branch <= (in_rs1_data = in_rs2_data) and (in_branch = '1');
   jump <= (in_jump = '1');
   pc_transfer <= '1' when branch or jump else '0';
+  flush <= pc_transfer;
 
 -- EX/ME register
   exme : process(in_clk)
   begin
     if in_clk'event and in_clk = '1' then
+      -- report "rs1 = " & to_hstring(unsigned(in_rs1_data)) & " rs2 = " & to_hstring(unsigned(in_rs2_data))
       -- passthrough
       out_loadword <= in_loadword;
       out_storeword <= in_loadword;

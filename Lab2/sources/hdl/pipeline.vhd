@@ -19,7 +19,8 @@ entity rv_core is
     out_if_transfer : out FLAG;
     out_if_flush : out FLAG;
     out_if_pc : out WORD;
-    out_id_instr : out WORD
+    out_id_instr : out WORD;
+    out_jump, out_branch : out FLAG
   );
 end rv_core;
 
@@ -30,13 +31,15 @@ architecture arch of rv_core is
   signal id_ex_loadword, id_ex_storeword : FLAG := '0';
   signal ex_me_loadword, ex_me_storeword : FLAG := '0';
   signal id_ex_alu_arith, id_ex_alu_sign : FLAG := '0';
+  signal me_wb_lw : FLAG := '0';
 
   signal ex_if_target, if_id_instr : WORD := ZERO_VALUE;
-  signal wb_id_data, id_ex_rs1, id_ex_rs2, id_ex_imm: WORD := ZERO_VALUE;
+  signal id_ex_rs1, id_ex_rs2, id_ex_imm: WORD := ZERO_VALUE;
+  signal me_wb_alu_result, wb_id_rd_data : WORD := ZERO_VALUE;
   signal ex_me_alu_result, ex_me_store_data : WORD := ZERO_VALUE;
   signal id_ex_pc, if_id_pc : WORD := ZERO_VALUE;
 
-  signal wb_id_addr : REG_ADDR := "00000";
+  signal wb_id_rd_addr, me_wb_rd_addr : REG_ADDR := "00000";
   signal id_ex_rd_addr, ex_me_rd_addr : REG_ADDR := "00000";
 
   signal id_ex_alu_opcode : OPCODE := "000";
@@ -50,6 +53,8 @@ begin
   out_if_transfer <= ex_if_transfer;
   out_id_instr <= if_id_instr;
   out_if_pc <= if_id_pc;
+  out_branch <= id_ex_branch;
+  out_jump <= id_ex_jump;
 
 -- port map
   u_fetch : rv_pipeline_fetch
@@ -71,14 +76,14 @@ begin
     in_instr => if_id_instr,
     in_we => wb_id_we,
     in_flush => ex_if_id_flush,
-    in_rd_data => wb_id_data,
-    in_rd_addr => wb_id_addr,
+    in_rd_data => wb_id_rd_data,
+    in_rd_addr => wb_id_rd_addr,
+    in_pc => if_id_pc,
     out_rs1_data => id_ex_rs1,
     out_rs2_data => id_ex_rs2,
     out_imm => id_ex_imm,
     out_jump => id_ex_jump,
     out_branch => id_ex_branch,
-    in_pc => if_id_pc,
     out_pc => id_ex_pc,
     out_alu_opcode => id_ex_alu_opcode,
     out_alu_use_src2 => id_ex_use_src2,
@@ -126,23 +131,21 @@ begin
     in_rd_addr => ex_me_rd_addr,
     in_loadword => ex_me_loadword, 
     in_storeword => ex_me_storeword,
-    out_rd_data => wb_id_data,
-    out_rd_addr => wb_id_addr,
-    in_dmem_read => in_dmem_read,
+    out_rd_addr => me_wb_rd_addr,
     out_dmem_we => out_dmem_we,
     out_dmem_addr => out_dmem_addr,
     out_dmem_write => out_dmem_write
   );
 
-  u_writeback : rv_pipeline_writeback 
+  u_writeback : rv_pipeline_writeback
     port map (
-      in_rd_addr : in WORD;
-      in_alu_result : in WORD;
-      in_dmem_read : in WORD;
-      in_lw : in FLAG;
+      in_rd_addr => me_wb_rd_addr,
+      in_alu_result => me_wb_alu_result,
+      in_dmem_read => in_dmem_read,
+      in_lw => me_wb_lw,
   
-      out_rd_data : out WORD;
-      out_rd_addr : out WORD
+      out_rd_data => wb_id_rd_data,
+      out_rd_addr => wb_id_rd_addr
     );
     
 end arch;

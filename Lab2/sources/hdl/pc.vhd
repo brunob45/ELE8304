@@ -33,8 +33,10 @@ begin
   begin
     if (in_rstn = '0') then
       pc <= reset;
-    elsif (in_stall = '0') and (in_clk'event) and (in_clk = '1') then
-      pc <= out_mux;
+    elsif (in_clk'event) and (in_clk = '1') then
+      if (in_stall = '0') then 
+        pc <= out_mux;
+      end if;
     end if;
   end process;
 

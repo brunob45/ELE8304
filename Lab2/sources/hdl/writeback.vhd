@@ -4,13 +4,13 @@ use ieee.numeric_std.all;
 
 entity rv_pipeline_writeback is
   port (
-    in_rd_addr : in WORD;
+    in_rd_addr : in REG_ADDR;
     in_alu_result : in WORD;
     in_dmem_read : in WORD;
     in_lw : in FLAG;
 
     out_rd_data : out WORD;
-    out_rd_addr : out WORD
+    out_rd_addr : out REG_ADDR
   );
 
 end rv_pipeline_writeback;
