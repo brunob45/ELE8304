@@ -64,8 +64,9 @@ begin
   out_debug1 <= debug1;
   out_debug2 <= debug2;
   
-  debug1(0) <= wb_id_rd_we;
-  debug2 <= id_ex_rs2;
+  debug1 <= wb_id_rd_data;
+  debug2(4 downto 0) <= wb_id_rd_addr;
+  debug2(20) <= id_ex_rd_we;
 
 -- port map
   u_fetch : rv_pipeline_fetch

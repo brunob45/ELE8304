@@ -23,6 +23,7 @@ end rv_pipeline_fetch;
 
 architecture arch of rv_pipeline_fetch is
 -- SIGNAUX
+  constant NOPE : WORD := x"00000013";
   signal pc : WORD := (others => '0');
   signal imem_read : WORD := (others => '0');
 
@@ -45,7 +46,7 @@ begin
       out_instr <= ZERO_VALUE;
     elsif (in_clk'event) and (in_clk = '1') then
       if (in_flush = '1') then
-        out_instr <= x"00000013";
+        out_instr <= NOPE;
       elsif (in_stall = '0') then
         out_instr <= in_imem_read;
         out_pc <= pc;
