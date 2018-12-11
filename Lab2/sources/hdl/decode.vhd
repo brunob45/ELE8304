@@ -58,7 +58,7 @@ begin
 
 -- predecode
   local_opcode <= in_instr(6 downto 0);
-  funct3 <= in_instr(14 downto 12);
+  funct3 <= in_instr(14 downto 12) when in_instr(4 downto 0) = "10011" else (others => '0');
 
 -- decode
   i_imm(10 downto 0) <= in_instr(30 downto 20);
@@ -135,7 +135,11 @@ begin
       out_alu_arith <= i_imm(10);
       out_alu_opcode <= funct3;
       out_alu_shamt <= i_imm(4 downto 0);
-      out_alu_use_src2 <= (local_opcode(5) and (not local_opcode(2)));
+      if (local_opcode = "0110011") then
+        out_alu_use_src2 <= '1';
+      else
+        out_alu_use_src2 <= '0';
+      end if;
       out_rd_addr <= in_instr(11 downto 7);
       if (local_opcode = "1100011") or (local_opcode = "0100011") then 
         out_rd_we <= '0';

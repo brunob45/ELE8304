@@ -28,19 +28,19 @@ entity rv_pipeline_memory is
 end rv_pipeline_memory;
 
 architecture arch of rv_pipeline_memory is
--- SIGNAUX
+  -- SIGNAUX
   signal dmem_addr : ADDRESS := ZERO_ADDR;
   signal alu_result : WORD := ZERO_VALUE;
   -- signal rd_addr : REG_ADDR := "00000";
 
 begin
   alu_result <= in_alu_result;
--- la memoire est addressable par mots de 32 bits, alors il faut diviser l'addresse par 4
+  -- la memoire est addressable par mots de 32 bits, alors il faut diviser l'addresse par 4
   out_dmem_addr <= "00" & alu_result(ADDR_WIDTH-1 downto 2);
   out_dmem_we <= in_storeword;
   out_dmem_write <= in_store_data;
 
--- registre ME/WB
+  -- registre ME/WB
   mewb : process (in_clk)
   begin 
     if (in_clk'event) and (in_clk = '1') then

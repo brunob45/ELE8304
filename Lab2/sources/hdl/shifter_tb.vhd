@@ -30,7 +30,7 @@ architecture tb of shifter_tb is
   signal in_data : std_logic_vector(2**SIZE-1 downto 0) := std_logic_vector(to_signed(-1, 2**SIZE));
   signal in_shamt : std_logic_vector(SIZE-1 downto 0) := "0001";
   signal in_arith : std_logic := '0';
-  signal in_direction : std_logic := '1';
+  signal in_direction : std_logic := '0';
   signal out_data : std_logic_vector(2**SIZE-1 downto 0);
 
 begin
@@ -47,17 +47,17 @@ begin
   -- Main TB process
   do_tb : process
   begin
---    report "<<---- Simulation Start ---->>";
+    report "<<---- Simulation Start ---->>";
 
-    in_data <= "0010110100000000";
+    in_data <= "0010110100000011";
     wait for PERIOD;
---    report "out = " & to_hstring(out_data);
-    in_data <= "0000111111110000";
+    in_direction <= '1';
     wait for PERIOD;
---    report "out = " & to_hstring(out_data);    
-    in_data <= "1111111111110000";
+    in_arith <= '1';
     wait for PERIOD;
---    report "out = " & to_hstring(out_data);
+    in_shamt <= "0011";
+    wait for PERIOD;
+
     
     
     report "<<---- Simulation End ---->>";

@@ -1,9 +1,10 @@
-set lib     "~/Labs/Lab2/simulation/beh"
-set srcD    "~/Labs/Lab2/sources/hdl"
+set lib     "beh/pc"
+set srcD    "../sources/hdl"
 set top     "pc"
 set tb      "${top}_tb"
-set modules [list ]
+set modules [list "pkg"]
 set simtime "2000"
+
 # Librairie de travail
 if { [file exists $lib] } {
 file delete -force $lib
@@ -17,6 +18,10 @@ vcom -work $lib $srcD/$top.vhd
 
 vcom -2008 -work $lib $srcD/$tb.vhd
 # Simulation
-vsim $work.$tb
-do ${top}_wave.do
-run $simtime ns
+vsim $lib.$tb
+
+vcd file $lib/$top.vcd
+vcd add /$tb/$dut/*
+
+run -all
+vcd flush

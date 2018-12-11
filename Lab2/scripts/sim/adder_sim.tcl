@@ -1,8 +1,9 @@
-set lib     "~/Labs/Lab2/simulation/beh"
-set srcD    "~/Labs/Lab2/sources/hdl"
+set lib     "beh/adder"
+set srcD    "../sources/hdl"
 set top     "adder"
 set tb      "${top}_tb"
-set modules [list "hadd"]
+set dut     "u_${top}"
+set modules [list "pkg" "hadd"]
 set simtime "2000"
 # Librairie de travail
 if { [file exists $lib] } {
@@ -17,6 +18,10 @@ vcom -work $lib $srcD/$top.vhd
 
 vcom -2008 -work $lib $srcD/$tb.vhd
 # Simulation
-vsim $work.$tb
-do ${top}_wave.do
-run $simtime ns
+vsim $lib.$tb
+
+vcd file $lib/$top.vcd
+vcd add /$tb/$dut/*
+
+run -all
+vcd flush

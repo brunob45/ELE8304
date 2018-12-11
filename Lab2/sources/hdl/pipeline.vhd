@@ -19,10 +19,7 @@ entity rv_core is
     out_if_transfer : out FLAG;
     out_if_flush : out FLAG;
     out_if_pc : out WORD;
-    out_id_instr : out WORD;
-    -- debug
-    out_branch : out FLAG;
-    out_debug1, out_debug2 : out WORD
+    out_id_instr : out WORD
   );
 end rv_core;
 
@@ -59,14 +56,6 @@ begin
   out_if_transfer <= ex_if_transfer;
   out_id_instr <= if_id_instr;
   out_if_pc <= if_id_pc;
-  -- debug
-  out_branch <= ex_if_transfer;
-  out_debug1 <= debug1;
-  out_debug2 <= debug2;
-  
-  debug1 <= wb_id_rd_data;
-  debug2(4 downto 0) <= wb_id_rd_addr;
-  debug2(20) <= id_ex_rd_we;
 
 -- port map
   u_fetch : rv_pipeline_fetch

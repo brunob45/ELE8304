@@ -101,8 +101,8 @@
 "type":"design"},
 
 {"index": "1", 
- "date": "Sun Dec 09 18:46:14 EST 2018",
- "seconds": 1544399174.037744,
+ "date": "Tue Dec 11 01:00:09 EST 2018",
+ "seconds": 1544508009.720737,
  "netlist": "fv/rv_adder/fv_map.v.gz", 
  "design_name": "rv_adder", 
  "synth_workdir": "/users/Cours/ele8304/2/Labs/Lab2/implementation/syn", 
@@ -114,6 +114,6 @@
  "do_dft": "", 
  "do_compare": "{set_system_mode lec} {analyze_datapath -module -verbose } {analyze_datapath  -verbose} {# report_mapped_points} {report_unmapped_points -summary} {report_unmapped_points -extra -unreachable -notmapped} {add_compared_points -all} {# report_compared_points} compare", 
  "do_reports": "", 
- "write_verif_file_runtime": 0.394621 
+ "write_verif_file_runtime": 0.398259 
  }
 ]

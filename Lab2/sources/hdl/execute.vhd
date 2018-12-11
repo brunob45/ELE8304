@@ -5,9 +5,6 @@ use ieee.numeric_std.all;
 library work;
 use work.mini_riscv.all;
 
-library std;
-use std.textio.all;
-use std.env.all;
 
 entity rv_pipeline_execute is
   port (
@@ -80,8 +77,6 @@ begin
   exme : process(in_clk)
   begin
     if in_clk'event and in_clk = '1' then
-      -- report "rs1 = " & to_hstring(unsigned(in_rs1_data)) & " rs2 = " & to_hstring(unsigned(in_rs2_data)) severity warning;
-      -- report "alu out = " & to_hstring(unsigned(alu_out)) severity warning;
       -- passthrough
       out_loadword <= in_loadword;
       out_storeword <= in_storeword;
@@ -91,8 +86,12 @@ begin
       out_pc_target <= pc_target(DATA_WIDTH-1 downto 0);
       out_pc_transfer <= pc_transfer;
       out_rd_addr <= in_rd_addr;
-
-      out_stall <= '1' when in_loadword = '1' else '0';
+      
+      if in_loadword = '1' then
+	out_stall <= '1';
+      else
+	out_stall <= '0';
+      end if;
       out_flush <= flush;
       out_rd_we <= in_rd_we;
     end if;

@@ -72,11 +72,14 @@ begin
     report "<<---- Simulation Start ---->>";
     wait for PERIOD;
     in_rstn <= '1';
-    wait for PERIOD*3;
+    wait for PERIOD;
+    in_stall <= '0';
+    wait for PERIOD;
+    in_stall <= '0';
     in_transfert <= '1';
     wait for PERIOD;
     in_transfert <= '0';
-    wait for PERIOD*3;
+    wait for PERIOD;
     in_stall <= '1';
     wait for PERIOD*2;
   
