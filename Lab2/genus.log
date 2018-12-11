@@ -5,44 +5,33 @@ of Cadence Design Systems, Inc. in the United States and other countries.
 
 Version: 17.10-p007_1, built Thu Aug 03 2017
 Options: -overwrite 
-Date:    Mon Nov 05 15:50:26 2018
-Host:    vlsi304 (x86_64 w/Linux 3.10.0-862.14.4.el7.x86_64) (4cores*8cpus*1physical cpu*Intel(R) Core(TM) i7 CPU 960 @ 3.20GHz 8192KB) (12291636KB)
-OS:      Scientific Linux release 7.5 (Nitrogen)
+Date:    Mon Dec 10 12:48:07 2018
+Host:    vlsi310 (x86_64 w/Linux 3.10.0-957.1.3.el7.x86_64) (4cores*8cpus*1physical cpu*Intel(R) Core(TM) i7 CPU 960 @ 3.20GHz 8192KB) (12291104KB)
+OS:      Scientific Linux release 7.6 (Nitrogen)
 
 Checking out license: Genus_Synthesis
 
 Loading tool scripts...
 Finished loading tool scripts (10 seconds elapsed).
 
-WARNING: This version of the tool is 459 days old.
-genus@root:> ls
-UVVM
-asm
-doc
-genus.cmd
-genus.log
-implementation
-scripts
-simulation
-simulations
-sources
+WARNING: This version of the tool is 494 days old.
 genus@root:> cd scripts
+genus@root:> source setup.csh
+File 'setup.csh' does not exist.
+genus@root:> source config.csh
+File 'config.csh' does not exist.
 genus@root:> ls
 compile.tcl
 config.tcl
-fv
-shifter.tcl
-genus@root:> rm -r fv
-genus@root:> ls
-compile.tcl
-config.tcl
-shifter.tcl
+elab
+syn
 genus@root:> source config.tcl
-Sourcing './config.tcl' (Mon Nov 05 15:51:00 EST 2018)...
+Sourcing './config.tcl' (Mon Dec 10 12:48:38 EST 2018)...
   Setting attribute of root '/': 'information_level' = 7
   Setting attribute of root '/': 'hdl_vhdl_read_version' = 2008
   Setting attribute of root '/': 'init_hdl_search_path' = /users/Cours/ele8304/2/Labs/Lab2/sources/hdl
   Setting attribute of root '/': 'init_lib_search_path' = /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/lef /CMC/kits/AMSKIT616_GPDK/tech/giolib045/giolib045/lef /CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/qrc/qx
+  Setting attribute of root '/': 'syn_generic_effort' = medium
             Reading file '/CMC/kits/AMSKIT616_GPDK/tech/gsclib045/gsclib045/timing/fast_vdd1v0_basicCells.lib'
     Loading library fast_vdd1v0_basicCells.lib
 Info    : Missing a function attribute in the output pin definition. [LBR-518]
@@ -578,232 +567,131 @@ Info    : Inconsistent pin direction prevents conversion to pgpin. [PHYS-145]
   According to qrc_tech_file, there are total 11 routing layers [ V(5) / H(6) ]
 
 Done reading qrc_tech_file
-genus@root:> source shifter.tcl
-Sourcing './shifter.tcl' (Mon Nov 05 15:51:10 EST 2018)...
               Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/std/standard.vhdl'
-            Reading VHDL file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd'
+            Reading VHDL file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/pkg.vhd'
               Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/ieee/std_logic_1164.vhdl'
               Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/cadence/attributes.vhdl'
               Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/std/textio.vhdl'
               Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/ieee/numeric_std.vhdl'
 Info    : Error summary. [VHDLPT-508]
         : 0 errors and 118 warnings reported.
-Info    : Elaborating Design. [ELAB-1]
-        : Elaborating top-level block 'rv_shifter' from file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd'.
-Info    : Binding to architecture. [ELAB-5]
-        : Elaborating architecture 'shifter_arch' for entity 'rv_shifter'.
-Warning : Using default parameter value for module elaboration. [CDFG-818]
-        : Elaborating block 'rv_shifter' with default parameters value.
-Warning : Unreachable statements for case item. [CDFG-472]
-        : Case item 'others' in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 19.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'in_direction' in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 17.
-Info    : Unused module input port. [CDFG-500]
-        : Input port 'in_arith' is not used in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 10.
-        : The value of the input port is not used within the design.
-Info    : Done Elaborating Design. [ELAB-3]
-        : Done elaborating 'rv_shifter'.
-Checking for analog nets.... 
-Check completed for analog nets.
-Info: Checking for source rtl...
-Info: Check completed for source rtl...
-        Computing net loads.
-UM:  flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
-UM:            14             46                                      elaborate
-  Checking the design.
-
- 	 Check Design Report
-	 -------------------- 
-
-  Unresolved References & Empty Modules
-  ------------------------------------- 
-No unresolved references in design 'rv_shifter'
-
-No empty modules in design 'rv_shifter'
-
-  Done Checking the design.
-genus@root:> ls fv
-rv_shifter
-genus@root:> help elaborate
-Commands:
-  elaborate: elaborates previously read HDL files and creates corresponding design and subdesigns 
-
-Usage: elaborate [-parameters <string>] [-lib_path <string>]+ [-lib_extension <string>]+ [<string>+]
-
-    [-parameters <string>]:
-        specifies a list of parameter/value pairs for top-level Verilog module or VHDL entity. For 
-        example, elab -parameters {{width 5} {depth 10}}. 
-    [-lib_path <string>]:
-        defines Verilog library search path 
-    [-lib_extension <string>]:
-        defines Verilog library file extension 
-    [<string>+]:
-        the top-level Verilog modules or VHDL architectures to elaborate 
-
-
-genus@root:> read_hdl -vhdl shifter.vhd
-              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/std/standard.vhdl'
+genus@root:> clear
+genus@root:> clear
+genus@root:> source elab/core_elaborate.tcl
+Sourcing './elab/core_elaborate.tcl' (Mon Dec 10 12:49:19 EST 2018)...
+            Reading VHDL file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/hadd.vhd'
+            Reading VHDL file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/adder.vhd'
             Reading VHDL file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd'
-              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/ieee/std_logic_1164.vhdl'
-              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/cadence/attributes.vhdl'
-              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/std/textio.vhdl'
-              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/ieee/numeric_std.vhdl'
+            Reading VHDL file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/alu.vhd'
+            Reading VHDL file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/rf.vhd'
+Warning : Initial values are ignored for synthesis. [VHDL-639]
+        : in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/rf.vhd' on line 27.
+        : The specified construct has no effect on synthesis. In some cases (such as 'after' clauses in signal assignments) may cause a mismatch between and simulation.
+            Reading VHDL file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/pc.vhd'
+Warning : Initial values are ignored for synthesis. [VHDL-639]
+        : in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/pc.vhd' on line 27.
+            Reading VHDL file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/decode.vhd'
+            Reading VHDL file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/fetch.vhd'
+Warning : Initial values are ignored for synthesis. [VHDL-639]
+        : in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/fetch.vhd' on line 26.
+Warning : Initial values are ignored for synthesis. [VHDL-639]
+        : in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/fetch.vhd' on line 27.
+            Reading VHDL file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/memory.vhd'
+Warning : Initial values are ignored for synthesis. [VHDL-639]
+        : in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/memory.vhd' on line 28.
+Warning : Initial values are ignored for synthesis. [VHDL-639]
+        : in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/memory.vhd' on line 29.
+            Reading VHDL file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/execute.vhd'
+Warning : Initial values are ignored for synthesis. [VHDL-639]
+        : in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/execute.vhd' on line 42.
+Warning : Initial values are ignored for synthesis. [VHDL-639]
+        : in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/execute.vhd' on line 42.
+Warning : Initial values are ignored for synthesis. [VHDL-639]
+        : in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/execute.vhd' on line 43.
+Warning : Initial values are ignored for synthesis. [VHDL-639]
+        : in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/execute.vhd' on line 44.
+Warning : Initial values are ignored for synthesis. [VHDL-639]
+        : in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/execute.vhd' on line 44.
+Warning : Initial values are ignored for synthesis. [VHDL-639]
+        : in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/execute.vhd' on line 44.
+Warning : Initial values are ignored for synthesis. [VHDL-639]
+        : in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/execute.vhd' on line 45.
+Warning : Initial values are ignored for synthesis. [VHDL-639]
+        : in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/execute.vhd' on line 45.
+            Reading VHDL file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/writeback.vhd'
+    in_rd_addr : in REG_ADDR;
+                    |
+Error   : Undeclared identifier. [VHDLPT-766] [read_hdl]
+        : Identifier 'REG_ADDR' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/writeback.vhd' on line 7, column 21.
+        : Invalid or unsupported VHDL syntax is encountered.
+    in_alu_result : in WORD;
+                       |
+Error   : Undeclared identifier. [VHDLPT-766] [read_hdl]
+        : Identifier 'WORD' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/writeback.vhd' on line 8, column 24.
+    in_dmem_read : in WORD;
+                      |
+Error   : Undeclared identifier. [VHDLPT-766] [read_hdl]
+        : Identifier 'WORD' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/writeback.vhd' on line 9, column 23.
+    in_lw : in FLAG;
+               |
+Error   : Undeclared identifier. [VHDLPT-766] [read_hdl]
+        : Identifier 'FLAG' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/writeback.vhd' on line 10, column 16.
+    in_we : in FLAG;
+               |
+Error   : Undeclared identifier. [VHDLPT-766] [read_hdl]
+        : Identifier 'FLAG' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/writeback.vhd' on line 11, column 16.
+    out_rd_data : out WORD;
+                      |
+Error   : Undeclared identifier. [VHDLPT-766] [read_hdl]
+        : Identifier 'WORD' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/writeback.vhd' on line 13, column 23.
+    out_rd_addr : out REG_ADDR;
+                      |
+Error   : Undeclared identifier. [VHDLPT-766] [read_hdl]
+        : Identifier 'REG_ADDR' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/writeback.vhd' on line 14, column 23.
+    out_we : out FLAG
+                 |
+Error   : Undeclared identifier. [VHDLPT-766] [read_hdl]
+        : Identifier 'FLAG' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/writeback.vhd' on line 15, column 18.
+Info    : Design unit not stored. [VHDLPT-506]
+        : Entity rv_pipeline_writeback.
+architecture arch of rv_pipeline_writeback is
+|
+Error   : No such primary unit in library. [VHDLPT-703] [read_hdl]
+        : No unit 'rv_pipeline_writeback' in WORK in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/writeback.vhd' on line 20, column 1.
+        : There are two typical causes for this error: 1) the unit has not been read in with read_hdl -vhdl; or 2) it has been read into a different library than the library referenced in this context.
+  signal rd_data : WORD;
+                   |
+Error   : Undeclared identifier. [VHDLPT-766] [read_hdl]
+        : Identifier 'WORD' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/writeback.vhd' on line 22, column 20.
+  out_rd_data <= in_dmem_read when in_lw = '1' else in_alu_result;
+  |
+Error   : Undeclared identifier. [VHDLPT-766] [read_hdl]
+        : Identifier 'out_rd_data' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/writeback.vhd' on line 26, column 3.
+  out_rd_data <= in_dmem_read when in_lw = '1' else in_alu_result;
+                                                                 |
+Error   : Illegal extra ';' detected. [VHDLPT-636] [read_hdl]
+        : in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/writeback.vhd' on line 26, column 66.
+        : Invalid or unsupported VHDL syntax is encountered.
+  out_rd_addr < in_rd_addr;
+  |
+Error   : Undeclared identifier. [VHDLPT-766] [read_hdl]
+        : Identifier 'out_rd_addr' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/writeback.vhd' on line 27, column 3.
+  out_rd_addr < in_rd_addr;
+                          |
+Error   : Illegal extra ';' detected. [VHDLPT-636] [read_hdl]
+        : in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/writeback.vhd' on line 27, column 27.
+  out_we <= in_we;
+  |
+Error   : Undeclared identifier. [VHDLPT-766] [read_hdl]
+        : Identifier 'out_we' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/writeback.vhd' on line 28, column 3.
+  out_we <= in_we;
+                 |
+Error   : Illegal extra ';' detected. [VHDLPT-636] [read_hdl]
+        : in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/writeback.vhd' on line 28, column 18.
+Info    : Design unit not stored. [VHDLPT-506]
+        : Architecture rv_pipeline_writeback-arch.
 Info    : Error summary. [VHDLPT-508]
-        : 0 errors and 118 warnings reported.
-genus@root:> elaborate rv_shifter
-Info    : Elaborating Design. [ELAB-1]
-        : Elaborating top-level block 'rv_shifter' from file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd'.
-Info    : Binding to architecture. [ELAB-5]
-        : Elaborating architecture 'shifter_arch' for entity 'rv_shifter'.
-Warning : Using default parameter value for module elaboration. [CDFG-818]
-        : Elaborating block 'rv_shifter' with default parameters value.
-Warning : Unreachable statements for case item. [CDFG-472]
-        : Case item 'others' in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 19.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'in_direction' in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 17.
-Info    : Unused module input port. [CDFG-500]
-        : Input port 'in_arith' is not used in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 10.
-Info    : Done Elaborating Design. [ELAB-3]
-        : Done elaborating 'rv_shifter'.
-Checking for analog nets.... 
-Check completed for analog nets.
-Info: Checking for source rtl...
-Info: Check completed for source rtl...
-design:rv_shifter_1
-Commands:
-
-
-Attributes:
-
-Commands:
-
-
-Attributes:
-
-Commands:
-
-genus@root:> help check_design
-Commands:
-  check_design: reports information on design state 
-
-Usage: check_design [-undriven] [-unloaded] [-unloaded_comb] [-multiple_driver] [-unresolved] [-constant]
-           [-through_tie_cell] [-assigns] [-all] [-preserved] [-physical_only] [-logical_only]
-           [-lib_lef_consistency] [-report_scan_pins] [-skip_scan_pins] [-vname]
-           [-threshold_fanout <integer>] [-only_user_hierarchy] [-long_module_name] [-status] [<design>]
-
-    [-undriven]:
-        reports undriven ports and pins 
-    [-unloaded]:
-        reports the unloaded ports and sequential elements (flops and latches) 
-    [-unloaded_comb]:
-        reports the unloaded comb elements 
-    [-multiple_driver]:
-        reports multidriven ports and pins 
-    [-unresolved]:
-        reports the unresolved references and empty modules 
-    [-constant]:
-        reports the constant pins, ports in the design 
-    [-through_tie_cell]:
-        reports the constant pins, ports in the design through tie cell 
-    [-assigns]:
-        reports assign statements from the design 
-    [-all]:
-        report all information 
-    [-preserved]:
-        reports all preserved instances in the design 
-    [-physical_only]:
-        report all instances linked to physical only libcells 
-    [-logical_only]:
-        report all instances linked to logical only libcells 
-    [-lib_lef_consistency]:
-        reports all the lib-lef inconsistencies 
-    [-report_scan_pins]:
-        reports all the scan pins also during checks 
-    [-skip_scan_pins]:
-        skips the scan pins during checks 
-    [-vname]:
-        reports only 'vnames of objects' 
-    [-threshold_fanout <integer>]:
-        reports only the undriven and constant pins with fanout value equal to and above the specified 
-        threshold 
-    [-only_user_hierarchy]:
-        report only user created hierarchies 
-    [-long_module_name]:
-        report the subdesigns whose name is greater than 1.5k 
-    [-status]:
-        returns the status, 1 for any reported instances, 0 by default 
-    [<design>]:
-        specify the design name for which the check netlist is to be performed 
-
-
-genus@root:> source shifter.tcl
-Sourcing './shifter.tcl' (Mon Nov 05 15:53:36 EST 2018)...
-              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/std/standard.vhdl'
-            Reading VHDL file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd'
-              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/ieee/std_logic_1164.vhdl'
-              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/cadence/attributes.vhdl'
-              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/std/textio.vhdl'
-              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/ieee/numeric_std.vhdl'
-Info    : Error summary. [VHDLPT-508]
-        : 0 errors and 118 warnings reported.
-Info    : Elaborating Design. [ELAB-1]
-        : Elaborating top-level block 'rv_shifter' from file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd'.
-Info    : Binding to architecture. [ELAB-5]
-        : Elaborating architecture 'shifter_arch' for entity 'rv_shifter'.
-Warning : Using default parameter value for module elaboration. [CDFG-818]
-        : Elaborating block 'rv_shifter' with default parameters value.
-Warning : Unreachable statements for case item. [CDFG-472]
-        : Case item 'others' in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 19.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'in_direction' in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 17.
-Info    : Unused module input port. [CDFG-500]
-        : Input port 'in_arith' is not used in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 10.
-Info    : Done Elaborating Design. [ELAB-3]
-        : Done elaborating 'rv_shifter'.
-Checking for analog nets.... 
-Check completed for analog nets.
-Info: Checking for source rtl...
-Info: Check completed for source rtl...
-Error   : Multiple designs are available. Specify the design you want to use. [TUI-17] [check_design]
-        : There is no unique design here.
-        : Specify a design by using the cd command to change to that design's directory or specify the design as an argument for the command.
-Failed on find_unique_design
-genus@root:> rm fv -r
-genus@root:> ls
-compile.tcl
-config.tcl
-shifter.tcl
-genus@root:> source shifter.tcl
-Sourcing './shifter.tcl' (Mon Nov 05 15:54:51 EST 2018)...
-              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/std/standard.vhdl'
-            Reading VHDL file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd'
-              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/ieee/std_logic_1164.vhdl'
-              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/cadence/attributes.vhdl'
-              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/std/textio.vhdl'
-              Reading VHDL predefined package '/CMC/tools/cadence/GENUS17.10.000_lnx86/tools.lnx86/lib/vhdl/v2008/ieee/numeric_std.vhdl'
-Info    : Error summary. [VHDLPT-508]
-        : 0 errors and 118 warnings reported.
-Info    : Elaborating Design. [ELAB-1]
-        : Elaborating top-level block 'rv_shifter' from file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd'.
-Info    : Binding to architecture. [ELAB-5]
-        : Elaborating architecture 'shifter_arch' for entity 'rv_shifter'.
-Warning : Using default parameter value for module elaboration. [CDFG-818]
-        : Elaborating block 'rv_shifter' with default parameters value.
-Warning : Unreachable statements for case item. [CDFG-472]
-        : Case item 'others' in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 19.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'in_direction' in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 17.
-Info    : Unused module input port. [CDFG-500]
-        : Input port 'in_arith' is not used in module 'rv_shifter' in file '/users/Cours/ele8304/2/Labs/Lab2/sources/hdl/shifter.vhd' on line 10.
-Info    : Done Elaborating Design. [ELAB-3]
-        : Done elaborating 'rv_shifter'.
-Checking for analog nets.... 
-Check completed for analog nets.
-Info: Checking for source rtl...
-Info: Check completed for source rtl...
-Error   : Multiple designs are available. Specify the design you want to use. [TUI-17] [check_design]
-        : There is no unique design here.
-Failed on find_unique_design
-
-Another Ctrl-C within 1 second will terminate the tool.
-Abnormal exit.
+        : 16 errors and 0 warnings reported.
+1
+genus@root:> exit
+Normal exit.
